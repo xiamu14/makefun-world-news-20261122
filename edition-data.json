@@ -1,21 +1,21 @@
 {
   "masthead": "Sunday 22 November 2026",
   "eyebrow_left": "THE WORLD IN ONE DAY",
-  "eyebrow_right": "35 STORIES · 7 REGIONS · EVERY ONE DATED SUNDAY 22 NOVEMBER 2026",
-  "deck": "COP31 tables final draft in Antalya · Russia fires 148 drones, 3 missiles · Verstappen wins Las Vegas GP · India declare 720/9",
+  "eyebrow_right": "23 STORIES · 7 REGIONS · EVERY ONE DATED SUNDAY 22 NOVEMBER 2026",
+  "deck": "COP31 tables final draft in Antalya · Russia fires 148 drones, 3 missiles · Hormuz 3 tankers hit · HK votes · India 720/9",
   "kpi_stats": [
-    {"num": "~200", "label": "nations at COP31 (Reuters)", "color": "oklch(0.24 0.01 260)"},
-    {"num": "148", "label": "drones on Ukraine (AP)", "color": "oklch(0.46 0.13 245)"},
-    {"num": "3", "label": "Hormuz tankers hit (AP)", "color": "oklch(0.46 0.15 310)"},
-    {"num": "720/9", "label": "India Test record (Reuters)", "color": "oklch(0.46 0.12 170)"},
-    {"num": "856", "label": "HK candidates (SCMP)", "color": "oklch(0.48 0.12 195)"},
-    {"num": "26", "label": "Bayelsa boat toll (Vanguard)", "color": "oklch(0.46 0.13 150)"}
+    {"num": "~200", "label": "nations at COP31", "color": "oklch(0.24 0.01 260)"},
+    {"num": "148", "label": "drones on Ukraine", "color": "oklch(0.46 0.13 245)"},
+    {"num": "3", "label": "Hormuz tankers hit", "color": "oklch(0.46 0.15 310)"},
+    {"num": "720/9", "label": "India Test record", "color": "oklch(0.46 0.12 170)"},
+    {"num": "856", "label": "HK vote candidates", "color": "oklch(0.48 0.12 195)"},
+    {"num": "26", "label": "Bayelsa boat dead", "color": "oklch(0.46 0.13 150)"}
   ],
   "region_bar": [
-    {"name": "Europe 9", "count": 9, "color": "oklch(0.46 0.13 245)"},
-    {"name": "Asia-Pacific 8", "count": 8, "color": "oklch(0.48 0.12 195)"},
-    {"name": "Middle East 7", "count": 7, "color": "oklch(0.46 0.15 310)"},
-    {"name": "Americas 6", "count": 6, "color": "oklch(0.48 0.18 24)"},
+    {"name": "Europe 7", "count": 7, "color": "oklch(0.46 0.13 245)"},
+    {"name": "Middle East 5", "count": 5, "color": "oklch(0.46 0.15 310)"},
+    {"name": "Asia 3", "count": 3, "color": "oklch(0.48 0.12 195)"},
+    {"name": "Americas 3", "count": 3, "color": "oklch(0.48 0.18 24)"},
     {"name": "Africa 2", "count": 2, "color": "oklch(0.46 0.13 150)"},
     {"name": "Oceania 2", "count": 2, "color": "oklch(0.46 0.12 170)"},
     {"name": "Global 1", "count": 1, "color": "oklch(0.24 0.01 260)"}
@@ -35,7 +35,7 @@
       "kicker": "2 · UKRAINE · WAR",
       "status": "REPORTED",
       "status_kind": "confirmed",
-      "title": "Russia fires 148 drones, 3 missiles overnight",
+      "title": "Russia fires 148 drones, 3 missiles",
       "body": "Double-tap strike on Kryvyi Rih kills 2, wounds 60; Zaporizhzhia & Kamianske also hit (AP, Kyiv Ind.).",
       "art": "ukraine_barrage"
     },
@@ -44,46 +44,34 @@
       "kicker": "3 · HORMUZ · IRAN WAR",
       "status": "CLAIM",
       "status_kind": "official",
-      "title": "Iran strikes 3 tankers; Bahrain radar claim",
-      "body": "Three tankers hit near Oman as traffic drops ~65%; IRGC claims Bahrain radar hits, unverified (AP, AJ).",
+      "title": "Iran strikes 3 tankers; Bahrain claim",
+      "body": "Three tankers hit near Oman as traffic falls ~65%; IRGC claims Bahrain radar hits, unverified (AP, AJ).",
       "art": "hormuz_scene"
     }
   ],
   "cards": [
-    {"id": "4", "kicker": "4 · HONG KONG", "status": "REPORTED", "status_kind": "confirmed", "title": "HK votes for Election Body", "sub": "856 candidates for 723 seats (SCMP)", "art": "hk_vote"},
-    {"id": "5", "kicker": "5 · WELLINGTON", "status": "REPORTED", "status_kind": "confirmed", "title": "India declare on 720/9", "sub": "Pant 128; NZ Test record (Reuters)", "art": "cricket_720"},
+    {"id": "4", "kicker": "4 · HONG KONG", "status": "REPORTED", "status_kind": "confirmed", "title": "HK votes for Election Body", "sub": "856 candidates, 723 seats (SCMP)", "art": "hk_vote"},
+    {"id": "5", "kicker": "5 · WELLINGTON", "status": "REPORTED", "status_kind": "confirmed", "title": "India declare on 720/9", "sub": "Pant 128; NZ record (Reuters)", "art": "cricket_720"},
     {"id": "6", "kicker": "6 · LAS VEGAS", "status": "REPORTED", "status_kind": "confirmed", "title": "Verstappen wins Vegas GP", "sub": "Norris 2nd, Piastri 3rd (AP)", "art": "vegas_f1"},
-    {"id": "7", "kicker": "7 · INDONESIA", "status": "REPORTED", "status_kind": "confirmed", "title": "Cikande factory fire kills 3", "sub": "36 missing; 15 rescued (BBC)", "art": "indonesia_fire"},
-    {"id": "8", "kicker": "8 · TEHRAN", "status": "REPORTED", "status_kind": "confirmed", "title": "Iran starts power rationing", "sub": "Up to 2 hrs/day cuts (RFE/RL)", "art": "iran_power"},
-    {"id": "9", "kicker": "9 · WASHINGTON", "status": "REPORTED", "status_kind": "confirmed", "title": "FBI probes NCIC breach", "sub": "Criminal database hack (AP)", "art": "fbi_cyber"},
-    {"id": "10", "kicker": "10 · BRUSSELS", "status": "REPORTED", "status_kind": "confirmed", "title": "Belgium grounds Mon flights", "sub": "National strike 07–21h (AFP)", "art": "belgium_strike"},
-    {"id": "11", "kicker": "11 · GAZA", "status": "REPORTED", "status_kind": "confirmed", "title": "Hamas seeks urgent talks", "sub": "Aid-van row; 1,671 toll (AA)", "art": "gaza_van"},
-    {"id": "12", "kicker": "12 · NIGERIA", "status": "REPORTED", "status_kind": "confirmed", "title": "Bayelsa boat toll hits 26", "sub": "Mourners search continues (RIA)", "art": "nigeria_boat"},
-    {"id": "13", "kicker": "13 · CANBERRA", "status": "REPORTED", "status_kind": "confirmed", "title": "Marles rejects AUKUS claim", "sub": "Defends sub budget (ABC)", "art": "aukus_sub"}
+    {"id": "7", "kicker": "7 · INDONESIA", "status": "REPORTED", "status_kind": "confirmed", "title": "Cikande fire kills 3", "sub": "36 missing; 15 rescued (BBC)", "art": "indonesia_fire"},
+    {"id": "8", "kicker": "8 · TEHRAN", "status": "REPORTED", "status_kind": "confirmed", "title": "Iran rations electricity", "sub": "Up to 2 hrs/day cuts (RFE/RL)", "art": "iran_power"},
+    {"id": "9", "kicker": "9 · WASHINGTON", "status": "REPORTED", "status_kind": "confirmed", "title": "FBI probes NCIC breach", "sub": "Crime database hack (AP)", "art": "fbi_cyber"},
+    {"id": "10", "kicker": "10 · BRUSSELS", "status": "REPORTED", "status_kind": "confirmed", "title": "Belgium grounds flights", "sub": "National strike 07–21h (AFP)", "art": "belgium_strike"},
+    {"id": "11", "kicker": "11 · NIGERIA", "status": "REPORTED", "status_kind": "confirmed", "title": "Bayelsa boat toll hits 26", "sub": "Mourners recovery goes on (RIA)", "art": "nigeria_boat"}
   ],
   "briefs": [
-    ["14", "Finland", "Sparta II still ablaze off Loviisa; 16 crew safe (Reuters)"],
-    ["15", "Finland", "Russian helo suspected 4.1 km in airspace (MoD)"],
-    ["16", "Poland", "NATO's Rutte pledges support after airspace breach (AFP)"],
-    ["17", "Denmark", "Expels Russian attaché over alleged rapper plot (Guardian)"],
-    ["18", "Estonia", "To shut Russia border 1 Dec after sabotage bid (Reuters)"],
-    ["19", "Italy", "Paolo Bulgari dies aged 89 (BBC); ATP Final 17:00 GMT"],
-    ["20", "UK", "Liverpool host Man Utd 16:30 GMT; Leeds 4–1 Chelsea (BBC)"],
-    ["21", "Jerusalem", "Eisenkot invites Likud to broad coalition talks (ST)"],
-    ["22", "Doha", "Qatar mediates US–Iran talks on permanent Hormuz deal (AA)"],
-    ["23", "Saudi Arabia", "Coalition downs Houthi missile ~01:42 (Al Jazeera)"],
-    ["24", "Lebanon", "Pres. Aoun demands Israeli withdrawal (Al Jazeera)"],
-    ["25", "New Delhi", "Nepal PM Shah lands for first state visit (IANS)"],
-    ["26", "Manipur", "Toxic liquor toll climbs to 19; ~600 in hospital (E-Pao)"],
-    ["27", "Taiwan", "Kinmen live-fire drill; warns Canada on China trade (AP)"],
-    ["28", "Philippines", "M5.9 deep quake off Palawan, 688 km deep (EMSC)"],
-    ["29", "Tokyo", "Poll: record 62% feel friendly to S. Korea (Kyodo)"],
-    ["30", "Brazil", "Bolsonaro stays in ICU with bowel obstruction (Reuters)"],
-    ["31", "Wall St", "S&P 500 sinks 3.7% in tech sell-off; Nvidia probe (AP)"],
-    ["32", "Florida", "St Johns River record flood crest; ~200 rescues (NPR)"],
-    ["33", "Haiti", "3 Salvadoran soldiers of anti-gang force killed (BBC)"],
-    ["34", "Sudan", "North Kordofan landmine kills 22 on tuk-tuk (Darfur24)"],
-    ["35", "Melbourne", "Australia chase 188 to beat England in 1st T20 (ABC)"]
+    ["12", "Finland", "Sparta II still ablaze; 16 crew safe (Reuters)"],
+    ["13", "Poland", "NATO's Rutte backs Warsaw after breach (AFP)"],
+    ["14", "Denmark", "Expels Russian attaché over plot (Guardian)"],
+    ["15", "Estonia", "To shut Russia border 1 Dec (Reuters)"],
+    ["16", "UK/Italy", "Liverpool–Man Utd 16:30; ATP 17:00 GMT"],
+    ["17", "Gaza", "Hamas seeks talks on aid-van strike; 1,671 toll"],
+    ["18", "Doha", "Qatar mediates US–Iran Hormuz talks (AJ)"],
+    ["19", "Jerusalem", "Eisenkot invites Likud to coalition talks (ST)"],
+    ["20", "Canberra", "Marles rejects US AUKUS sub claim (ABC)"],
+    ["21", "Manipur", "Toxic liquor toll climbs to 19 (E-Pao)"],
+    ["22", "Americas", "Bolsonaro stays in ICU; S&P 500 -3.7% (AP)"],
+    ["23", "Sudan", "North Kordofan landmine kills 22 (Darfur24)"]
   ],
   "pins": [
     {"id": 1, "lon": 30.7, "lat": 36.9, "r": "GLOBAL"},
@@ -96,9 +84,9 @@
     {"id": 8, "lon": 51.4, "lat": 35.7, "r": "MIDDLE EAST"},
     {"id": 9, "lon": -77.0, "lat": 38.9, "r": "N. AMERICA"},
     {"id": 10, "lon": 4.4, "lat": 50.8, "r": "EUROPE"},
-    {"id": 11, "lon": 34.5, "lat": 31.5, "r": "MIDDLE EAST"},
-    {"id": 12, "lon": 6.3, "lat": 4.9, "r": "AFRICA"},
-    {"id": 13, "lon": 149.1, "lat": -35.3, "r": "OCEANIA"}
+    {"id": 11, "lon": 6.3, "lat": 4.9, "r": "AFRICA"},
+    {"id": 12, "lon": 26.8, "lat": 60.1, "r": "EUROPE"},
+    {"id": 13, "lon": 21.0, "lat": 52.2, "r": "EUROPE"}
   ],
-  "date_check": "DATE CHECK — LEFT OUT ON PURPOSE (NOT SUNDAY 22 NOV): Russia's 400-drone barrage (Fri 20 Nov) · Peru M6.7 quake (Sat 21 Nov) · El Chapo Isidro capture (Fri night/Sat) · EU-Indonesia CEPA deal (Sat 21 Nov) · BepiColombo burn (Sat 18:24 UTC). Pending at press time: COP31 final vote, ATP Final (17:00 GMT), Liverpool–Man Utd (16:30 GMT)."
+  "date_check": "DATE CHECK — LEFT OUT ON PURPOSE (NOT 22 NOV): Russia 400-drone barrage (Fri 20 Nov) · Peru M6.7 quake (Sat 21 Nov) · El Chapo Isidro capture (Fri/Sat) · EU-Indonesia deal (Sat) · BepiColombo burn (Sat). Pending: COP31 vote, ATP Final (17:00 GMT)."
 }
