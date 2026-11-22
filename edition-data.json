@@ -1,176 +1,114 @@
 {
-  "masthead": "THE WORLD DAILY",
-  "date": "22 NOVEMBER 2026",
-  "edition": "SUNDAY · EARLY EDITION",
-  "tagline": "The world, in perspective.",
-  "eyebrow_left": "WORLD NEWS IN ONE IMAGE · 22 NOVEMBER 2026",
-  "eyebrow_right": "24 STORIES · 3 DESKS",
-  "columns": [
+  "masthead": "SUNDAY 22 NOVEMBER 2026",
+  "deck": "Hormuz tankers hit · COP31 new deal text · Baltic ship ablaze · Iran starts power rationing",
+  "stats": [
+    {"num": "2", "desc": "tankers hit leaving Hormuz\nUKMTO · Al Jazeera"},
+    {"num": "16", "desc": "crew off burning Sparta II\nFinland Border Guard"},
+    {"num": "2 hrs", "desc": "daily power cuts begin in Iran\nTavanir · RFE/RL"},
+    {"num": "22", "desc": "killed by landmine in Sudan\nN. Kordofan · Darfur24"},
+    {"num": "4.1 km", "desc": "suspected helo in Finland\nFinnish MoD"},
+    {"num": "M6.7", "desc": "Peru quake shakes Lima\nAndean region · USGS"}
+  ],
+  "regions": [
+    {"name": "EUROPE 6", "color": "#2B5B84", "count": 6},
+    {"name": "ASIA 5", "color": "#C88A2B", "count": 5},
+    {"name": "MIDDLE EAST 7", "color": "#AF242A", "count": 7},
+    {"name": "AFRICA 3", "color": "#2E6F40", "count": 3},
+    {"name": "AMERICAS 5", "color": "#6B4C9A", "count": 5},
+    {"name": "OCEANIA 2", "color": "#2E8B8B", "count": 2},
+    {"name": "GLOBAL 2", "color": "#555555", "count": 2}
+  ],
+  "leads": [
     {
-      "label": "01 / WORLD AFFAIRS",
-      "lead": {
-        "id": "01",
-        "title_roman": "Iran announces power rationing",
-        "title_italic": "as Gulf tensions persist",
-        "summary": "Restrictions begin 22 Nov with outages up to 2 hours by area, adding strain to daily life and an aging grid.",
-        "source": "[01] RFE/RL · 22 Nov",
-        "image_crop": "tehran"
-      },
-      "items": [
-        {
-          "id": "02",
-          "headline": "Bahrain reports industrial strike",
-          "summary": "Facility hit 21 Nov causing fire, no injuries; Iran cites US targets.",
-          "source": "Reuters / ST · 22 Nov"
-        },
-        {
-          "id": "03",
-          "headline": "Baltic drone strike evacuates ship",
-          "summary": "Sparta II’s 16 crew rescued by Finland; cargo remains unconfirmed.",
-          "source": "Reuters · 21 Nov"
-        },
-        {
-          "id": "04",
-          "headline": "NATO reassures Poland on airspace",
-          "summary": "Rutte pledges defence after 3 Russian objects enter; allies meet Mon.",
-          "source": "Reuters / PAP · 21 Nov"
-        },
-        {
-          "id": "05",
-          "headline": "Taiwan warns Canada on China trade",
-          "summary": "Outbound investment share fell >80% to 3.8%; cites economic coercion.",
-          "source": "AP · updated 22 Nov"
-        },
-        {
-          "id": "06",
-          "headline": "Bangladesh adds 90 guard platoons",
-          "summary": "Security reinforced after political arson ahead of Hasina’s vowed return.",
-          "source": "AFP / ST · 21 Nov"
-        },
-        {
-          "id": "07",
-          "headline": "Japan ad faces vetting backlash",
-          "summary": "Officials admit incomplete checks on YouTuber in ¥300m campaign.",
-          "source": "Kyodo / ST · 21 Nov"
-        },
-        {
-          "id": "08",
-          "headline": "Lewis Pugh swims 15km near Hormuz",
-          "summary": "Urges ceasefire, reopening the strait and marine pollution cleanup.",
-          "source": "AFP / ST · 22 Nov"
-        }
-      ]
+      "id": "1",
+      "badge": "HORMUZ: TANKERS HIT",
+      "kicker": "1 · STRAIT OF HORMUZ · IRAN WAR",
+      "title": "Two tankers hit leaving Hormuz as shipping tightens",
+      "body": "Two vessels struck near Oman; traffic ~65% below normal. Iran claims mines; unverified. (UKMTO, Al Jazeera)",
+      "art": "hormuz_photo",
+      "region": "MIDDLE EAST"
     },
     {
-      "label": "02 / ECONOMY & SOCIETY",
-      "lead": {
-        "id": "09",
-        "title_roman": "Wall Street reels",
-        "title_italic": "as the AI trade unwinds",
-        "summary": "AI-led sell-off caps bruising week to 20 Nov: S&P 500 −8.6%, Dow −8%, Nasdaq ≈−10%.",
-        "source": "[09] CNBC; AP / NPR · wk to 20 Nov",
-        "image_crop": "finance"
-      },
-      "items": [
-        {
-          "id": "10",
-          "headline": "White House touts $17bn+ Asia deals",
-          "summary": "South-east Asian commercial and defence packages; announced, not paid.",
-          "source": "Reuters · 19 Nov"
-        },
-        {
-          "id": "11",
-          "headline": "Trump orders contractor disclosures",
-          "summary": "Federal firms must alert White House before giving Congress records.",
-          "source": "Reuters · 21 Nov"
-        },
-        {
-          "id": "12",
-          "headline": "Indonesia queries YouTube purge",
-          "summary": "Asks Google to explain 19,372 Q3 channel removals over influence ops.",
-          "source": "The Straits Times · 20–21 Nov"
-        },
-        {
-          "id": "13",
-          "headline": "Judge clears $7.25bn Bayer deal",
-          "summary": "Roundup cancer settlement approved; Bayer continues to deny causation.",
-          "source": "NPR · 21 Nov"
-        },
-        {
-          "id": "14",
-          "headline": "Jury convicts in Palisades retrial",
-          "summary": "Rinderknecht guilty on 2025 fire arson counts; sentencing 17 Mar 2027.",
-          "source": "AP / NPR · 21 Nov"
-        },
-        {
-          "id": "15",
-          "headline": "Meiji’s Alaska return, revisited",
-          "summary": "22 Nov feature details Aug repatriation of 11 bone fragments & 1 object.",
-          "source": "Asahi Shimbun · 22 Nov"
-        },
-        {
-          "id": "16",
-          "headline": "Zagreb rallies over patient death",
-          "summary": "Thousands protest after footage; 4 hospital technicians investigated.",
-          "source": "Reuters / ST · 22 Nov"
-        }
-      ]
+      "id": "2",
+      "badge": "COP31: NEW DEAL TEXT",
+      "kicker": "2 · ANTALYA, TURKEY · CLIMATE",
+      "title": "COP31 nears a deal as revised text is tabled",
+      "body": "Australia and Turkey issue final text on fossil fuels and finance; plenary approval pending. (Reuters)",
+      "art": "cop31_photo",
+      "region": "GLOBAL"
     },
     {
-      "label": "03 / PLANET & PEOPLE",
-      "lead": {
-        "id": "17",
-        "title_roman": "Climate talks enter overtime",
-        "title_italic": "in Antalya",
-        "summary": "COP31 negotiators issue revised package after overnight talks; ~200 delegations weigh deal.",
-        "source": "[17] Reuters / KFGO; UN News · 22 Nov",
-        "image_crop": "climate"
-      },
-      "items": [
-        {
-          "id": "18",
-          "headline": "Brazil supercell damages thousands",
-          "summary": "Tupanciretã hit by 114 km/h gusts on 20 Nov; at least 3 dead.",
-          "source": "Reuters / ST · 22 Nov"
-        },
-        {
-          "id": "19",
-          "headline": "Wolbachia cuts dengue ~69% in trial",
-          "summary": "4-year Brazil study of 5,700+ children vs comparison areas.",
-          "source": "AP / ST · 22 Nov"
-        },
-        {
-          "id": "20",
-          "headline": "Hillsborough dengue hits 12-wk low",
-          "summary": "19 local cases (8–14 Nov); Florida emergency extended to 26 Nov.",
-          "source": "WUSF · 20 Nov"
-        },
-        {
-          "id": "21",
-          "headline": "24+ die as Nigeria boat capsizes",
-          "summary": "Funeral vessel sinks in Bayelsa; 24 rescued, search continues.",
-          "source": "AP / ABC News · 21 Nov"
-        },
-        {
-          "id": "22",
-          "headline": "M4.1 earthquake hits Myanmar",
-          "summary": "Recorded at 95 km depth early 22 Nov; no casualty report yet.",
-          "source": "ANI / NCS · 22 Nov"
-        },
-        {
-          "id": "23",
-          "headline": "US gas eases to $3.69; Brent $92.57",
-          "summary": "Pump price −3¢/day (+59¢/yr); Brent +0.64%, WTI $83.98/bbl.",
-          "source": "CNBC / AAA · 20 Nov"
-        },
-        {
-          "id": "24",
-          "headline": "Zverev meets Alcaraz in ATP final",
-          "summary": "Turin title match set for 22 Nov after Saturday semifinal wins.",
-          "source": "AP / ST · 22 Nov preview"
-        }
-      ]
+      "id": "3",
+      "badge": "BALTIC: SHIP ABLAZE",
+      "kicker": "3 · GULF OF FINLAND · UKRAINE WAR",
+      "title": "Russian cargo ship ablaze in Baltic after drone strike",
+      "body": "Sparta II drifted into Finnish waters; 16 crew evacuated. Finland says Ukraine 'likely'. (Reuters)",
+      "art": "baltic_ship",
+      "region": "EUROPE"
     }
   ],
-  "footer": "Early-edition snapshot; some events predate 22 Nov. Illustrations are conceptual, not documentary photographs. COP31 approval pending; tennis is a preview."
+  "cards": [
+    {"id": "4", "badge": "BAHRAIN: SITE ON FIRE", "kicker": "4 · SITRA · GULF", "title": "Bahrain says Iranian strike hit industrial site", "sub": "Fire, no injuries; IRGC cites US bases. (Reuters)", "art": "bahrain_fire"},
+    {"id": "5", "badge": "IRAN: POWER RATIONED", "kicker": "5 · TEHRAN · ENERGY", "title": "Iran begins rolling power rationing Sunday", "sub": "Outages up to 2 hrs/day as gas lags. (RFE/RL)", "art": "tehran_photo"},
+    {"id": "6", "badge": "POLAND: NATO PLEDGE", "kicker": "6 · WARSAW · NATO", "title": "Rutte in Warsaw: NATO stands with Poland", "sub": "Follows Fri airspace incursion; Mon talks. (Reuters)", "art": "nato_poland"},
+    {"id": "7", "badge": "RUSSIA: DRONE WAVE", "kicker": "7 · LENINGRAD · WAR", "title": "Ukrainian drones hit Russia's Leningrad region", "sub": "Air defences active; dozens downed. (Reuters)", "art": "drone_wave"},
+    {"id": "8", "badge": "GAZA: AID VAN HIT", "kicker": "8 · GAZA CITY · CONFLICT", "title": "Israeli strike on Gaza food van kills three", "sub": "IDF says militants targeted; WCK denies link. (AP)", "art": "gaza_van"},
+    {"id": "9", "badge": "MEXICO: CARTEL BOSS", "kicker": "9 · SINALOA · CRIME", "title": "Mexico captures 'El Chapo Isidro' in raid", "sub": "FBI top-10 fugitive held; 11 killed in clashes. (AP)", "art": "mexico_cartel"},
+    {"id": "10", "badge": "FBI: DATA BREACH?", "kicker": "10 · WASHINGTON · CYBER", "title": "FBI probes reported hack of NCIC database", "sub": "Trump calls breach 'not good'; probe active. (AP)", "art": "fbi_cyber"},
+    {"id": "11", "badge": "SUDAN: LANDMINE", "kicker": "11 · N. KORDOFAN · WAR", "title": "Landmine kills 22 on road to El-Obeid", "sub": "Passenger tuk-tuk hit; women & children dead. (Darfur24)", "art": "sudan_mine"},
+    {"id": "12", "badge": "BELGIUM: SKIES SHUT", "kicker": "12 · BRUSSELS · LABOUR", "title": "Belgian national strike to ground flights Mon", "sub": "Skeyes halts regular air traffic 07:00–21:00. (AFP)", "art": "belgium_strike"},
+    {"id": "13", "badge": "LAS VEGAS: F1 POLE", "kicker": "13 · LAS VEGAS · SPORT", "title": "Verstappen on pole for Las Vegas GP", "sub": "Inherits P1 after Antonelli penalty; race Sun. (F1)", "art": "f1_vegas"}
+  ],
+  "briefs": [
+    ["14", "Doha", "Qatar mediates US–Iran talks on Hormuz & permanent truce (AA)"],
+    ["15", "Gulf", "US CENTCOM denies Iran hit an F-18; all jets accounted for (ToI)"],
+    ["16", "Finland", "Suspected Russian helo 4.1 km inside airspace; probe open (MoD)"],
+    ["17", "Helsinki", "PM Orpo warns war spilling over; backs Ukraine defence (Guardian)"],
+    ["18", "Sudan", "Intensive drone & airstrikes hit Kordofan and Blue Nile (Dabanga)"],
+    ["19", "Peru", "M6.7 quake in Junin shakes Lima; no immediate casualties (USGS)"],
+    ["20", "Taiwan", "Warns Canada on China trade risk; inv. share >80% to 3.8% (AP)"],
+    ["21", "Pakistan", "Extends airspace ban on Indian aircraft through 24 Dec (PAA)"],
+    ["22", "Myanmar", "M4.1 quake at 95 km depth early 22 Nov; details awaited (NCS)"],
+    ["23", "Japan", "Poll: 62% affinity toward S. Korea; security ad vetting row (Kyodo)"],
+    ["24", "Philippines", "Volcanic & regional tremors recorded around 22 Nov (Phivolcs)"],
+    ["25", "Turin", "ATP Finals: Zverev meets Alcaraz on 22 Nov; preview only (AP)"],
+    ["26", "Australia", "National 'Grandmother' rallies over 2027 homebirth rules (ABC)"],
+    ["27", "Melbourne", "Australia beat England by 3 wickets in 1st T20I at MCG (Guardian)"],
+    ["28", "Zagreb", "Thousands rally over psychiatric patient's death; 4 probed (Reuters)"],
+    ["29", "Bangladesh", "90 extra Border Guard platoons deployed after arson (AFP)"],
+    ["30", "Vatican", "Pope Leo XIV marks Christ the King Sunday at St Peter's (Vatican)"]
+  ],
+  "pins": [
+    {"id": 1, "lon": 56.4, "lat": 26.5, "r": "MIDDLE EAST"},
+    {"id": 2, "lon": 30.7, "lat": 36.9, "r": "GLOBAL"},
+    {"id": 3, "lon": 26.8, "lat": 60.1, "r": "EUROPE"},
+    {"id": 4, "lon": 50.6, "lat": 26.2, "r": "MIDDLE EAST"},
+    {"id": 5, "lon": 51.4, "lat": 35.7, "r": "MIDDLE EAST"},
+    {"id": 6, "lon": 21.0, "lat": 52.2, "r": "EUROPE"},
+    {"id": 7, "lon": 30.3, "lat": 59.9, "r": "EUROPE"},
+    {"id": 8, "lon": 34.5, "lat": 31.5, "r": "MIDDLE EAST"},
+    {"id": 9, "lon": -108.5, "lat": 25.6, "r": "AMERICAS"},
+    {"id": 10, "lon": -77.0, "lat": 38.9, "r": "AMERICAS"},
+    {"id": 11, "lon": 30.2, "lat": 13.2, "r": "AFRICA"},
+    {"id": 12, "lon": 4.4, "lat": 50.8, "r": "EUROPE"},
+    {"id": 13, "lon": -115.1, "lat": 36.1, "r": "AMERICAS"},
+    {"id": 14, "lon": 51.5, "lat": 25.3, "r": "MIDDLE EAST"},
+    {"id": 15, "lon": 53.0, "lat": 25.8, "r": "MIDDLE EAST"},
+    {"id": 16, "lon": 25.0, "lat": 61.5, "r": "EUROPE"},
+    {"id": 17, "lon": 24.9, "lat": 60.2, "r": "EUROPE"},
+    {"id": 18, "lon": 32.5, "lat": 12.0, "r": "AFRICA"},
+    {"id": 19, "lon": -75.5, "lat": -11.5, "r": "AMERICAS"},
+    {"id": 20, "lon": 121.5, "lat": 25.0, "r": "ASIA"},
+    {"id": 21, "lon": 73.0, "lat": 33.7, "r": "ASIA"},
+    {"id": 22, "lon": 94.6, "lat": 24.4, "r": "ASIA"},
+    {"id": 23, "lon": 139.7, "lat": 35.7, "r": "ASIA"},
+    {"id": 24, "lon": 121.0, "lat": 14.0, "r": "ASIA"},
+    {"id": 25, "lon": 7.7, "lat": 45.1, "r": "GLOBAL"},
+    {"id": 26, "lon": 149.1, "lat": -35.3, "r": "OCEANIA"},
+    {"id": 27, "lon": 145.0, "lat": -37.8, "r": "OCEANIA"},
+    {"id": 28, "lon": 16.0, "lat": 45.8, "r": "AFRICA"},
+    {"id": 29, "lon": 90.4, "lat": 23.8, "r": "AMERICAS"},
+    {"id": 30, "lon": 12.5, "lat": 41.9, "r": "GLOBAL"}
+  ],
+  "date_check": "DATE CHECK · Every story happened or was first reported on Sunday 22 November 2026 in at least one time zone. Excluded as earlier news: Wall Street AI sell-off (Fri 20 Nov), Brazil supercell (Fri 20 Nov), Meiji Aug repatriation. Pending at cutoff: COP31 plenary adoption, Las Vegas GP race, ATP Turin final."
 }

@@ -10,13 +10,23 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps
 W, H = 1024, 1024
 INK = '#111111'
 SUBTLE = '#333333'
-MUTED = '#666666'
+MUTED = '#5F5F5F'
 RED = '#AF242A'
-RULE = '#D6D5D1'
-PANEL_BG = '#F5F5F3'
+RULE = '#D4D3CE'
+PANEL_BG = '#F5F5F2'
 
 FONTS = Path('/System/Library/Fonts/Supplemental')
 ASSETS = Path('/Users/ben/Workspace/Project/make-fun/world-news-2026-11-22')
+
+REGION_COLORS = {
+    'EUROPE': '#2B5B84',
+    'ASIA': '#C88A2B',
+    'MIDDLE EAST': '#AF242A',
+    'AFRICA': '#2E6F40',
+    'AMERICAS': '#6B4C9A',
+    'OCEANIA': '#2E8B8B',
+    'GLOBAL': '#555555',
+}
 
 
 @functools.lru_cache(maxsize=64)
@@ -36,8 +46,7 @@ def font(kind: str, size: int, index: int = 0) -> ImageFont.FreeTypeFont:
 
 def wrap_lines(draw: ImageDraw.ImageDraw, text: str, f: ImageFont.FreeTypeFont, max_w: int) -> list[str]:
     words = text.split()
-    lines: list[str] = []
-    cur = ''
+    lines, cur = [], ''
     for w in words:
         cand = f'{cur} {w}'.strip()
         if draw.textlength(cand, font=f) <= max_w:
@@ -51,311 +60,276 @@ def wrap_lines(draw: ImageDraw.ImageDraw, text: str, f: ImageFont.FreeTypeFont, 
     return lines
 
 
-def draw_centered_text(draw: ImageDraw.ImageDraw, cx: int, y: int, text: str, f: ImageFont.FreeTypeFont, fill: str) -> None:
+def draw_centered(draw: ImageDraw.ImageDraw, cx: int, y: int, text: str, f: ImageFont.FreeTypeFont, fill: str) -> None:
     tw = draw.textlength(text, font=f)
     draw.text((round(cx - tw / 2), y), text, font=f, fill=fill, anchor='lt')
 
 
-def draw_wavy_rule(draw: ImageDraw.ImageDraw, x1: int, x2: int, y: int, color: str = RULE) -> None:
-    pts = []
-    for x in range(x1, x2 + 1, 2):
-        dy = math.sin((x - x1) * 0.45) * 1.5
-        pts.append((x, y + dy))
-    if len(pts) > 1:
-        draw.line(pts, fill=color, width=1)
-
-
 def draw_brace(draw: ImageDraw.ImageDraw, x: int, y1: int, y2: int, side: str = 'left', color: str = '#999999') -> None:
     mid = (y1 + y2) / 2
-    dx = -7 if side == 'left' else 7
-    pts = [
-        (x - dx * 0.5, y1),
-        (x, y1 + 5),
-        (x, mid - 5),
-        (x + dx, mid),
-        (x, mid + 5),
-        (x, y2 - 5),
-        (x - dx * 0.5, y2),
-    ]
+    dx = -6 if side == 'left' else 6
+    pts = [(x - dx * 0.4, y1), (x, y1 + 4), (x, mid - 4), (x + dx, mid), (x, mid + 4), (x, y2 - 4), (x - dx * 0.4, y2)]
     draw.line(pts, fill=color, width=1)
 
 
-def load_crop(kind: str, target_w: int, target_h: int) -> Image.Image:
-    if kind == 'tehran':
-        im = Image.open(ASSETS / 'lead-illustration/tehran-dusk.png').convert('RGB')
-        w, h = im.size
-        im = im.crop((0, int(h * 0.10), w, int(h * 0.88)))
-    elif kind == 'finance':
-        im = Image.open(ASSETS / 'expanded-english/illustrations/finance-climate.png').convert('RGB')
-        w, h = im.size
-        im = im.crop((0, int(h * 0.04), w, int(h * 0.48)))
-    elif kind == 'climate':
-        im = Image.open(ASSETS / 'expanded-english/illustrations/finance-climate.png').convert('RGB')
-        w, h = im.size
-        im = im.crop((0, int(h * 0.52), w, int(h * 0.96)))
-    else:
+def draw_art(kind: str, w: int, h: int) -> Image.Image:
+    if kind == 'hormuz_photo':
         sheet = Image.open(ASSETS / 'illustration-assets/editorial-contact-sheet.png').convert('RGB')
         sw, sh = sheet.size
-        cw, ch = sw // 2, sh // 3
-        grid = {
-            'nigeria': (1, 0),
-            'brazil': (0, 1),
-            'wolbachia': (1, 1),
-            'hormuz': (0, 2),
-            'tennis': (1, 2),
-        }
-        gx, gy = grid[kind]
-        im = sheet.crop((gx * cw + 4, gy * ch + 4, (gx + 1) * cw - 4, (gy + 1) * ch - 4))
-    return ImageOps.fit(im, (target_w, target_h), method=Image.Resampling.LANCZOS)
+        im = sheet.crop((4, 2 * (sh // 3) + 4, sw // 2 - 4, sh - 4))
+        return ImageOps.fit(im, (w, h), method=Image.Resampling.LANCZOS)
+    if kind == 'cop31_photo':
+        im = Image.open(ASSETS / 'expanded-english/illustrations/finance-climate.png').convert('RGB')
+        iw, ih = im.size
+        return ImageOps.fit(im.crop((0, int(ih * 0.52), iw, int(ih * 0.96))), (w, h), method=Image.Resampling.LANCZOS)
+    if kind == 'tehran_photo':
+        im = Image.open(ASSETS / 'lead-illustration/tehran-dusk.png').convert('RGB')
+        iw, ih = im.size
+        return ImageOps.fit(im.crop((0, int(ih * 0.14), iw, int(ih * 0.86))), (w, h), method=Image.Resampling.LANCZOS)
+
+    # Crisp vector-style editorial illustrations in Pillow
+    im = Image.new('RGB', (w, h), '#DCE6EE')
+    d = ImageDraw.Draw(im)
+    if kind == 'baltic_ship':
+        d.rectangle((0, 0, w, int(h * 0.55)), fill='#CEDAE3')
+        d.rectangle((0, int(h * 0.55), w, h), fill='#3B6E8C')
+        # Ship hull + smoke
+        d.polygon([(70, int(h * 0.65)), (240, int(h * 0.65)), (225, int(h * 0.80)), (85, int(h * 0.80))], fill='#232A31')
+        d.rectangle((100, int(h * 0.50), 145, int(h * 0.65)), fill='#E9E7E2')
+        for cx, cy, r, col in [(165, 36, 18, '#555A60'), (185, 24, 22, '#6E747B'), (205, 16, 16, '#898F96')]:
+            d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=col)
+        d.ellipse((158, int(h * 0.55), 178, int(h * 0.72)), fill='#D9532F')
+    elif kind == 'bahrain_fire':
+        d.rectangle((0, 0, w, h), fill='#EFEBE4')
+        d.rectangle((0, int(h * 0.72), w, h), fill='#C8B89E')
+        d.rectangle((36, int(h * 0.42), 92, int(h * 0.72)), fill='#5D6268')
+        d.rectangle((104, int(h * 0.50), 152, int(h * 0.72)), fill='#7A7F85')
+        d.polygon([(72, int(h * 0.45)), (98, int(h * 0.18)), (118, int(h * 0.48))], fill='#D94E28')
+        d.ellipse((84, 8, 128, 36), fill='#666666')
+    elif kind == 'nato_poland':
+        d.rectangle((0, 0, w, h), fill='#E8EEF4')
+        d.polygon([(w // 2 - 28, 18), (w // 2 + 28, 18), (w // 2 + 24, 58), (w // 2, 76), (w // 2 - 24, 58)], fill='#1F4E8C')
+        d.rectangle((w // 2 - 14, 34, w // 2 + 14, 46), fill='#FFFFFF')
+        d.rectangle((w // 2 - 14, 46, w // 2 + 14, 58), fill='#AF242A')
+    elif kind == 'drone_wave':
+        d.rectangle((0, 0, w, h), fill='#1D2A38')
+        for r in (16, 30, 44):
+            d.arc((w // 2 - r, h // 2 - r + 10, w // 2 + r, h // 2 + r + 10), 190, 350, fill='#5B86A8', width=1)
+        for dx, dy in [(42, 34), (96, 26), (144, 44)]:
+            d.polygon([(dx, dy), (dx + 14, dy + 6), (dx, dy + 12)], fill='#E2583E')
+    elif kind == 'gaza_van':
+        d.rectangle((0, 0, w, h), fill='#EAE6DF')
+        d.rectangle((0, int(h * 0.70), w, h), fill='#B9B2A6')
+        d.rectangle((48, int(h * 0.42), 134, int(h * 0.70)), fill='#FFFFFF', outline='#444444')
+        d.ellipse((58, int(h * 0.65), 76, int(h * 0.80)), fill='#222222')
+        d.ellipse((110, int(h * 0.65), 128, int(h * 0.80)), fill='#222222')
+        d.polygon([(82, int(h * 0.30)), (96, int(h * 0.14)), (110, int(h * 0.42))], fill='#D94E28')
+    elif kind == 'mexico_cartel':
+        d.rectangle((0, 0, w, h), fill='#E8E1D5')
+        d.ellipse((46, 30, 82, 66), outline='#222222', width=4)
+        d.ellipse((104, 30, 140, 66), outline='#222222', width=4)
+        d.line((82, 48, 104, 48), fill='#222222', width=3)
+    elif kind == 'fbi_cyber':
+        d.rectangle((0, 0, w, h), fill='#18222D')
+        d.rectangle((32, 26, 156, 72), fill='#253545', outline='#4A6A88')
+        d.rectangle((80, 38, 108, 60), fill='#D9A136')
+        d.arc((84, 24, 104, 46), 180, 360, fill='#D9A136', width=3)
+    elif kind == 'sudan_mine':
+        d.rectangle((0, 0, w, h), fill='#EDE1CA')
+        d.rectangle((0, int(h * 0.68), w, h), fill='#C2A67D')
+        d.polygon([(94, 24), (124, 68), (64, 68)], fill='#F2C94C', outline='#111111')
+        d.text((91, 38), '!', font=font('bold', 22), fill='#111111')
+    elif kind == 'belgium_strike':
+        d.rectangle((0, 0, w, h), fill='#E4E9EE')
+        d.rectangle((0, int(h * 0.72), w, h), fill='#555A60')
+        d.polygon([(40, 56), (132, 56), (144, 46), (120, 48), (48, 48)], fill='#FFFFFF', outline='#333333')
+        d.rectangle((106, 22, 166, 38), fill=RED)
+        draw_centered(d, 136, 25, 'STRIKE', font('narrow_bold', 10), '#FFFFFF')
+    elif kind == 'f1_vegas':
+        d.rectangle((0, 0, w, h), fill='#171722')
+        for rx, col in [(36, '#AF242A'), (66, '#E2B63B'), (96, '#2E8B8B'), (126, '#6B4C9A')]:
+            d.rectangle((rx, 30, rx + 18, h - 10), fill=col)
+        draw_centered(d, w // 2, 16, 'P1', font('didot', 22, index=2), '#FFFFFF')
+    return im
 
 
-def paste_circle(canvas: Image.Image, im: Image.Image, cx: int, cy: int, diameter: int) -> None:
-    sq = ImageOps.fit(im, (diameter, diameter), method=Image.Resampling.LANCZOS)
-    mask = Image.new('L', (diameter, diameter), 0)
-    mdraw = ImageDraw.Draw(mask)
-    mdraw.ellipse((0, 0, diameter - 1, diameter - 1), fill=255)
-    canvas.paste(sq, (cx - diameter // 2, cy - diameter // 2), mask)
-    draw = ImageDraw.Draw(canvas)
-    draw.ellipse((cx - diameter // 2, cy - diameter // 2, cx + diameter // 2 - 1, cy + diameter // 2 - 1), outline=RULE, width=1)
+def draw_badge(im: Image.Image, text: str, bg: str = RED) -> None:
+    d = ImageDraw.Draw(im)
+    f = font('narrow_bold', 10)
+    tw = d.textlength(text, font=f)
+    d.rectangle((6, 6, round(tw + 16), 22), fill=bg)
+    d.text((11, 8), text, font=f, fill='#FFFFFF', anchor='lt')
+
+
+def draw_world_map(canvas: Image.Image, x0: int, y0: int, mw: int, mh: int, pins: list[dict]) -> None:
+    d = ImageDraw.Draw(canvas)
+    d.rectangle((x0, y0, x0 + mw, y0 + mh), fill='#F2F4F5', outline=RULE, width=1)
+
+    def proj(lon: float, lat: float) -> tuple[int, int]:
+        px = x0 + round(((lon + 180.0) / 360.0) * mw)
+        py = y0 + round(((85.0 - lat) / 145.0) * mh)
+        return px, py
+
+    # Simplified crisp landmass polygons
+    continents = [
+        [(-165, 65), (-130, 70), (-80, 62), (-55, 50), (-75, 28), (-105, 18), (-125, 38)],  # N America
+        [(-80, 12), (-50, 5), (-35, -8), (-55, -35), (-70, -52), (-80, -15)],  # S America
+        [(-10, 36), (0, 50), (15, 58), (35, 68), (55, 65), (50, 45), (30, 38), (5, 36)],  # Europe
+        [(-16, 35), (10, 37), (34, 31), (50, 12), (40, -10), (28, -34), (15, -30), (10, 5), (-16, 15)],  # Africa
+        [(35, 38), (60, 38), (75, 20), (105, 10), (122, 24), (142, 44), (165, 64), (100, 72), (55, 68)],  # Asia
+        [(114, -22), (145, -12), (153, -28), (138, -38), (115, -34)],  # Australia
+    ]
+    for poly in continents:
+        d.polygon([proj(lo, la) for lo, la in poly], fill='#DFDDD4', outline='#C5C2B7')
+
+    f_pin = font('narrow_bold', 8)
+    for p in pins:
+        px, py = proj(p['lon'], p['lat'])
+        px = max(x0 + 8, min(x0 + mw - 8, px))
+        py = max(y0 + 8, min(y0 + mh - 8, py))
+        col = REGION_COLORS.get(p['r'], '#555555')
+        d.ellipse((px - 6, py - 6, px + 6, py + 6), fill=col, outline='#FFFFFF')
+        draw_centered(d, px, py - 5, str(p['id']), f_pin, '#FFFFFF')
 
 
 def render(data_path: Path, out_path: Path) -> None:
     data = json.loads(data_path.read_text(encoding='utf-8'))
     canvas = Image.new('RGB', (W, H), '#FFFFFF')
-    draw = ImageDraw.Draw(canvas)
+    d = ImageDraw.Draw(canvas)
+    mx = 22
+    iw = W - 2 * mx  # 980
 
-    mx = 24
-    inner_w = W - 2 * mx  # 976
+    # 1. Masthead with Vanity Fair-style flanking braces
+    d.text((mx, 8), 'THE WORLD IN ONE DAY', font=font('narrow_bold', 9), fill=RED, anchor='lt')
+    rt = '30 STORIES · 7 REGIONS · ALL DATED SUNDAY 22 NOV 2026'
+    d.text((W - mx - d.textlength(rt, font=font('narrow_bold', 9)), 8), rt, font=font('narrow_bold', 9), fill=MUTED, anchor='lt')
 
-    # 1. Masthead with flanking editorial braces (Vanity Fair style)
-    draw_brace(draw, mx + 8, 18, 80, side='left')
-    draw_brace(draw, mx + 188, 18, 80, side='right')
-    draw_centered_text(draw, mx + 98, 20, '24 STORIES · 3 DESKS', font('narrow_bold', 9), RED)
-    draw_centered_text(draw, mx + 98, 34, 'EARLY EDITION', font('georgia_bold', 11), INK)
-    draw_centered_text(draw, mx + 98, 50, 'SUNDAY · 22 NOV 2026', font('narrow', 10), SUBTLE)
-    draw_centered_text(draw, mx + 98, 65, 'WORLD DIGEST →', font('narrow_bold', 9), RED)
+    draw_brace(d, mx + 4, 24, 72, 'left')
+    draw_brace(d, mx + 134, 24, 72, 'right')
+    draw_centered(d, mx + 69, 27, 'THE WORLD DAILY', font('narrow_bold', 10), INK)
+    draw_centered(d, mx + 69, 41, 'EARLY EDITION', font('sans', 8), MUTED)
+    draw_centered(d, mx + 69, 54, '30 STORIES →', font('narrow_bold', 9), RED)
 
-    f_mast = font('didot', 54, index=2)
-    draw_centered_text(draw, W // 2, 18, data['masthead'], f_mast, INK)
+    draw_centered(d, W // 2, 22, data['masthead'], font('didot', 48, index=2), INK)
 
-    rx = W - mx - 196
-    draw_brace(draw, rx + 8, 18, 80, side='left')
-    draw_brace(draw, rx + 188, 18, 80, side='right')
-    draw_centered_text(draw, rx + 98, 20, 'KEY TRENDS', font('narrow_bold', 9), RED)
-    draw_centered_text(draw, rx + 98, 34, 'S&P −8.6% · BRENT $92.57', font('narrow_bold', 11), INK)
-    draw_centered_text(draw, rx + 98, 50, 'TAIWAN >80% → 3.8%', font('narrow', 10), SUBTLE)
-    draw_centered_text(draw, rx + 98, 65, 'COP31 IN OVERTIME →', font('narrow_bold', 9), RED)
+    rx = W - mx - 138
+    draw_brace(d, rx + 4, 24, 72, 'left')
+    draw_brace(d, rx + 134, 24, 72, 'right')
+    draw_centered(d, rx + 69, 27, '7 REGIONS', font('narrow_bold', 10), INK)
+    draw_centered(d, rx + 69, 41, 'VERIFIED 22 NOV', font('sans', 8), MUTED)
+    draw_centered(d, rx + 69, 54, 'DATE CHECK →', font('narrow_bold', 9), RED)
 
-    # Sub-masthead navigation bar
-    draw.line((mx, 90, W - mx, 90), fill=RULE, width=1)
-    draw.text((mx, 95), '22 NOVEMBER 2026', font=font('italic', 11), fill=RED, anchor='lt')
-    draw_centered_text(draw, W // 2, 95, 'WORLD AFFAIRS ▸    ECONOMY & SOCIETY ▸    PLANET & PEOPLE ▸    KEY NUMBERS', font('narrow_bold', 10), INK)
-    rw_num = draw.textlength('01–24', font=font('narrow_bold', 10))
-    draw.text((W - mx - rw_num, 95), '01–24', font=font('narrow_bold', 10), fill=MUTED, anchor='lt')
-    draw.line((mx, 113, W - mx, 113), fill=INK, width=2)
+    draw_centered(d, W // 2, 74, data['deck'], font('italic', 11), SUBTLE)
+    d.line((mx, 92, W - mx, 92), fill=INK, width=2)
 
-    # 2. Asymmetric 3-Zone Hero Band (y = 124..446)
-    hero_top = 124
-    left_x, left_w = mx, 196
-    ctr_x, ctr_w = mx + left_w + 18, 492
-    side_x, side_w = ctr_x + ctr_w + 18, W - mx - (ctr_x + ctr_w + 18)  # 252
+    # 2. 6-Stat Breaking Numbers Strip (y = 97..137)
+    sw = iw // 6
+    for i, st in enumerate(data['stats']):
+        sx = mx + i * sw
+        if i > 0:
+            d.line((sx, 99, sx, 134), fill=RULE, width=1)
+        d.text((sx + 6, 98), st['num'], font=font('georgia_bold', 19), fill=INK, anchor='lt')
+        nw = d.textlength(st['num'], font=font('georgia_bold', 19)) + 12
+        for li, line in enumerate(st['desc'].split('\n')[:2]):
+            d.text((sx + nw, 100 + li * 11), line, font=font('sans', 8), fill=MUTED, anchor='lt')
+    d.line((mx, 138, W - mx, 138), fill=RULE, width=1)
 
-    # Left Column: 2 stacked photo-led cards ([09] Wall Street, [08] Lewis Pugh)
-    left_cards = [
-        ('finance', 'MARKETS · −8.6% WK', 'Wall Street reels as AI trade unwinds', 'S&P −8.6% · Nasdaq ≈−10%', 'CNBC / NPR · wk to 20 Nov'),
-        ('hormuz', 'HORMUZ · 15KM SWIM', 'Pugh swims to spotlight the strait', 'Urges ceasefire & pollution cleanup', 'AFP / ST · 22 Nov'),
-    ]
-    ly = hero_top
-    for idx, (crop_k, cat, hline, sub, src) in enumerate(left_cards):
-        im = load_crop(crop_k, left_w, 72)
-        canvas.paste(im, (left_x, ly))
-        draw.rectangle((left_x, ly, left_x + left_w - 1, ly + 71), outline=RULE, width=1)
-        ly += 77
-        draw_centered_text(draw, left_x + left_w // 2, ly, cat, font('narrow_bold', 9), RED)
-        ly += 13
-        for hl in wrap_lines(draw, hline, font('georgia_bold', 11), left_w)[:2]:
-            draw_centered_text(draw, left_x + left_w // 2, ly, hl, font('georgia_bold', 11), INK)
-            ly += 13
-        draw_centered_text(draw, left_x + left_w // 2, ly + 1, sub, font('sans', 9), SUBTLE)
-        ly += 13
-        draw_centered_text(draw, left_x + left_w // 2, ly, src, font('sans', 8), MUTED)
-        ly += 16
-        if idx == 0:
-            draw.line((left_x + 20, ly - 3, left_x + left_w - 20, ly - 3), fill=RULE, width=1)
-            ly += 5
+    # 3. 7-Region Color Bar (y = 143..163)
+    tot = sum(r['count'] for r in data['regions'])
+    rx_cur = mx
+    for r in data['regions']:
+        rw = round((r['count'] / tot) * iw)
+        d.rectangle((rx_cur, 143, rx_cur + rw - 2, 161), fill=r['color'])
+        draw_centered(d, rx_cur + rw // 2, 146, r['name'], font('narrow_bold', 9), '#FFFFFF')
+        rx_cur += rw
 
-    # Center Hero: Tehran Power Rationing ([01])
-    hero_im = load_crop('tehran', ctr_w, 186)
-    canvas.paste(hero_im, (ctr_x, hero_top))
-    draw.rectangle((ctr_x, hero_top, ctr_x + ctr_w - 1, hero_top + 185), outline=RULE, width=1)
-    hy = hero_top + 194
-    draw_centered_text(draw, ctr_x + ctr_w // 2, hy, 'W O R L D   /   I R A N   ·   2 2   N O V   2 0 2 6', font('narrow_bold', 10), RED)
-    hy += 16
-    draw_centered_text(draw, ctr_x + ctr_w // 2, hy, 'Iran Announces Power Rationing', font('didot', 25, index=2), INK)
-    hy += 28
-    draw_centered_text(draw, ctr_x + ctr_w // 2, hy, 'as Gulf Tensions Persist', font('didot', 22, index=1), INK)
-    hy += 28
-    hero_sum = 'Utility plans up to 2-hr daily outages from 22 Nov; Bahrain reports industrial-facility strike.'
-    for sl in wrap_lines(draw, hero_sum, font('sans', 10), ctr_w - 30)[:2]:
-        draw_centered_text(draw, ctr_x + ctr_w // 2, hy, sl, font('sans', 10), SUBTLE)
-        hy += 13
-    draw_centered_text(draw, ctr_x + ctr_w // 2, hy + 3, '→   [01] RFE/RL · Reuters / ST · 22 Nov', font('sans', 8), RED)
+    # 4. Top 3 Lead Illustrated Cards (y = 170..356)
+    lw = (iw - 24) // 3  # 318
+    for i, lead in enumerate(data['leads']):
+        lx = mx + i * (lw + 12)
+        im = draw_art(lead['art'], lw, 102)
+        draw_badge(im, lead['badge'], RED if i != 1 else '#2B5B84')
+        canvas.paste(im, (lx, 170))
+        d.rectangle((lx, 170, lx + lw - 1, 271), outline=RULE, width=1)
+        d.text((lx, 276), lead['kicker'], font=font('narrow_bold', 9), fill=RED, anchor='lt')
+        ty = 289
+        for tl in wrap_lines(d, lead['title'], font('georgia_bold', 12), lw)[:2]:
+            d.text((lx, ty), tl, font=font('georgia_bold', 12), fill=INK, anchor='lt')
+            ty += 14
+        for bl in wrap_lines(d, lead['body'], font('sans', 9), lw)[:2]:
+            d.text((lx, ty + 2), bl, font=font('sans', 9), fill=SUBTLE, anchor='lt')
+            ty += 11
+    d.line((mx, 355, W - mx, 355), fill=RULE, width=1)
 
-    # Right Sidebar: KEY NUMBERS & TRENDS
-    side_bot = 442
-    draw.rectangle((side_x, hero_top, side_x + side_w, side_bot), fill=PANEL_BG)
-    draw.rectangle((side_x, hero_top, side_x + side_w, side_bot), outline=RULE, width=1)
-    sx_c = side_x + side_w // 2
-    sy = hero_top + 10
-    draw.line((side_x + 28, sy + 6, side_x + 62, sy + 6), fill=INK, width=1)
-    draw.line((side_x + side_w - 62, sy + 6, side_x + side_w - 28, sy + 6), fill=INK, width=1)
-    draw_centered_text(draw, sx_c, sy, 'KEY NUMBERS', font('narrow_bold', 12), INK)
-    sy += 22
+    # 5. Middle 10 Illustrated Cards (2 rows x 5 cols, y = 362..646)
+    cw = (iw - 4 * 10) // 5  # 188
+    for idx, c in enumerate(data['cards']):
+        row, col = divmod(idx, 5)
+        cx = mx + col * (cw + 10)
+        cy = 362 + row * 144
+        im = draw_art(c['art'], cw, 64)
+        draw_badge(im, c['badge'], '#1D2A38' if row == 1 else RED)
+        canvas.paste(im, (cx, cy))
+        d.rectangle((cx, cy, cx + cw - 1, cy + 63), outline=RULE, width=1)
+        d.text((cx, cy + 68), c['kicker'], font=font('narrow_bold', 8), fill=RED, anchor='lt')
+        ty = cy + 80
+        for tl in wrap_lines(d, c['title'], font('georgia_bold', 10), cw)[:2]:
+            d.text((cx, ty), tl, font=font('georgia_bold', 10), fill=INK, anchor='lt')
+            ty += 12
+        for sl in wrap_lines(d, c['sub'], font('sans', 8), cw)[:2]:
+            d.text((cx, ty + 2), sl, font=font('sans', 8), fill=MUTED, anchor='lt')
+            ty += 10
+    d.line((mx, 650, W - mx, 650), fill=INK, width=2)
 
-    # Bar chart: US Stocks weekly
-    draw_centered_text(draw, sx_c, sy, 'US STOCKS · WK TO 20 NOV', font('narrow_bold', 9), RED)
-    sy += 14
-    bars = [('S&P 500', 8.6, '−8.6%'), ('Dow', 8.0, '−8.0%'), ('Nasdaq', 10.0, '≈−10%')]
-    bx0 = side_x + 56
-    bmax = 124
-    for lbl, val, val_s in bars:
-        draw.text((side_x + 12, sy), lbl, font=font('sans', 9), fill=INK, anchor='lt')
-        bw = round((val / 11.0) * bmax)
-        draw.rectangle((bx0, sy + 2, bx0 + bw, sy + 11), fill=RED)
-        draw.text((bx0 + bw + 5, sy), val_s, font=font('bold', 9), fill=RED, anchor='lt')
-        sy += 16
-    sy += 6
-    draw_wavy_rule(draw, side_x + 18, side_x + side_w - 18, sy)
-    sy += 10
+    # 6. Bottom 2-Zone: Left World Map + Right 17 Briefs + DATE CHECK (y = 658..994)
+    map_w = 340
+    d.text((mx, 658), 'WHERE IT HAPPENED · NUMBERED AS THE STORIES', font=font('narrow_bold', 10), fill=INK, anchor='lt')
+    draw_world_map(canvas, mx, 675, map_w, 250, data['pins'])
+    # Legend under map
+    leg_y = 934
+    lx_cur = mx
+    for rname, rcol in REGION_COLORS.items():
+        d.ellipse((lx_cur, leg_y + 2, lx_cur + 7, leg_y + 9), fill=rcol)
+        d.text((lx_cur + 10, leg_y), rname.title(), font=font('sans', 8), fill=MUTED, anchor='lt')
+        lx_cur += round(d.textlength(rname.title(), font=font('sans', 8)) + 18)
+        if lx_cur > mx + map_w - 40:
+            lx_cur = mx
+            leg_y += 14
 
-    # Numeric trend blocks
-    trend_blocks = [
-        ('US GASOLINE & BRENT · 20 NOV', '$3.69/gal  ·  Brent $92.57', '−3¢/day (+59¢/yr) · Brent +0.64% · WTI $83.98'),
-        ('TAIWAN CHINA EXPOSURE', '>80% to 3.8%', 'Outbound inv. 2010–25 · CN+HK exports ≈44% to ≈27%'),
-        ('HEALTH, LEGAL & DIGITAL', '≈69% fewer  ·  $7.25bn', 'Wolbachia dengue · Bayer deal · 19,372 YT purged'),
-    ]
-    for t_idx, (t_cat, t_big, t_sub) in enumerate(trend_blocks):
-        draw_centered_text(draw, sx_c, sy, t_cat, font('narrow_bold', 9), RED)
-        sy += 12
-        draw_centered_text(draw, sx_c, sy, t_big, font('georgia_bold', 13), INK)
-        sy += 17
-        for tl in wrap_lines(draw, t_sub, font('sans', 8), side_w - 18)[:2]:
-            draw_centered_text(draw, sx_c, sy, tl, font('sans', 8), MUTED)
-            sy += 11
-        sy += 4
-        if t_idx < len(trend_blocks) - 1:
-            draw_wavy_rule(draw, side_x + 28, side_x + side_w - 28, sy)
-            sy += 8
+    # Right side: 17 briefs in 2 sub-columns + DATE CHECK box
+    bx = mx + map_w + 18
+    bw = W - mx - bx  # 622
+    d.text((bx, 658), 'ALSO ON SUNDAY 22 NOVEMBER · 17 MORE STORIES', font=font('narrow_bold', 10), fill=RED, anchor='lt')
+    d.line((bx, 672, W - mx, 672), fill=RULE, width=1)
 
-    # 3. Middle "FEATURED" Band with 4 Circular Medallions (y = 456..626)
-    feat_top, feat_bot = 460, 622
-    draw.rectangle((mx, feat_top, W - mx, feat_bot), fill=PANEL_BG)
-    draw.rectangle((mx, feat_top, W - mx, feat_bot), outline=RULE, width=1)
-    # Floating "// FEATURED //" header pill
-    pill_w = 126
-    draw.rectangle((W // 2 - pill_w // 2, feat_top - 10, W // 2 + pill_w // 2, feat_top + 10), fill='#FFFFFF', outline=RULE, width=1)
-    draw_centered_text(draw, W // 2, feat_top - 7, '«  FEATURED  »', font('narrow_bold', 11), INK)
+    sub_w = (bw - 16) // 2
+    for idx, (bid, bloc, btxt) in enumerate(data['briefs']):
+        col = 0 if idx < 9 else 1
+        row = idx if idx < 9 else idx - 9
+        sx = bx + col * (sub_w + 16)
+        sy = 678 + row * 28
+        d.text((sx, sy), bid, font=font('narrow_bold', 9), fill=RED, anchor='lt')
+        d.text((sx + 16, sy), bloc, font=font('bold', 9), fill=INK, anchor='lt')
+        lw_loc = round(d.textlength(bloc, font=font('bold', 9))) + 20
+        lines = wrap_lines(d, btxt, font('sans', 8), sub_w - lw_loc)
+        if lines:
+            d.text((sx + lw_loc, sy + 1), lines[0], font=font('sans', 8), fill=SUBTLE, anchor='lt')
+            if len(lines) > 1:
+                d.text((sx + 16, sy + 12), lines[1], font=font('sans', 8), fill=SUBTLE, anchor='lt')
 
-    featured = [
-        ('climate', 'CLIMATE · ANTALYA', 'COP31 talks enter overtime', '~200 delegations weigh deal'),
-        ('brazil', 'WEATHER · 114 KM/H', 'Brazil supercell hits thousands', 'Tupanciretã · at least 3 dead'),
-        ('wolbachia', 'HEALTH · ≈69% FEWER', 'Wolbachia cuts dengue in trial', '4-yr Brazil study, 5,700+ kids'),
-        ('nigeria', 'NIGERIA · 24+ DEAD', 'Funeral boat capsizes in Bayelsa', '24 rescued · search continues'),
-    ]
-    fw = inner_w // 4
-    for f_idx, (fk, fcat, ftitle, fsub) in enumerate(featured):
-        fcx = mx + f_idx * fw + fw // 2
-        f_im = load_crop(fk, 160, 160)
-        paste_circle(canvas, f_im, fcx, feat_top + 56, 76)
-        draw_centered_text(draw, fcx, feat_top + 101, fcat, font('narrow_bold', 9), RED)
-        t_lines = wrap_lines(draw, ftitle, font('georgia_bold', 11), fw - 22)[:2]
-        ty = feat_top + 115
-        for fl in t_lines:
-            draw_centered_text(draw, fcx, ty, fl, font('georgia_bold', 11), INK)
-            ty += 13
-        draw_centered_text(draw, fcx, ty + 3, fsub, font('sans', 8), MUTED)
+    # DATE CHECK box at bottom right
+    dc_y = 934
+    d.rectangle((bx, dc_y, W - mx, 990), fill=PANEL_BG, outline=RED, width=1)
+    dy = dc_y + 6
+    for dl in wrap_lines(d, data['date_check'], font('sans', 8), bw - 14)[:4]:
+        d.text((bx + 7, dy), dl, font=font('sans', 8), fill=INK, anchor='lt')
+        dy += 12
 
-    # 4. Bottom 3-Column Section with Red Top Rules + Downward Arrows (y = 638..994)
-    bot_top = 640
-    col_gap = 26
-    col_w = (inner_w - 2 * col_gap) // 3  # 308
-
-    # Vertical column dividers
-    for c_i in (1, 2):
-        gx = mx + c_i * col_w + (c_i - 1) * col_gap + col_gap // 2
-        draw.line((gx, bot_top + 16, gx, 994), fill=RULE, width=1)
-
-    bottom_cols = [
-        ('WORLD AFFAIRS', None, [
-            ('02', 'Bahrain reports industrial-facility strike', 'Fire reported 21 Nov, no injuries; Iran cites US targets · Reuters / ST'),
-            ('03', 'Baltic drone strike forces ship evacuation', 'Sparta II’s 16 crew rescued by Finland; cargo unconfirmed · Reuters'),
-            ('04', 'NATO reassures Poland after incursion', 'Rutte pledges defence after 3 Russian objects enter airspace · Reuters'),
-            ('05', 'Taiwan warns Canada on China trade', 'Urges weighing coercion risks; investment share fell >80%→3.8% · AP'),
-            ('06', 'Bangladesh adds 90 guard platoons', 'Security reinforced after political arson ahead of Hasina vow · AFP'),
-            ('07', 'Japan ad faces vetting backlash', 'Incomplete check on YouTuber in ¥300m security campaign · Kyodo'),
-        ]),
-        ('ECONOMY & SOCIETY', None, [
-            ('10', 'White House touts $17bn+ Asia deals', 'Commercial & defence packages; announced, not disbursed · Reuters'),
-            ('11', 'Trump orders contractor Congress alerts', 'Federal firms must notify White House before disclosures · Reuters'),
-            ('12', 'Indonesia queries 19,372 YT removals', 'Asks Google to explain Q3 coordinated-influence purge · ST'),
-            ('13', 'Judge clears $7.25bn Bayer settlement', 'Roundup cancer claims deal; Bayer denies causation · NPR'),
-            ('14', 'Jury convicts in Palisades Fire retrial', 'Rinderknecht guilty on 2025 arson counts; sentencing Mar 2027 · AP'),
-            ('15', 'Meiji’s Alaska repatriation, revisited', '22 Nov feature details Aug return of 11 bone fragments & 1 object · Asahi'),
-            ('16', 'Zagreb rallies over patient’s death', 'Thousands protest after footage; 4 technicians investigated · Reuters'),
-        ]),
-        ('PLANET & PEOPLE', ('tennis', 'SPORT · TURIN PREVIEW', 'Zverev meets Alcaraz in ATP final', '22 Nov title match set after Saturday semifinals · AP / ST'), [
-            ('20', 'Hillsborough dengue hits 12-week low', '19 local cases (8–14 Nov); Florida emergency runs to 26 Nov · WUSF'),
-            ('22', 'Magnitude 4.1 quake hits Myanmar', '95 km depth early 22 Nov; no casualty report yet · ANI / NCS'),
-            ('23', 'US gas eases to $3.69; Brent $92.57', 'Pump price −3¢/day (+59¢/yr); Brent +0.64%, WTI $83.98/bbl · CNBC'),
-        ]),
-    ]
-
-    for c_idx, (sec_name, photo_lead, items) in enumerate(bottom_cols):
-        cx = mx + c_idx * (col_w + col_gap)
-        ccx = cx + col_w // 2
-
-        # Red top rule with centered label + downward arrow (Vanity Fair style)
-        lbl_w = draw.textlength(sec_name, font=font('narrow_bold', 12)) + 16
-        draw.line((cx, bot_top + 6, ccx - lbl_w / 2, bot_top + 6), fill=RED, width=1)
-        draw.line((ccx + lbl_w / 2, bot_top + 6, cx + col_w, bot_top + 6), fill=RED, width=1)
-        draw_centered_text(draw, ccx, bot_top, sec_name, font('narrow_bold', 12), RED)
-        draw_centered_text(draw, ccx, bot_top + 13, '↓', font('bold', 11), RED)
-
-        cy = bot_top + 30
-        if photo_lead is not None:
-            pk, pcat, phead, psub = photo_lead
-            pim = load_crop(pk, col_w, 92)
-            canvas.paste(pim, (cx, cy))
-            draw.rectangle((cx, cy, cx + col_w - 1, cy + 91), outline=RULE, width=1)
-            cy += 97
-            draw_centered_text(draw, ccx, cy, pcat, font('narrow_bold', 9), RED)
-            cy += 12
-            draw_centered_text(draw, ccx, cy, phead, font('georgia_bold', 12), INK)
-            cy += 15
-            draw_centered_text(draw, ccx, cy, psub, font('sans', 9), SUBTLE)
-            cy += 16
-            draw.line((cx, cy, cx + col_w, cy), fill=RULE, width=1)
-            cy += 7
-
-        rem_h = 994 - cy
-        slot_h = rem_h / len(items)
-        for i_idx, (iid, ihead, isum) in enumerate(items):
-            iy = round(cy + i_idx * slot_h)
-            draw.text((cx, iy + 1), iid, font=font('narrow_bold', 10), fill=RED, anchor='lt')
-            draw.text((cx + 17, iy), ihead, font=font('georgia_bold', 10), fill=INK, anchor='lt')
-            by = iy + 14
-            for bl in wrap_lines(draw, isum, font('sans', 9), col_w)[:2]:
-                draw.text((cx, by), bl, font=font('sans', 9), fill=SUBTLE, anchor='lt')
-                by += 11
-            if i_idx < len(items) - 1:
-                ry = round(cy + (i_idx + 1) * slot_h) - 4
-                draw.line((cx, ry, cx + col_w, ry), fill=RULE, width=1)
-
-    # 5. Footer
-    draw.line((mx, 998, W - mx, 998), fill=RULE, width=1)
-    draw.text((mx, 1003), data['footer'], font=font('sans', 8), fill=MUTED, anchor='lt')
-    rw_end = draw.textlength('01–24', font=font('narrow_bold', 8))
-    draw.text((W - mx - rw_end, 1003), '01–24', font=font('narrow_bold', 8), fill=INK, anchor='lt')
+    # 7. Footer
+    d.line((mx, 998, W - mx, 998), fill=RULE, width=1)
+    d.text((mx, 1004), 'Every story happened or was first reported on Sunday 22 November 2026 in at least one time zone.', font=font('sans', 8), fill=MUTED, anchor='lt')
+    rt_end = 'Sources named beside each story · 01–30'
+    d.text((W - mx - d.textlength(rt_end, font=font('sans', 8)), 1004), rt_end, font=font('sans', 8), fill=MUTED, anchor='lt')
 
     canvas.save(out_path, format='PNG', optimize=True)
     if out_path.stat().st_size > 1048576:
