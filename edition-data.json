@@ -1,0 +1,176 @@
+{
+  "masthead": "THE WORLD DAILY",
+  "date": "22 NOVEMBER 2026",
+  "edition": "SUNDAY · EARLY EDITION",
+  "tagline": "The world, in perspective.",
+  "eyebrow_left": "WORLD NEWS IN ONE IMAGE · 22 NOVEMBER 2026",
+  "eyebrow_right": "24 STORIES · 3 DESKS",
+  "columns": [
+    {
+      "label": "01 / WORLD AFFAIRS",
+      "lead": {
+        "id": "01",
+        "title_roman": "Iran announces power rationing",
+        "title_italic": "as Gulf tensions persist",
+        "summary": "Restrictions begin 22 Nov with outages up to 2 hours by area, adding strain to daily life and an aging grid.",
+        "source": "[01] RFE/RL · 22 Nov",
+        "image_crop": "tehran"
+      },
+      "items": [
+        {
+          "id": "02",
+          "headline": "Bahrain reports industrial strike",
+          "summary": "Facility hit 21 Nov causing fire, no injuries; Iran cites US targets.",
+          "source": "Reuters / ST · 22 Nov"
+        },
+        {
+          "id": "03",
+          "headline": "Baltic drone strike evacuates ship",
+          "summary": "Sparta II’s 16 crew rescued by Finland; cargo remains unconfirmed.",
+          "source": "Reuters · 21 Nov"
+        },
+        {
+          "id": "04",
+          "headline": "NATO reassures Poland on airspace",
+          "summary": "Rutte pledges defence after 3 Russian objects enter; allies meet Mon.",
+          "source": "Reuters / PAP · 21 Nov"
+        },
+        {
+          "id": "05",
+          "headline": "Taiwan warns Canada on China trade",
+          "summary": "Outbound investment share fell >80% to 3.8%; cites economic coercion.",
+          "source": "AP · updated 22 Nov"
+        },
+        {
+          "id": "06",
+          "headline": "Bangladesh adds 90 guard platoons",
+          "summary": "Security reinforced after political arson ahead of Hasina’s vowed return.",
+          "source": "AFP / ST · 21 Nov"
+        },
+        {
+          "id": "07",
+          "headline": "Japan ad faces vetting backlash",
+          "summary": "Officials admit incomplete checks on YouTuber in ¥300m campaign.",
+          "source": "Kyodo / ST · 21 Nov"
+        },
+        {
+          "id": "08",
+          "headline": "Lewis Pugh swims 15km near Hormuz",
+          "summary": "Urges ceasefire, reopening the strait and marine pollution cleanup.",
+          "source": "AFP / ST · 22 Nov"
+        }
+      ]
+    },
+    {
+      "label": "02 / ECONOMY & SOCIETY",
+      "lead": {
+        "id": "09",
+        "title_roman": "Wall Street reels",
+        "title_italic": "as the AI trade unwinds",
+        "summary": "AI-led sell-off caps bruising week to 20 Nov: S&P 500 −8.6%, Dow −8%, Nasdaq ≈−10%.",
+        "source": "[09] CNBC; AP / NPR · wk to 20 Nov",
+        "image_crop": "finance"
+      },
+      "items": [
+        {
+          "id": "10",
+          "headline": "White House touts $17bn+ Asia deals",
+          "summary": "South-east Asian commercial and defence packages; announced, not paid.",
+          "source": "Reuters · 19 Nov"
+        },
+        {
+          "id": "11",
+          "headline": "Trump orders contractor disclosures",
+          "summary": "Federal firms must alert White House before giving Congress records.",
+          "source": "Reuters · 21 Nov"
+        },
+        {
+          "id": "12",
+          "headline": "Indonesia queries YouTube purge",
+          "summary": "Asks Google to explain 19,372 Q3 channel removals over influence ops.",
+          "source": "The Straits Times · 20–21 Nov"
+        },
+        {
+          "id": "13",
+          "headline": "Judge clears $7.25bn Bayer deal",
+          "summary": "Roundup cancer settlement approved; Bayer continues to deny causation.",
+          "source": "NPR · 21 Nov"
+        },
+        {
+          "id": "14",
+          "headline": "Jury convicts in Palisades retrial",
+          "summary": "Rinderknecht guilty on 2025 fire arson counts; sentencing 17 Mar 2027.",
+          "source": "AP / NPR · 21 Nov"
+        },
+        {
+          "id": "15",
+          "headline": "Meiji’s Alaska return, revisited",
+          "summary": "22 Nov feature details Aug repatriation of 11 bone fragments & 1 object.",
+          "source": "Asahi Shimbun · 22 Nov"
+        },
+        {
+          "id": "16",
+          "headline": "Zagreb rallies over patient death",
+          "summary": "Thousands protest after footage; 4 hospital technicians investigated.",
+          "source": "Reuters / ST · 22 Nov"
+        }
+      ]
+    },
+    {
+      "label": "03 / PLANET & PEOPLE",
+      "lead": {
+        "id": "17",
+        "title_roman": "Climate talks enter overtime",
+        "title_italic": "in Antalya",
+        "summary": "COP31 negotiators issue revised package after overnight talks; ~200 delegations weigh deal.",
+        "source": "[17] Reuters / KFGO; UN News · 22 Nov",
+        "image_crop": "climate"
+      },
+      "items": [
+        {
+          "id": "18",
+          "headline": "Brazil supercell damages thousands",
+          "summary": "Tupanciretã hit by 114 km/h gusts on 20 Nov; at least 3 dead.",
+          "source": "Reuters / ST · 22 Nov"
+        },
+        {
+          "id": "19",
+          "headline": "Wolbachia cuts dengue ~69% in trial",
+          "summary": "4-year Brazil study of 5,700+ children vs comparison areas.",
+          "source": "AP / ST · 22 Nov"
+        },
+        {
+          "id": "20",
+          "headline": "Hillsborough dengue hits 12-wk low",
+          "summary": "19 local cases (8–14 Nov); Florida emergency extended to 26 Nov.",
+          "source": "WUSF · 20 Nov"
+        },
+        {
+          "id": "21",
+          "headline": "24+ die as Nigeria boat capsizes",
+          "summary": "Funeral vessel sinks in Bayelsa; 24 rescued, search continues.",
+          "source": "AP / ABC News · 21 Nov"
+        },
+        {
+          "id": "22",
+          "headline": "M4.1 earthquake hits Myanmar",
+          "summary": "Recorded at 95 km depth early 22 Nov; no casualty report yet.",
+          "source": "ANI / NCS · 22 Nov"
+        },
+        {
+          "id": "23",
+          "headline": "US gas eases to $3.69; Brent $92.57",
+          "summary": "Pump price −3¢/day (+59¢/yr); Brent +0.64%, WTI $83.98/bbl.",
+          "source": "CNBC / AAA · 20 Nov"
+        },
+        {
+          "id": "24",
+          "headline": "Zverev meets Alcaraz in ATP final",
+          "summary": "Turin title match set for 22 Nov after Saturday semifinal wins.",
+          "source": "AP / ST · 22 Nov preview"
+        }
+      ]
+    }
+  ],
+  "footer": "Early-edition snapshot; some events predate 22 Nov. Illustrations are conceptual, not documentary photographs. COP31 approval pending; tennis is a preview."
+}
