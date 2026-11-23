@@ -16,202 +16,223 @@ REGION_OKLCH = {
 }
 
 SVGS: dict[str, str] = {
-    'cop31_scene': """
-    <svg viewBox="0 0 318 112" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="318" height="112" fill="oklch(0.96 0.01 85)"/>
-      <circle cx="159" cy="50" r="42" fill="none" stroke="oklch(0.88 0.02 220)" stroke-width="1" stroke-dasharray="3 3"/>
-      <g transform="translate(14,24)">
-        <rect width="74" height="48" rx="2" fill="oklch(0.48 0.21 25)"/>
-        <circle cx="28" cy="24" r="11" fill="white"/>
-        <circle cx="32" cy="24" r="8.8" fill="oklch(0.48 0.21 25)"/>
-        <polygon points="45,24 51,22 47,27 47,21 51,26" fill="white"/>
-        <text x="37" y="58" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="800" font-size="8.5" fill="oklch(0.35 0.02 260)">TÜRKİYE</text>
+    'cop31_collapse': """
+    <svg viewBox="0 0 318 118" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="318" height="118" fill="oklch(0.96 0.01 85)"/>
+      <circle cx="159" cy="54" r="40" fill="none" stroke="oklch(0.86 0.02 220)" stroke-width="1" stroke-dasharray="3 3"/>
+      <g transform="translate(16,26)">
+        <rect width="72" height="44" rx="2" fill="oklch(0.48 0.21 25)"/>
+        <circle cx="27" cy="22" r="10.5" fill="white"/>
+        <circle cx="31" cy="22" r="8.4" fill="oklch(0.48 0.21 25)"/>
+        <polygon points="44,22 50,20 46,25 46,19 50,24" fill="white"/>
+        <text x="36" y="55" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="800" font-size="8.5" fill="oklch(0.32 0.02 260)">TÜRKİYE</text>
       </g>
-      <g transform="translate(230,24)">
-        <rect width="74" height="48" rx="2" fill="oklch(0.34 0.16 258)"/>
-        <rect width="32" height="23" fill="oklch(0.30 0.14 258)"/>
-        <path d="M0,0 L32,23 M32,0 L0,23" stroke="white" stroke-width="2.8"/>
-        <path d="M0,0 L32,23 M32,0 L0,23" stroke="oklch(0.50 0.20 25)" stroke-width="1.1"/>
-        <path d="M16,0 V23 M0,11.5 H32" stroke="white" stroke-width="4.2"/>
-        <path d="M16,0 V23 M0,11.5 H32" stroke="oklch(0.50 0.20 25)" stroke-width="2"/>
-        <circle cx="16" cy="35" r="3.8" fill="white"/>
-        <circle cx="54" cy="13" r="1.8" fill="white"/><circle cx="62" cy="22" r="1.8" fill="white"/>
-        <circle cx="50" cy="29" r="1.8" fill="white"/><circle cx="56" cy="38" r="1.8" fill="white"/>
-        <text x="37" y="58" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="800" font-size="8.5" fill="oklch(0.35 0.02 260)">AUSTRALIA</text>
+      <g transform="translate(230,26)">
+        <rect width="72" height="44" rx="2" fill="oklch(0.34 0.16 258)"/>
+        <rect width="31" height="21" fill="oklch(0.30 0.14 258)"/>
+        <path d="M0,0 L31,21 M31,0 L0,21" stroke="white" stroke-width="2.6"/>
+        <path d="M0,0 L31,21 M31,0 L0,21" stroke="oklch(0.50 0.20 25)" stroke-width="1"/>
+        <path d="M15.5,0 V21 M0,10.5 H31" stroke="white" stroke-width="4"/>
+        <path d="M15.5,0 V21 M0,10.5 H31" stroke="oklch(0.50 0.20 25)" stroke-width="1.8"/>
+        <circle cx="15.5" cy="32" r="3.5" fill="white"/>
+        <circle cx="52" cy="12" r="1.8" fill="white"/><circle cx="60" cy="21" r="1.8" fill="white"/>
+        <circle cx="48" cy="28" r="1.8" fill="white"/><circle cx="54" cy="36" r="1.8" fill="white"/>
+        <text x="36" y="55" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="800" font-size="8.5" fill="oklch(0.32 0.02 260)">AUSTRALIA</text>
       </g>
-      <g transform="translate(124,20)">
-        <rect width="70" height="54" rx="3" fill="white" stroke="oklch(0.46 0.13 245)" stroke-width="1.5"/>
-        <polygon points="55,0 70,15 55,15" fill="oklch(0.90 0.03 240)"/>
-        <rect x="9" y="9" width="36" height="4" rx="1" fill="oklch(0.46 0.13 245)"/>
-        <line x1="9" y1="20" x2="61" y2="20" stroke="oklch(0.65 0.04 250)" stroke-width="2"/>
-        <line x1="9" y1="28" x2="61" y2="28" stroke="oklch(0.65 0.04 250)" stroke-width="2"/>
-        <line x1="9" y1="36" x2="46" y2="36" stroke="oklch(0.65 0.04 250)" stroke-width="2"/>
-        <line x1="9" y1="44" x2="38" y2="44" stroke="oklch(0.65 0.04 250)" stroke-width="2"/>
-        <circle cx="55" cy="43" r="6.5" fill="oklch(0.42 0.12 152)"/>
-        <polyline points="51.5,43 54,45.5 58.5,40.5" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+      <g transform="translate(124,23)">
+        <rect width="70" height="50" rx="3" fill="white" stroke="oklch(0.46 0.13 245)" stroke-width="1.5"/>
+        <polygon points="56,0 70,14 56,14" fill="oklch(0.90 0.03 240)"/>
+        <line x1="10" y1="15" x2="50" y2="15" stroke="oklch(0.65 0.04 250)" stroke-width="2"/>
+        <line x1="10" y1="24" x2="60" y2="24" stroke="oklch(0.65 0.04 250)" stroke-width="2"/>
+        <line x1="10" y1="33" x2="46" y2="33" stroke="oklch(0.65 0.04 250)" stroke-width="2"/>
+        <circle cx="54" cy="39" r="8" fill="oklch(0.48 0.18 24)"/>
+        <path d="M50.5,35.5 L57.5,42.5 M57.5,35.5 L50.5,42.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
       </g>
-      <text x="159" y="14" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="11" fill="oklch(0.22 0.01 260)">ANTALYA · OVERTIME DRAFT</text>
-      <rect x="14" y="85" width="290" height="22" rx="2" fill="oklch(0.48 0.18 24)"/>
-      <text x="159" y="100" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="13" fill="white">COP31: FINAL DRAFT TABLED</text>
+      <text x="159" y="16" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="10.5" fill="oklch(0.22 0.01 260)">ANTALYA · +2 DAYS OVERTIME</text>
+      <rect x="16" y="88" width="286" height="21" rx="2" fill="oklch(0.48 0.18 24)"/>
+      <text x="159" y="102.5" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="12" fill="white">COP31: TALKS COLLAPSE · NO DEAL</text>
     </svg>""",
-    'ukraine_barrage': """
-    <svg viewBox="0 0 318 112" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="318" height="112" fill="oklch(0.18 0.03 255)"/>
-      <path d="M180 112 A78 78 0 0 1 310 112" fill="none" stroke="oklch(0.46 0.10 190)" stroke-width="1" stroke-dasharray="3 3"/>
+    'ukraine_strikes': """
+    <svg viewBox="0 0 318 118" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="318" height="118" fill="oklch(0.18 0.03 255)"/>
+      <path d="M182 118 A76 76 0 0 1 308 118" fill="none" stroke="oklch(0.46 0.10 190)" stroke-width="1" stroke-dasharray="3 3"/>
       <g fill="oklch(0.28 0.02 255)">
-        <rect x="10" y="68" width="24" height="44"/><rect x="38" y="54" width="28" height="58"/>
-        <rect x="70" y="64" width="22" height="48"/><rect x="96" y="48" width="30" height="64"/>
-        <rect x="130" y="72" width="24" height="40"/><rect x="248" y="62" width="28" height="50"/>
-        <rect x="280" y="70" width="26" height="42"/>
+        <rect x="10" y="72" width="24" height="46"/><rect x="38" y="58" width="28" height="60"/>
+        <rect x="70" y="68" width="22" height="50"/><rect x="96" y="52" width="30" height="66"/>
+        <rect x="130" y="76" width="24" height="42"/><rect x="248" y="66" width="28" height="52"/>
+        <rect x="280" y="74" width="26" height="44"/>
       </g>
-      <polygon points="94,80 112,40 130,80" fill="oklch(0.62 0.21 35)"/>
-      <polygon points="101,80 112,52 123,80" fill="oklch(0.84 0.18 75)"/>
-      <circle cx="116" cy="36" r="11" fill="oklch(0.42 0.01 260)" opacity="0.8"/>
-      <polygon points="168,38 190,43 168,48 174,43" fill="oklch(0.80 0.16 75)"/>
-      <polygon points="204,26 224,30 204,34 209,30" fill="oklch(0.80 0.16 75)"/>
-      <polygon points="234,44 256,49 234,54 240,49" fill="oklch(0.80 0.16 75)"/>
-      <line x1="258" y1="88" x2="210" y2="38" stroke="oklch(0.84 0.16 80)" stroke-width="1.3" stroke-dasharray="3 3"/>
-      <rect x="8" y="7" width="196" height="23" rx="2" fill="oklch(0.48 0.18 24)"/>
-      <text x="106" y="23" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="13" fill="white">UKRAINE: 148 DRONES</text>
-      <rect x="210" y="7" width="100" height="23" rx="2" fill="white"/>
-      <text x="260" y="23" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="12" fill="oklch(0.18 0.01 260)">3 MISSILES</text>
+      <polygon points="94,84 112,44 130,84" fill="oklch(0.62 0.21 35)"/>
+      <polygon points="101,84 112,56 123,84" fill="oklch(0.84 0.18 75)"/>
+      <circle cx="116" cy="40" r="11" fill="oklch(0.42 0.01 260)" opacity="0.8"/>
+      <polygon points="168,46 190,51 168,56 174,51" fill="oklch(0.80 0.16 75)"/>
+      <polygon points="204,34 224,38 204,42 209,38" fill="oklch(0.80 0.16 75)"/>
+      <polygon points="234,52 256,57 234,62 240,57" fill="oklch(0.80 0.16 75)"/>
+      <line x1="258" y1="94" x2="210" y2="46" stroke="oklch(0.84 0.16 80)" stroke-width="1.3" stroke-dasharray="3 3"/>
+      <rect x="10" y="10" width="192" height="22" rx="2" fill="oklch(0.48 0.18 24)"/>
+      <text x="106" y="25" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="12.5" fill="white">UKRAINE: 148 DRONES</text>
+      <rect x="208" y="10" width="100" height="22" rx="2" fill="white"/>
+      <text x="258" y="25" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="11.5" fill="oklch(0.18 0.01 260)">3 MISSILES</text>
     </svg>""",
-    'hormuz_scene': """
-    <svg viewBox="0 0 318 112" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+    'sea_strikes': """
+    <svg viewBox="0 0 318 118" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <linearGradient id="hsky" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="oklch(0.94 0.025 85)"/>
-          <stop offset="100%" stop-color="oklch(0.87 0.045 78)"/>
+        <linearGradient id="seasky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="oklch(0.84 0.03 235)"/>
+          <stop offset="100%" stop-color="oklch(0.91 0.02 230)"/>
         </linearGradient>
-        <linearGradient id="hsea" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="oklch(0.72 0.08 228)"/>
-          <stop offset="100%" stop-color="oklch(0.58 0.09 232)"/>
+        <linearGradient id="seawater" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="oklch(0.48 0.09 235)"/>
+          <stop offset="100%" stop-color="oklch(0.36 0.08 240)"/>
         </linearGradient>
       </defs>
-      <rect width="318" height="54" fill="url(#hsky)"/>
-      <rect y="54" width="318" height="58" fill="url(#hsea)"/>
-      <path d="M0 50 L28 44 L56 52 L90 58 L72 112 L0 112 Z" fill="oklch(0.78 0.06 78)"/>
-      <path d="M214 112 L254 82 L290 72 L318 66 L318 112 Z" fill="oklch(0.78 0.06 78)"/>
-      <text x="10" y="101" font-family="Roboto, sans-serif" font-weight="900" font-size="10.5" fill="oklch(0.24 0.04 75)">IRAN COAST</text>
-      <text x="242" y="102" font-family="Roboto, sans-serif" font-weight="900" font-size="10" fill="oklch(0.24 0.04 75)">OMAN</text>
-      <g transform="translate(106,46)">
-        <path d="M0,14 L64,14 L56,23 L8,23 Z" fill="oklch(0.20 0.015 260)"/>
-        <rect x="6" y="12" width="52" height="2" fill="oklch(0.48 0.18 24)"/>
-        <rect x="8" y="5" width="12" height="7" fill="oklch(0.95 0.01 90)"/>
-        <circle cx="34" cy="1" r="8" fill="oklch(0.36 0.01 260)" opacity="0.85"/>
-        <polygon points="28,12 34,-2 40,12" fill="oklch(0.64 0.21 35)"/>
+      <rect width="318" height="58" fill="url(#seasky)"/>
+      <rect y="58" width="318" height="60" fill="url(#seawater)"/>
+      <g transform="translate(26,50)">
+        <polygon points="0,20 122,20 110,36 12,36" fill="oklch(0.20 0.015 260)"/>
+        <rect x="8" y="17" width="106" height="3" fill="oklch(0.48 0.18 24)"/>
+        <rect x="18" y="4" width="24" height="13" fill="oklch(0.96 0.01 90)"/>
+        <rect x="48" y="9" width="24" height="8" fill="oklch(0.44 0.12 245)"/>
+        <polygon points="74,17 86,-8 98,17" fill="oklch(0.62 0.21 35)"/>
+        <circle cx="88" cy="-10" r="9" fill="oklch(0.38 0.01 260)" opacity="0.85"/>
       </g>
-      <g transform="translate(194,68)">
-        <path d="M0,14 L60,14 L52,22 L8,22 Z" fill="oklch(0.20 0.015 260)"/>
-        <rect x="6" y="12" width="48" height="2" fill="oklch(0.48 0.18 24)"/>
-        <rect x="8" y="5" width="11" height="7" fill="oklch(0.95 0.01 90)"/>
-        <polygon points="28,12 34,-1 40,12" fill="oklch(0.64 0.21 35)"/>
+      <g transform="translate(194,60)">
+        <polygon points="0,12 90,12 82,24 8,24" fill="oklch(0.22 0.02 250)"/>
+        <rect x="20" y="3" width="22" height="9" fill="oklch(0.40 0.02 250)"/>
+        <polygon points="56,12 66,-6 76,12" fill="oklch(0.64 0.21 35)"/>
       </g>
-      <rect x="108" y="7" width="202" height="23" rx="2" fill="oklch(0.48 0.18 24)"/>
-      <text x="209" y="23" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="13" fill="white">HORMUZ: 3 TANKERS HIT</text>
+      <text x="86" y="106" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="9.5" fill="white">BENGHAZI: MERKURY</text>
+      <text x="242" y="106" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="9.5" fill="white">SPARTA II TOWED</text>
+      <rect x="10" y="10" width="196" height="22" rx="2" fill="oklch(0.48 0.18 24)"/>
+      <text x="108" y="25" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="12.5" fill="white">WAR AT SEA: SHIPS HIT</text>
     </svg>""",
-    'hk_vote': """
-    <svg viewBox="0 0 236 80" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="236" height="80" fill="oklch(0.95 0.01 85)"/>
-      <rect x="22" y="38" width="60" height="34" rx="2" fill="oklch(0.46 0.16 24)"/>
-      <rect x="34" y="40" width="36" height="4" fill="oklch(0.22 0.01 260)"/>
-      <rect x="40" y="25" width="24" height="17" fill="white" stroke="oklch(0.22 0.01 260)" stroke-width="1.2"/>
-      <text x="158" y="50" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="22" fill="oklch(0.18 0.01 260)">856</text>
-      <text x="158" y="66" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="700" font-size="10.5" fill="oklch(0.36 0.02 260)">FOR 723 SEATS</text>
-      <rect x="6" y="5" width="112" height="16" rx="2" fill="oklch(0.48 0.18 24)"/>
-      <text x="62" y="16.5" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="9.5" fill="white">HONG KONG: VOTE</text>
+    'us_house': """
+    <svg viewBox="0 0 188 72" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="188" height="72" fill="oklch(0.95 0.012 240)"/>
+      <path d="M18,62 A38,38 0 0,1 94,62" fill="none" stroke="oklch(0.84 0.02 240)" stroke-width="11"/>
+      <path d="M18,62 A38,38 0 0,1 76,30" fill="none" stroke="oklch(0.46 0.15 250)" stroke-width="11"/>
+      <path d="M76,30 A38,38 0 0,1 94,62" fill="none" stroke="oklch(0.50 0.20 25)" stroke-width="11"/>
+      <rect x="45" y="50" width="22" height="12" fill="oklch(0.86 0.01 250)"/>
+      <path d="M47,50 Q56,39 65,50 Z" fill="oklch(0.76 0.01 250)"/>
+      <line x1="56" y1="40" x2="56" y2="44" stroke="oklch(0.46 0.02 250)" stroke-width="1.5"/>
+      <text x="142" y="47" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="18.5" fill="oklch(0.46 0.15 250)">258+</text>
+      <text x="142" y="60" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="800" font-size="8.5" fill="oklch(0.28 0.02 250)">HOUSE SEATS</text>
     </svg>""",
-    'cricket_720': """
-    <svg viewBox="0 0 236 80" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="236" height="80" fill="oklch(0.93 0.035 145)"/>
-      <line x1="36" y1="30" x2="52" y2="66" stroke="oklch(0.55 0.09 55)" stroke-width="5.5" stroke-linecap="round"/>
-      <circle cx="68" cy="60" r="6.5" fill="oklch(0.48 0.18 24)"/>
-      <text x="154" y="58" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="25" fill="oklch(0.18 0.01 260)">720/9</text>
-      <rect x="6" y="5" width="108" height="16" rx="2" fill="oklch(0.46 0.12 170)"/>
-      <text x="60" y="16.5" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="9.5" fill="white">CRICKET: RECORD</text>
-    </svg>""",
-    'vegas_f1': """
-    <svg viewBox="0 0 236 80" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="236" height="80" fill="oklch(0.20 0.02 260)"/>
-      <rect y="56" width="236" height="24" fill="oklch(0.30 0.01 260)"/>
-      <line x1="0" y1="68" x2="236" y2="68" stroke="oklch(0.84 0.16 80)" stroke-width="1.6" stroke-dasharray="7 5"/>
-      <path d="M26,56 L78,56 L68,46 L36,46 Z" fill="oklch(0.46 0.16 250)"/>
-      <circle cx="36" cy="58" r="5.5" fill="oklch(0.14 0.01 260)" stroke="white" stroke-width="1.2"/>
-      <circle cx="70" cy="58" r="5.5" fill="oklch(0.14 0.01 260)" stroke="white" stroke-width="1.2"/>
-      <text x="162" y="50" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="18" fill="white">P1 MAX</text>
-      <rect x="6" y="5" width="104" height="16" rx="2" fill="oklch(0.48 0.18 24)"/>
-      <text x="58" y="16.5" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="9.5" fill="white">VEGAS F1: WIN</text>
+    'hormuz_mini': """
+    <svg viewBox="0 0 188 72" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="188" height="40" fill="oklch(0.91 0.025 85)"/>
+      <rect y="40" width="188" height="32" fill="oklch(0.68 0.08 228)"/>
+      <path d="M0 42 L42 42 L32 72 L0 72 Z" fill="oklch(0.78 0.06 78)"/>
+      <g transform="translate(46,34)">
+        <path d="M0,11 L48,11 L42,19 L6,19 Z" fill="oklch(0.20 0.015 260)"/>
+        <rect x="6" y="9" width="36" height="2" fill="oklch(0.48 0.18 24)"/>
+        <rect x="8" y="3" width="10" height="6" fill="white"/>
+        <polygon points="24,9 29,-2 34,9" fill="oklch(0.64 0.21 35)"/>
+      </g>
+      <g transform="translate(96,46)">
+        <path d="M0,10 L38,10 L33,16 L5,16 Z" fill="oklch(0.20 0.015 260)"/>
+        <rect x="5" y="8" width="28" height="2" fill="oklch(0.48 0.18 24)"/>
+        <polygon points="16,8 21,-2 26,8" fill="oklch(0.64 0.21 35)"/>
+      </g>
+      <text x="160" y="60" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="13" fill="white">3 HIT</text>
     </svg>""",
     'indonesia_fire': """
-    <svg viewBox="0 0 236 80" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="236" height="54" fill="oklch(0.90 0.025 85)"/>
-      <rect y="54" width="236" height="26" fill="oklch(0.40 0.04 145)"/>
-      <rect x="22" y="34" width="76" height="20" fill="oklch(0.38 0.02 250)"/>
-      <polygon points="22,34 37,25 52,34 67,25 82,34 98,34" fill="oklch(0.32 0.02 250)"/>
-      <circle cx="74" cy="17" r="9" fill="oklch(0.40 0.01 260)" opacity="0.82"/>
-      <polygon points="60,38 74,17 88,38" fill="oklch(0.62 0.21 35)"/>
-      <text x="168" y="48" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="18" fill="oklch(0.48 0.18 24)">3 DEAD</text>
-      <text x="168" y="70" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="10" fill="white">36 MISSING</text>
-      <rect x="6" y="5" width="112" height="16" rx="2" fill="oklch(0.48 0.18 24)"/>
-      <text x="62" y="16.5" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="9.5" fill="white">INDONESIA: FIRE</text>
+    <svg viewBox="0 0 188 72" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="188" height="49" fill="oklch(0.91 0.025 85)"/>
+      <rect y="49" width="188" height="23" fill="oklch(0.40 0.04 145)"/>
+      <rect x="14" y="37" width="66" height="15" fill="oklch(0.38 0.02 250)"/>
+      <polygon points="14,37 27,29 40,37 53,29 66,37 80,37" fill="oklch(0.32 0.02 250)"/>
+      <rect x="20" y="42" width="8" height="5" fill="oklch(0.75 0.12 75)"/>
+      <rect x="34" y="42" width="8" height="5" fill="oklch(0.75 0.12 75)"/>
+      <circle cx="58" cy="28" r="6" fill="oklch(0.40 0.01 260)" opacity="0.78"/>
+      <polygon points="46,40 58,26 70,40" fill="oklch(0.62 0.21 35)"/>
+      <text x="134" y="45" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="16" fill="oklch(0.48 0.18 24)">3 DEAD</text>
+      <text x="134" y="61" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="8.5" fill="white">36 MISSING</text>
+    </svg>""",
+    'korea_resign': """
+    <svg viewBox="0 0 188 72" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="188" height="72" fill="oklch(0.95 0.01 85)"/>
+      <rect x="16" y="29" width="50" height="33" rx="2" fill="white" stroke="oklch(0.36 0.04 250)" stroke-width="1.4"/>
+      <circle cx="41" cy="45.5" r="8.5" fill="oklch(0.50 0.20 25)"/>
+      <path d="M32.5,45.5 A4.25,4.25 0 0,1 41,45.5 A4.25,4.25 0 0,0 49.5,45.5 A8.5,8.5 0 0,1 32.5,45.5 Z" fill="oklch(0.38 0.16 255)"/>
+      <line x1="22" y1="34" x2="27" y2="37" stroke="oklch(0.22 0.01 260)" stroke-width="1.5"/>
+      <line x1="55" y1="37" x2="60" y2="34" stroke="oklch(0.22 0.01 260)" stroke-width="1.5"/>
+      <line x1="22" y1="57" x2="27" y2="54" stroke="oklch(0.22 0.01 260)" stroke-width="1.5"/>
+      <line x1="55" y1="54" x2="60" y2="57" stroke="oklch(0.22 0.01 260)" stroke-width="1.5"/>
+      <text x="128" y="47" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="15.5" fill="oklch(0.18 0.01 260)">RESIGNS</text>
+      <text x="128" y="60" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="700" font-size="8.5" fill="oklch(0.36 0.02 260)">AI EXAM ROW</text>
     </svg>""",
     'iran_power': """
-    <svg viewBox="0 0 236 80" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="236" height="80" fill="oklch(0.18 0.02 260)"/>
-      <polygon points="64,25 46,50 60,50 50,72 80,44 66,44" fill="oklch(0.80 0.17 78)"/>
-      <line x1="44" y1="28" x2="80" y2="66" stroke="oklch(0.55 0.22 25)" stroke-width="3.2" stroke-linecap="round"/>
-      <text x="156" y="52" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="20" fill="white">2 HRS/DAY</text>
-      <text x="156" y="68" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="700" font-size="9.5" fill="oklch(0.78 0.03 85)">ROLLING CUTS</text>
-      <rect x="6" y="5" width="114" height="16" rx="2" fill="oklch(0.48 0.18 24)"/>
-      <text x="63" y="16.5" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="9.5" fill="white">IRAN: POWER CUTS</text>
-    </svg>""",
-    'fbi_cyber': """
-    <svg viewBox="0 0 236 80" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="236" height="80" fill="oklch(0.19 0.03 255)"/>
-      <g transform="translate(22,28)">
-        <ellipse cx="22" cy="7" rx="18" ry="5" fill="oklch(0.36 0.06 245)" stroke="oklch(0.68 0.12 230)" stroke-width="1.3"/>
-        <path d="M4,7 V36 A18,5 0 0 0 40,36 V7" fill="oklch(0.30 0.05 245)" stroke="oklch(0.68 0.12 230)" stroke-width="1.3"/>
-        <polygon points="40,22 51,40 29,40" fill="oklch(0.55 0.21 25)" stroke="white" stroke-width="1"/>
-        <text x="40" y="38" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="10" fill="white">!</text>
+    <svg viewBox="0 0 188 72" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="188" height="72" fill="oklch(0.18 0.02 260)"/>
+      <g fill="oklch(0.26 0.02 260)">
+        <rect x="8" y="46" width="16" height="26"/><rect x="28" y="38" width="18" height="34"/>
+        <rect x="152" y="42" width="22" height="30"/>
       </g>
-      <text x="152" y="54" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="18" fill="oklch(0.80 0.15 78)">NCIC HACK</text>
-      <rect x="6" y="5" width="104" height="16" rx="2" fill="oklch(0.48 0.18 24)"/>
-      <text x="58" y="16.5" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="9.5" fill="white">FBI: DATA BREACH</text>
+      <polygon points="56,28 43,47 54,47 47,63 69,41 58,41" fill="oklch(0.80 0.17 78)"/>
+      <line x1="42" y1="30" x2="68" y2="61" stroke="oklch(0.55 0.22 25)" stroke-width="2.8" stroke-linecap="round"/>
+      <text x="126" y="47" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="17" fill="white">2 HRS</text>
+      <text x="126" y="60" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="700" font-size="8.5" fill="oklch(0.78 0.03 85)">DAILY CUTS</text>
     </svg>""",
-    'belgium_strike': """
-    <svg viewBox="0 0 236 80" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="236" height="80" fill="oklch(0.94 0.015 240)"/>
-      <g transform="translate(28,36)">
-        <path d="M4,14 L24,14 L38,3 L44,3 L36,14 L50,14 L55,9 L59,9 L57,16 L59,23 L55,23 L50,18 L36,18 L44,29 L38,29 L24,18 L4,18 Z" fill="oklch(0.34 0.03 250)"/>
-        <circle cx="32" cy="16" r="18" fill="none" stroke="oklch(0.52 0.20 24)" stroke-width="2.6"/>
-        <line x1="19" y1="3" x2="45" y2="29" stroke="oklch(0.52 0.20 24)" stroke-width="2.6"/>
-      </g>
-      <text x="160" y="50" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="18" fill="oklch(0.18 0.01 260)">07–21H</text>
-      <text x="160" y="65" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="700" font-size="9.5" fill="oklch(0.36 0.02 260)">GROUNDED</text>
-      <rect x="6" y="5" width="112" height="16" rx="2" fill="oklch(0.46 0.13 245)"/>
-      <text x="62" y="16.5" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="9.5" fill="white">BELGIUM: STRIKE</text>
+    'alcaraz_atp': """
+    <svg viewBox="0 0 188 72" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="188" height="72" fill="oklch(0.42 0.11 235)"/>
+      <rect x="14" y="29" width="54" height="33" fill="oklch(0.48 0.12 235)" stroke="white" stroke-width="1.4"/>
+      <line x1="41" y1="29" x2="41" y2="62" stroke="white" stroke-width="1.3"/>
+      <line x1="25" y1="29" x2="25" y2="62" stroke="white" stroke-width="0.9"/>
+      <line x1="57" y1="29" x2="57" y2="62" stroke="white" stroke-width="0.9"/>
+      <circle cx="80" cy="45.5" r="6" fill="oklch(0.84 0.18 98)"/>
+      <text x="135" y="47" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="14.5" fill="white">6–2, 7–6</text>
+      <text x="135" y="60" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="700" font-size="8.5" fill="oklch(0.92 0.02 230)">ALCARAZ</text>
+    </svg>""",
+    'cricket_720': """
+    <svg viewBox="0 0 188 72" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="188" height="72" fill="oklch(0.92 0.035 145)"/>
+      <rect x="14" y="30" width="52" height="33" fill="oklch(0.86 0.04 95)" rx="2"/>
+      <line x1="28" y1="30" x2="42" y2="61" stroke="oklch(0.55 0.09 55)" stroke-width="4.8" stroke-linecap="round"/>
+      <circle cx="56" cy="54" r="5.2" fill="oklch(0.48 0.18 24)"/>
+      <text x="126" y="53" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="22" fill="oklch(0.18 0.01 260)">720/9</text>
+    </svg>""",
+    'vegas_f1': """
+    <svg viewBox="0 0 188 72" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="188" height="72" fill="oklch(0.19 0.02 260)"/>
+      <rect y="50" width="188" height="22" fill="oklch(0.30 0.01 260)"/>
+      <line x1="0" y1="62" x2="188" y2="62" stroke="oklch(0.84 0.16 80)" stroke-width="1.5" stroke-dasharray="6 4"/>
+      <path d="M16,51 L70,51 L62,41 L30,41 Z" fill="oklch(0.46 0.16 250)"/>
+      <rect x="10" y="46" width="10" height="5" fill="oklch(0.48 0.18 24)"/>
+      <rect x="64" y="40" width="8" height="4" fill="oklch(0.48 0.18 24)"/>
+      <circle cx="28" cy="53" r="4.8" fill="oklch(0.14 0.01 260)" stroke="white" stroke-width="1"/>
+      <circle cx="60" cy="53" r="4.8" fill="oklch(0.14 0.01 260)" stroke="white" stroke-width="1"/>
+      <text x="132" y="47" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="15.5" fill="white">P1 MAX</text>
+    </svg>""",
+    'motogp_8': """
+    <svg viewBox="0 0 188 72" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="188" height="72" fill="oklch(0.22 0.02 25)"/>
+      <circle cx="34" cy="52" r="8.5" fill="none" stroke="white" stroke-width="2.6"/>
+      <circle cx="70" cy="52" r="8.5" fill="none" stroke="white" stroke-width="2.6"/>
+      <path d="M34,52 L48,39 L66,41 L70,52" fill="none" stroke="oklch(0.62 0.21 35)" stroke-width="3.8" stroke-linecap="round"/>
+      <polygon points="55,33 66,39 57,43" fill="oklch(0.84 0.16 80)"/>
+      <text x="135" y="47" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="18" fill="white">8TH</text>
+      <text x="135" y="60" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="700" font-size="8.5" fill="oklch(0.86 0.04 85)">MÁRQUEZ</text>
     </svg>""",
     'nigeria_boat': """
-    <svg viewBox="0 0 236 80" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="236" height="46" fill="oklch(0.88 0.03 220)"/>
-      <rect y="46" width="236" height="34" fill="oklch(0.56 0.08 225)"/>
-      <path d="M24,56 L84,48 L76,62 L32,62 Z" fill="oklch(0.30 0.04 55)"/>
-      <circle cx="98" cy="58" r="7" fill="none" stroke="oklch(0.64 0.20 35)" stroke-width="2.8"/>
-      <text x="166" y="58" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="18" fill="oklch(0.48 0.18 24)">26 DEAD</text>
-      <rect x="6" y="5" width="108" height="16" rx="2" fill="oklch(0.46 0.13 150)"/>
-      <text x="60" y="16.5" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="9.5" fill="white">NIGERIA: BOAT</text>
+    <svg viewBox="0 0 188 72" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="188" height="42" fill="oklch(0.88 0.03 220)"/>
+      <rect y="42" width="188" height="30" fill="oklch(0.56 0.08 225)"/>
+      <path d="M16,52 L70,44 L64,57 L22,57 Z" fill="oklch(0.30 0.04 55)"/>
+      <circle cx="82" cy="52" r="5.5" fill="none" stroke="oklch(0.64 0.20 35)" stroke-width="2.4"/>
+      <text x="137" y="56" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="15.5" fill="oklch(0.48 0.18 24)">26 DEAD</text>
     </svg>""",
 }
 
 
-def badge_html(status: str, kind: str, overlay: bool = False) -> str:
+def badge_html(status: str, kind: str) -> str:
     cls = 'badge-official' if kind == 'official' else 'badge-confirmed'
-    pos = 'badge-overlay' if overlay else ''
-    return f'<span class="badge {cls} {pos}">{html.escape(status)}</span>'
+    return f'<span class="badge {cls}">{html.escape(status)}</span>'
 
 
 def build_world_map_svg(pins: list[dict]) -> str:
-    w, h = 286, 152
+    w, h = 284, 144
 
     def proj(lon: float, lat: float) -> tuple[float, float]:
         px = ((lon + 180.0) / 360.0) * w
@@ -280,19 +301,23 @@ def build_world_map_svg(pins: list[dict]) -> str:
         + '" fill="oklch(0.91 0.018 85)" stroke="oklch(0.68 0.02 85)" stroke-width="0.75" stroke-linejoin="round"/>'
         for poly in landmasses
     )
+    dot_els = ''
     pin_els = ''
     for p in pins:
         px, py = proj(p['lon'], p['lat'])
         col = REGION_OKLCH.get(p['r'], 'oklch(0.24 0.01 260)')
-        pin_els += (
-            f'<g transform="translate({px:.1f},{py:.1f})">'
-            f'<circle r="6.2" fill="{col}" stroke="white" stroke-width="1"/>'
-            f'<text y="2.8" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="7.5" fill="white">{p["id"]}</text>'
-            f'</g>'
-        )
+        if p.get('dot'):
+            dot_els += f'<circle cx="{px:.1f}" cy="{py:.1f}" r="3.2" fill="{col}" stroke="white" stroke-width="0.8"/>'
+        else:
+            pin_els += (
+                f'<g transform="translate({px:.1f},{py:.1f})">'
+                f'<circle r="6.0" fill="{col}" stroke="white" stroke-width="1"/>'
+                f'<text y="2.7" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="7.5" fill="white">{p["id"]}</text>'
+                f'</g>'
+            )
     return (
         f'<svg viewBox="0 0 {w} {h}" width="100%" height="{h}" xmlns="http://www.w3.org/2000/svg">'
-        f'<rect width="{w}" height="{h}" fill="oklch(0.955 0.014 225)"/>{grid_lines}{polys}{pin_els}</svg>'
+        f'<rect width="{w}" height="{h}" fill="oklch(0.955 0.014 225)"/>{grid_lines}{polys}{dot_els}{pin_els}</svg>'
     )
 
 
@@ -313,7 +338,10 @@ def generate_html(data_path: Path, out_html: Path) -> None:
         f'''<article class="lead-card">
           <div class="lead-art">{SVGS[l["art"]]}</div>
           <div class="meta-row">
-            <span class="kicker">{html.escape(l["kicker"])}</span>
+            <span class="meta-left">
+              <span class="num-circle" style="background:{l["weight_color"]}">{html.escape(l["id"])}</span>
+              <span class="loc-txt" style="color:{l["weight_color"]}">{html.escape(l["loc"])}</span>
+            </span>
             {badge_html(l["status"], l["status_kind"])}
           </div>
           <h2>{html.escape(l["title"])}</h2>
@@ -325,10 +353,15 @@ def generate_html(data_path: Path, out_html: Path) -> None:
     cards_html = ''.join(
         f'''<article class="mini-card">
           <div class="mini-art">
-            {SVGS[c["art"]]}
-            {badge_html(c["status"], c["status_kind"], overlay=True)}
+            <div class="mini-top">
+              <span class="mini-top-left">
+                <span class="num-circle-sm" style="background:{c["weight_color"]}">{html.escape(c["id"])}</span>
+                <span class="mini-loc" style="color:{c["weight_color"]}">{html.escape(c["loc"])}</span>
+              </span>
+              {badge_html(c["status"], c["status_kind"])}
+            </div>
+            <div class="mini-svg-wrap">{SVGS[c["art"]]}</div>
           </div>
-          <div class="kicker-sm">{html.escape(c["kicker"])}</div>
           <h3>{html.escape(c["title"])}</h3>
           <p>{html.escape(c["sub"])}</p>
         </article>'''
@@ -336,18 +369,22 @@ def generate_html(data_path: Path, out_html: Path) -> None:
     )
 
     col1 = ''.join(
-        f'<div class="brief"><span class="b-id">{b[0]}</span> <span class="b-loc">{html.escape(b[1])}:</span> {html.escape(b[2])}</div>'
-        for b in data['briefs'][:6]
+        f'<div class="brief"><span class="num-circle-xs" style="background:{b[3]}">{b[0]}</span> <span class="b-loc" style="color:{b[3]}">{html.escape(b[1])}:</span> {html.escape(b[2])}</div>'
+        for b in data['briefs'][:10]
     )
     col2 = ''.join(
-        f'<div class="brief"><span class="b-id">{b[0]}</span> <span class="b-loc">{html.escape(b[1])}:</span> {html.escape(b[2])}</div>'
-        for b in data['briefs'][6:]
+        f'<div class="brief"><span class="num-circle-xs" style="background:{b[3]}">{b[0]}</span> <span class="b-loc" style="color:{b[3]}">{html.escape(b[1])}:</span> {html.escape(b[2])}</div>'
+        for b in data['briefs'][10:]
     )
 
     legend_html = ''.join(
         f'<span class="leg-item"><i style="background:{col}"></i>{name.title()}</span>'
         for name, col in REGION_OKLCH.items()
     )
+
+    dc_escaped = html.escape(data['date_check'])
+    for key in ('DATE CHECK', '(NOT SUN 22 NOV)', '(Fri 20 Nov)', '(Sat 21 Nov)', '(Fri/Sat)', '(Sat 18:24 UTC)'):
+        dc_escaped = dc_escaped.replace(key, f'<span class="dc-key">{key}</span>')
 
     page = f'''<!doctype html>
 <html lang="en">
@@ -359,11 +396,11 @@ def generate_html(data_path: Path, out_html: Path) -> None:
 <style>
   :root {{
     --bg-paper: oklch(0.992 0.004 90);
-    --bg-panel: oklch(0.955 0.006 85);
+    --bg-panel: oklch(0.962 0.005 85);
     --ink-primary: oklch(0.18 0.01 260);
     --ink-secondary: oklch(0.30 0.01 260);
     --ink-muted: oklch(0.46 0.01 260);
-    --rule: oklch(0.84 0.008 85);
+    --rule: oklch(0.18 0.01 260 / 0.14);
     --scarlet: oklch(0.48 0.18 24);
     --badge-confirmed: oklch(0.42 0.12 152);
     --badge-official: oklch(0.46 0.13 65);
@@ -381,7 +418,7 @@ def generate_html(data_path: Path, out_html: Path) -> None:
   .page {{
     width: 1024px;
     height: 1024px;
-    padding: 6px 18px 5px;
+    padding: 6px 16px 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -392,7 +429,7 @@ def generate_html(data_path: Path, out_html: Path) -> None:
     justify-content: space-between;
     font-weight: 700;
     font-size: 12px;
-    letter-spacing: 0.02em;
+    font-variant-numeric: tabular-nums;
     padding-bottom: 2px;
     border-bottom: 1px solid var(--ink-primary);
   }}
@@ -400,11 +437,11 @@ def generate_html(data_path: Path, out_html: Path) -> None:
   .eyebrow-right {{ color: var(--ink-primary); }}
   h1.masthead {{
     font-weight: 900;
-    font-size: 35px;
+    font-size: 38px;
     line-height: 1.02;
     text-align: center;
     letter-spacing: -0.015em;
-    padding: 2px 0 1px;
+    padding: 4px 0;
   }}
   .deck {{
     text-align: center;
@@ -417,23 +454,27 @@ def generate_html(data_path: Path, out_html: Path) -> None:
   .kpi-strip {{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 6px;
+    gap: 8px;
     padding: 2px 0;
     border-bottom: 1px solid var(--rule);
   }}
   .kpi-item {{
-    padding-left: 5px;
+    padding-left: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
   }}
   .kpi-num {{
     font-weight: 900;
-    font-size: 19px;
+    font-size: 18px;
     line-height: 1.04;
+    font-variant-numeric: tabular-nums;
     color: var(--scarlet);
   }}
   .kpi-lbl {{
     font-weight: 600;
     font-size: 12px;
-    line-height: 1.15;
+    line-height: 1.12;
     color: var(--ink-secondary);
     margin-top: 1px;
   }}
@@ -449,21 +490,21 @@ def generate_html(data_path: Path, out_html: Path) -> None:
     text-align: center;
     white-space: nowrap;
     padding: 2px 6px;
-    border-radius: 1px;
+    border-radius: 2px;
   }}
   .leads {{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
-    padding: 2px 0 3px;
+    gap: 16px;
+    padding: 2px 0 4px;
     border-bottom: 1px solid var(--rule);
   }}
   .lead-art {{
-    height: 112px;
-    border: 1px solid var(--ink-secondary);
+    height: 118px;
+    border: 1px solid var(--rule);
     overflow: hidden;
   }}
-  .lead-art svg, .mini-art svg {{
+  .lead-art svg, .mini-svg-wrap svg {{
     display: block;
     width: 100%;
     height: 100%;
@@ -472,81 +513,152 @@ def generate_html(data_path: Path, out_html: Path) -> None:
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 2px 0 1.5px;
+    margin: 3px 0 2px;
   }}
-  .kicker {{
+  .meta-left {{
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }}
+  .num-circle {{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    color: white;
+    font-weight: 900;
+    font-size: 12px;
+    font-variant-numeric: tabular-nums;
+  }}
+  .loc-txt {{
     font-weight: 700;
     font-size: 12px;
-    color: var(--scarlet);
   }}
   .badge {{
-    font-weight: 700;
+    font-weight: 900;
     font-size: 12px;
     color: white;
     padding: 1px 6px;
     border-radius: 2px;
+    letter-spacing: 0.02em;
   }}
   .badge-confirmed {{ background: var(--badge-confirmed); }}
   .badge-official {{ background: var(--badge-official); }}
-  .badge-overlay {{
-    position: absolute;
-    top: 3px;
-    right: 3px;
-  }}
   .lead-card h2 {{
     font-weight: 900;
     font-size: 20px;
-    line-height: 1.07;
+    line-height: 1.06;
     margin-bottom: 2px;
   }}
   .lead-card p {{
     font-weight: 400;
-    font-size: 12px;
-    line-height: 1.24;
+    font-size: 14px;
+    line-height: 1.2;
     color: var(--ink-secondary);
   }}
   .cards {{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 5px 14px;
-    padding: 2px 0 4px;
-    border-bottom: 2px solid var(--ink-primary);
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4px 12px;
+    padding: 1px 0 3px;
+    border-bottom: 1px solid var(--rule);
   }}
   .mini-art {{
     position: relative;
-    height: 80px;
-    border: 1px solid var(--ink-secondary);
+    height: 72px;
+    border: 1px solid var(--rule);
     overflow: hidden;
+    background: white;
   }}
-  .kicker-sm {{
-    font-weight: 700;
+  .mini-top {{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 5px;
+    background: transparent;
+  }}
+  .mini-top-left {{
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    min-width: 0;
+  }}
+  .num-circle-sm {{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    color: white;
+    font-weight: 900;
     font-size: 12px;
-    color: var(--scarlet);
-    margin-top: 2px;
+    font-variant-numeric: tabular-nums;
+    flex-shrink: 0;
+  }}
+  .mini-loc {{
+    font-weight: 900;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    background: oklch(0.992 0.004 90 / 0.88);
+    padding: 0 4px;
+    border-radius: 2px;
+  }}
+  .mini-top .badge {{
+    font-size: 12px;
+    font-weight: 900;
+    padding: 1px 6px;
+    line-height: 1.2;
+  }}
+  .mini-svg-wrap {{
+    height: 72px;
+    overflow: hidden;
   }}
   .mini-card h3 {{
     font-weight: 900;
-    font-size: 15.5px;
-    line-height: 1.08;
-    margin: 1px 0;
+    font-size: 17px;
+    line-height: 1.06;
+    margin: 2px 0 1px;
   }}
   .mini-card p {{
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.22;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.16;
     color: var(--ink-secondary);
   }}
   .bottom {{
     display: grid;
-    grid-template-columns: 286px 1fr;
+    grid-template-columns: 284px 1fr;
     gap: 12px;
     align-items: start;
   }}
   .sec-hd {{
-    font-weight: 700;
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 3px;
+  }}
+  .sec-title {{
+    background: var(--bg-panel);
+    border-left: 3px solid var(--scarlet);
+    padding: 1px 6px;
+    font-weight: 800;
     font-size: 12px;
     color: var(--scarlet);
-    margin-bottom: 2px;
+  }}
+  .sec-sub {{
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--ink-secondary);
   }}
   .map-box {{
     border: 1px solid var(--rule);
@@ -575,42 +687,61 @@ def generate_html(data_path: Path, out_html: Path) -> None:
   .briefs-grid {{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0 10px;
+    gap: 0 12px;
     border-top: 1px solid var(--ink-primary);
     padding-top: 2px;
   }}
   .brief {{
     font-weight: 400;
-    font-size: 12px;
-    line-height: 1.22;
-    padding: 2px 0;
+    font-size: 13px;
+    line-height: 1.16;
+    padding: 4px 0;
     border-bottom: 1px solid var(--rule);
     color: var(--ink-primary);
+    white-space: nowrap;
+    overflow: hidden;
   }}
-  .b-id {{
-    font-weight: 700;
-    color: var(--scarlet);
+  .num-circle-xs {{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    color: white;
+    font-weight: 500;
+    font-size: 11px;
+    font-variant-numeric: tabular-nums;
+    vertical-align: middle;
   }}
   .b-loc {{
     font-weight: 700;
-    color: var(--ink-primary);
   }}
   .date-check {{
     background: var(--bg-panel);
-    border: 1px solid var(--scarlet);
-    border-left: 3px solid var(--scarlet);
-    padding: 3px 7px;
+    border: 2px solid var(--scarlet);
+    border-left-width: 2px;
+    padding: 5px 7px;
+    margin-top: 6px;
+    font-weight: 400;
     font-size: 12px;
     line-height: 1.22;
     color: var(--ink-primary);
+  }}
+  .dc-key {{
+    font-weight: 600;
   }}
   .footer {{
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid var(--ink-primary);
     padding-top: 2px;
     font-size: 12px;
-    color: var(--ink-muted);
+    font-weight: 600;
+    color: var(--ink-primary);
+  }}
+  .footer-date {{
+    font-weight: 800;
+    color: var(--scarlet);
   }}
 </style>
 </head>
@@ -633,12 +764,19 @@ def generate_html(data_path: Path, out_html: Path) -> None:
 
     <div class="bottom">
       <div>
-        <div class="sec-hd">WHERE IT HAPPENED · PINS 1–13</div>
+        <div class="sec-hd">
+          <span class="sec-title">Where It Happened</span>
+          <span class="sec-sub">Pins 1–13 · Dots 14–33</span>
+        </div>
         <div class="map-box">{build_world_map_svg(data["pins"])}</div>
         <div class="legend">{legend_html}</div>
+        <div class="date-check">{dc_escaped}</div>
       </div>
       <div>
-        <div class="sec-hd">ALSO ON SUNDAY 22 NOVEMBER · 12 MORE STORIES</div>
+        <div class="sec-hd">
+          <span class="sec-title">Also on Sunday 22 November</span>
+          <span class="sec-sub">20 More Stories</span>
+        </div>
         <div class="briefs-grid">
           <div>{col1}</div>
           <div>{col2}</div>
@@ -646,11 +784,9 @@ def generate_html(data_path: Path, out_html: Path) -> None:
       </div>
     </div>
 
-    <div class="date-check">{html.escape(data["date_check"])}</div>
-
     <div class="footer">
-      <span>Every story happened or was first reported on Sun 22 Nov 2026; claims labelled.</span>
-      <span>Sources: Reuters, AP, AFP, BBC, Al Jazeera, SCMP, RFE/RL, Darfur24 · Original vector art</span>
+      <span>REPORTED = confirmed; CLAIM = one side's claim · All <span class="footer-date">Sun 22 Nov 2026</span></span>
+      <span>Sources: BBC, Reuters, AP, AFP, Al Jazeera, Xinhua, RIA, SCMP · Original vector art</span>
     </div>
   </div>
 </body>
