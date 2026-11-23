@@ -2,17 +2,18 @@ from __future__ import annotations
 
 import html
 import json
+import math
 from pathlib import Path
 
 REGION_OKLCH = {
-    'EUROPE': 'oklch(0.46 0.13 245)',
-    'ASIA': 'oklch(0.48 0.12 195)',
-    'MIDDLE EAST': 'oklch(0.46 0.15 310)',
-    'AFRICA': 'oklch(0.46 0.13 150)',
-    'N. AMERICA': 'oklch(0.48 0.18 24)',
-    'S. AMERICA': 'oklch(0.50 0.14 70)',
-    'OCEANIA': 'oklch(0.46 0.12 170)',
-    'GLOBAL': 'oklch(0.24 0.01 260)',
+    'EUROPE': 'oklch(0.45 0.19 258)',
+    'ASIA': 'oklch(0.50 0.14 202)',
+    'MIDDLE EAST': 'oklch(0.47 0.21 322)',
+    'AFRICA': 'oklch(0.48 0.16 148)',
+    'N. AMERICA': 'oklch(0.50 0.21 24)',
+    'S. AMERICA': 'oklch(0.54 0.17 55)',
+    'OCEANIA': 'oklch(0.50 0.19 355)',
+    'GLOBAL': 'oklch(0.22 0.01 260)',
 }
 
 SVGS: dict[str, str] = {
@@ -243,75 +244,84 @@ def badge_html(status: str, kind: str) -> str:
 
 
 def build_world_map_svg(pins: list[dict]) -> str:
-    w, h = 340, 146
+    w, h = 364, 148
 
     def proj(lon: float, lat: float) -> tuple[float, float]:
-        px = ((lon + 180.0) / 360.0) * w
-        py = ((82.0 - lat) / 142.0) * h
-        return max(8, min(w - 8, px)), max(8, min(h - 8, py))
+        # Robinson-like pseudocylindrical projection (crisp Natural Earth look)
+        lat_c = max(-58.0, min(83.0, lat))
+        rad = math.radians(lat_c)
+        x_scale = 0.8487 + 0.1513 * math.cos(rad * 1.15)
+        px = w * 0.5 + ((lon / 180.0) * (w * 0.495) * x_scale)
+        py = ((83.0 - lat_c) / 141.0) * (h - 6.0) + 3.0
+        return max(4.0, min(w - 4.0, px)), max(4.0, min(h - 4.0, py))
 
-    landmasses = [
-        [
-            (-168, 65), (-162, 71), (-140, 70), (-125, 71), (-110, 74), (-95, 72), (-82, 68),
-            (-78, 62), (-92, 60), (-90, 54), (-79, 52), (-76, 60), (-64, 60), (-55, 52),
-            (-60, 46), (-67, 45), (-70, 42), (-75, 38), (-81, 31), (-80, 25), (-82, 27),
-            (-85, 30), (-90, 29), (-97, 26), (-96, 19), (-90, 21), (-87, 21), (-84, 15),
-            (-83, 10), (-78, 8), (-80, 9), (-86, 11), (-92, 14), (-105, 19), (-110, 24),
-            (-114, 31), (-117, 32), (-122, 38), (-124, 48), (-132, 54), (-140, 60),
-            (-152, 60), (-162, 55), (-166, 60),
-        ],
-        [(-56, 76), (-42, 82), (-20, 81), (-18, 70), (-36, 65), (-44, 60), (-52, 65)],
-        [
-            (-78, 9), (-72, 12), (-62, 10), (-52, 4), (-48, 0), (-35, -6), (-38, -14),
-            (-41, -22), (-48, -28), (-54, -34), (-62, -40), (-66, -46), (-68, -54),
-            (-74, -52), (-74, -42), (-71, -30), (-70, -18), (-77, -12), (-81, -5), (-79, 2),
-        ],
-        [
-            (-9, 37), (-9, 43), (-2, 44), (-4, 48), (2, 51), (8, 54), (8, 57), (12, 56),
-            (10, 60), (5, 62), (14, 68), (25, 71), (32, 70), (42, 67), (58, 70), (72, 73),
-            (102, 77), (138, 73), (170, 68), (178, 64), (162, 59), (156, 51), (142, 54),
-            (136, 44), (129, 40), (126, 35), (129, 35), (124, 39), (118, 39), (122, 31),
-            (118, 24), (109, 20), (109, 12), (104, 10), (103, 2), (100, 6), (98, 14),
-            (94, 16), (91, 22), (85, 19), (80, 13), (77, 8), (73, 18), (68, 23), (62, 25),
-            (56, 26), (51, 25), (49, 30), (56, 23), (59, 21), (53, 16), (44, 13), (40, 19),
-            (35, 29), (33, 31), (36, 36), (27, 37), (26, 41), (22, 37), (20, 40), (14, 45),
-            (16, 40), (12, 42), (9, 44), (4, 43), (0, 39), (-5, 36),
-        ],
-        [(-6, 50), (1, 51), (1, 53), (-2, 57), (-6, 58), (-7, 54)],
-        [(-10, 52), (-6, 52), (-6, 55), (-10, 54)],
-        [
-            (-6, 36), (10, 37), (12, 33), (25, 32), (32, 31), (36, 26), (42, 12), (51, 12),
-            (48, 4), (41, -2), (40, -11), (35, -20), (32, -28), (26, -34), (18, -34),
-            (15, -26), (12, -16), (12, -6), (9, 4), (2, 6), (-8, 5), (-15, 11),
-            (-17, 15), (-16, 22), (-10, 30),
-        ],
-        [(44, -25), (47, -25), (50, -15), (48, -12), (44, -18)],
-        [(130, 32), (136, 34), (141, 36), (142, 41), (145, 44), (140, 43), (136, 37), (130, 34)],
-        [(120, 18), (123, 14), (126, 7), (122, 6), (120, 13)],
-        [(109, 2), (118, 6), (117, -3), (110, -3)],
-        [(95, 5), (104, -2), (114, -8), (106, -7), (98, 1)],
-        [
-            (114, -22), (122, -17), (130, -12), (136, -12), (137, -15), (142, -11),
-            (146, -18), (153, -26), (150, -36), (145, -38), (138, -36), (130, -32),
-            (122, -34), (115, -34), (113, -27),
-        ],
-        [(173, -35), (178, -38), (175, -42), (167, -46), (170, -42), (174, -39)],
-    ]
+    topo_path = Path('/tmp/countries-110m.json')
+    country_paths = ''
+    if topo_path.exists():
+        topo = json.loads(topo_path.read_text(encoding='utf-8'))
+        sx, sy = topo['transform']['scale']
+        tx, ty = topo['transform']['translate']
+        decoded_arcs: list[list[tuple[float, float]]] = []
+        for arc in topo['arcs']:
+            x = y = 0
+            pts: list[tuple[float, float]] = []
+            for dx, dy in arc:
+                x += dx
+                y += dy
+                pts.append((x * sx + tx, y * sy + ty))
+            decoded_arcs.append(pts)
+
+        def ring_to_path(ring: list[int]) -> str:
+            coords: list[tuple[float, float]] = []
+            for idx in ring:
+                pts = decoded_arcs[idx] if idx >= 0 else list(reversed(decoded_arcs[~idx]))
+                if coords:
+                    coords.extend(pts[1:])
+                else:
+                    coords.extend(pts)
+            if len(coords) < 3:
+                return ''
+            segs: list[str] = []
+            prev_lon = None
+            for lon, lat in coords:
+                if lat < -58.0:
+                    lat = -58.0
+                px, py = proj(lon, lat)
+                if prev_lon is None or abs(lon - prev_lon) > 90.0:
+                    segs.append(f'M{px:.1f},{py:.1f}')
+                else:
+                    segs.append(f'L{px:.1f},{py:.1f}')
+                prev_lon = lon
+            return ''.join(segs) + 'Z'
+
+        parts: list[str] = []
+        for geom in topo['objects']['countries']['geometries']:
+            if geom.get('id') == '010':  # Exclude Antarctica
+                continue
+            gtype = geom.get('type')
+            if gtype == 'Polygon':
+                d = ''.join(ring_to_path(r) for r in geom['arcs'])
+                if d:
+                    parts.append(f'<path d="{d}"/>')
+            elif gtype == 'MultiPolygon':
+                d = ''.join(ring_to_path(r) for poly in geom['arcs'] for r in poly)
+                if d:
+                    parts.append(f'<path d="{d}"/>')
+        country_paths = (
+            '<g fill="oklch(0.915 0.015 85)" stroke="oklch(0.76 0.014 85)" '
+            'stroke-width="0.48" stroke-linejoin="round">'
+            + ''.join(parts)
+            + '</g>'
+        )
 
     grid_lines = ''
     for lat in (-30, 0, 30, 60):
         _, gy = proj(0, lat)
-        grid_lines += f'<line x1="0" y1="{gy:.1f}" x2="{w}" y2="{gy:.1f}" stroke="oklch(0.88 0.015 225)" stroke-width="0.6" stroke-dasharray="2 2"/>'
+        grid_lines += f'<line x1="0" y1="{gy:.1f}" x2="{w}" y2="{gy:.1f}" stroke="oklch(0.89 0.012 225)" stroke-width="0.5" stroke-dasharray="2 2"/>'
     for lon in (-120, -60, 0, 60, 120):
         gx, _ = proj(lon, 0)
-        grid_lines += f'<line x1="{gx:.1f}" y1="0" x2="{gx:.1f}" y2="{h}" stroke="oklch(0.88 0.015 225)" stroke-width="0.6" stroke-dasharray="2 2"/>'
+        grid_lines += f'<line x1="{gx:.1f}" y1="0" x2="{gx:.1f}" y2="{h}" stroke="oklch(0.89 0.012 225)" stroke-width="0.5" stroke-dasharray="2 2"/>'
 
-    polys = ''.join(
-        '<polygon points="'
-        + ' '.join(f'{proj(lo, la)[0]:.1f},{proj(lo, la)[1]:.1f}' for lo, la in poly)
-        + '" fill="oklch(0.91 0.018 85)" stroke="oklch(0.68 0.02 85)" stroke-width="0.75" stroke-linejoin="round"/>'
-        for poly in landmasses
-    )
     dot_els = ''
     pin_els = ''
     for p in pins:
@@ -322,13 +332,13 @@ def build_world_map_svg(pins: list[dict]) -> str:
         else:
             pin_els += (
                 f'<g transform="translate({px:.1f},{py:.1f})">'
-                f'<circle r="6.0" fill="{col}" stroke="white" stroke-width="1"/>'
-                f'<text y="2.7" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="7.5" fill="white">{p["id"]}</text>'
+                f'<circle r="6.2" fill="{col}" stroke="white" stroke-width="1"/>'
+                f'<text y="2.8" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="7.8" fill="white">{p["id"]}</text>'
                 f'</g>'
             )
     return (
         f'<svg viewBox="0 0 {w} {h}" width="100%" height="{h}" xmlns="http://www.w3.org/2000/svg">'
-        f'<rect width="{w}" height="{h}" fill="oklch(0.955 0.014 225)"/>{grid_lines}{polys}{dot_els}{pin_els}</svg>'
+        f'<rect width="{w}" height="{h}" fill="oklch(0.962 0.012 225)"/>{grid_lines}{country_paths}{dot_els}{pin_els}</svg>'
     )
 
 
@@ -500,11 +510,11 @@ def generate_html(data_path: Path, out_html: Path) -> None:
     align-items: center;
     gap: 8px;
     margin-top: 3px;
-    padding: 2px 6px;
+    padding: 3px 6px;
     background: var(--bg-panel);
     border-top: 1px solid var(--rule);
     border-bottom: 1px solid var(--rule);
-    font-size: 11px;
+    font-size: 12px;
     font-variant-numeric: tabular-nums;
     white-space: nowrap;
     overflow: hidden;
@@ -513,17 +523,39 @@ def generate_html(data_path: Path, out_html: Path) -> None:
     background: var(--ink-primary);
     color: white;
     font-weight: 800;
-    font-size: 10px;
-    padding: 1px 5px;
+    font-size: 12px;
+    padding: 1px 6px;
     border-radius: 2px;
     flex-shrink: 0;
   }}
   .utc-items {{
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     flex: 1;
-    gap: 6px;
+    gap: 5px;
     color: var(--ink-secondary);
+  }}
+  .utc-node {{
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+  }}
+  .utc-dot {{
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--scarlet);
+    border: 2px solid white;
+    box-shadow: 0 0 0 1.2px oklch(0.62 0.01 260);
+    flex-shrink: 0;
+  }}
+  .utc-line {{
+    flex: 1;
+    min-width: 10px;
+    height: 1.5px;
+    background: oklch(0.68 0.01 260);
   }}
   .utc-items b {{
     color: var(--scarlet);
@@ -546,7 +578,7 @@ def generate_html(data_path: Path, out_html: Path) -> None:
     border-bottom: 1px solid var(--rule);
   }}
   .lead-art {{
-    height: 112px;
+    height: 108px;
     border: 1px solid var(--rule);
     overflow: hidden;
   }}
@@ -684,8 +716,8 @@ def generate_html(data_path: Path, out_html: Path) -> None:
   }}
   .bottom {{
     display: grid;
-    grid-template-columns: 340px 1fr;
-    gap: 12px;
+    grid-template-columns: 364px 1fr;
+    gap: 10px;
     align-items: start;
   }}
   .sec-hd {{
@@ -742,8 +774,8 @@ def generate_html(data_path: Path, out_html: Path) -> None:
   .brief {{
     font-weight: 400;
     font-size: 13px;
-    line-height: 1.16;
-    padding: 4px 0;
+    line-height: 1.15;
+    padding: 3.5px 0;
     border-bottom: 1px solid var(--rule);
     color: var(--ink-primary);
     white-space: nowrap;
@@ -769,11 +801,11 @@ def generate_html(data_path: Path, out_html: Path) -> None:
     background: var(--bg-panel);
     border: 2px solid var(--scarlet);
     border-left-width: 2px;
-    padding: 5px 7px;
-    margin-top: 6px;
+    padding: 4px 7px;
+    margin-top: 3px;
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.22;
+    line-height: 1.2;
     color: var(--ink-primary);
   }}
   .dc-key {{
@@ -809,11 +841,15 @@ def generate_html(data_path: Path, out_html: Path) -> None:
       <div class="utc-strip">
         <span class="utc-label">THE DAY IN UTC</span>
         <div class="utc-items">
-          <span><b>01:00</b> HK polls open</span>
-          <span><b>05:30</b> Verstappen wins F1</span>
-          <span><b>06:00</b> 186 Ukraine drones tally</span>
-          <span><b>14:00</b> Alcaraz wins ATP</span>
-          <span><b>18:30</b> COP31 collapses</span>
+          <span class="utc-node"><i class="utc-dot"></i><b>01:00</b> HK polls</span>
+          <i class="utc-line"></i>
+          <span class="utc-node"><i class="utc-dot"></i><b>06:00</b> 186 drones</span>
+          <i class="utc-line"></i>
+          <span class="utc-node"><i class="utc-dot"></i><b>14:00</b> Márquez 8th</span>
+          <i class="utc-line"></i>
+          <span class="utc-node"><i class="utc-dot"></i><b>18:30</b> Alcaraz ATP</span>
+          <i class="utc-line"></i>
+          <span class="utc-node"><i class="utc-dot"></i><b>22:00</b> COP31 fails</span>
         </div>
       </div>
     </div>
