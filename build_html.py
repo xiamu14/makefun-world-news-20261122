@@ -56,36 +56,36 @@ SVGS: dict[str, str] = {
       <text x="159" y="102" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="10.5" fill="white">TALKS COLLAPSE OVER FOSSIL FUELS · LONGEST COP</text>
     </svg>""",
     'ukraine_strikes': """
-    <svg viewBox="0 0 318 118" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="318" height="118" fill="oklch(0.18 0.025 255)"/>
+    <svg viewBox="0 0 318 108" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="318" height="108" fill="oklch(0.18 0.025 255)"/>
       <g fill="oklch(0.25 0.02 255)">
-        <rect x="0" y="54" width="24" height="64"/>
-        <rect x="28" y="42" width="28" height="76"/>
-        <rect x="220" y="48" width="30" height="70"/>
-        <rect x="256" y="38" width="26" height="80"/>
-        <rect x="286" y="52" width="32" height="66"/>
+        <rect x="0" y="48" width="24" height="60"/>
+        <rect x="28" y="38" width="28" height="70"/>
+        <rect x="220" y="42" width="30" height="66"/>
+        <rect x="256" y="34" width="26" height="74"/>
+        <rect x="286" y="46" width="32" height="62"/>
       </g>
-      <rect x="64" y="44" width="52" height="58" fill="oklch(0.34 0.02 250)"/>
-      <polygon points="116,54 148,74 148,102 116,102" fill="oklch(0.29 0.02 250)"/>
+      <rect x="64" y="38" width="52" height="52" fill="oklch(0.34 0.02 250)"/>
+      <polygon points="116,48 148,66 148,90 116,90" fill="oklch(0.29 0.02 250)"/>
       <g fill="oklch(0.78 0.12 75)">
-        <rect x="70" y="52" width="7" height="7"/><rect x="83" y="52" width="7" height="7"/>
-        <rect x="70" y="66" width="7" height="7"/><rect x="83" y="66" width="7" height="7"/>
+        <rect x="70" y="46" width="7" height="7"/><rect x="83" y="46" width="7" height="7"/>
+        <rect x="70" y="59" width="7" height="7"/><rect x="83" y="59" width="7" height="7"/>
       </g>
-      <polygon points="56,102 92,84 128,88 168,102" fill="oklch(0.46 0.02 70)"/>
-      <polygon points="88,102 114,82 146,92 162,102" fill="oklch(0.54 0.02 75)"/>
-      <line x1="184" y1="102" x2="184" y2="48" stroke="oklch(0.78 0.16 78)" stroke-width="3.5"/>
-      <line x1="184" y1="50" x2="128" y2="68" stroke="oklch(0.78 0.16 78)" stroke-width="2.5"/>
-      <line x1="138" y1="65" x2="138" y2="85" stroke="white" stroke-width="1.2" stroke-dasharray="2 2"/>
-      <circle cx="156" cy="84" r="4" fill="oklch(0.78 0.16 78)"/>
-      <rect x="152" y="88" width="8" height="12" rx="2" fill="oklch(0.62 0.20 35)"/>
-      <polygon points="98,84 112,56 126,84" fill="oklch(0.66 0.22 38)"/>
-      <path d="M238,34 Q188,42 122,64" fill="none" stroke="oklch(0.76 0.16 75)" stroke-width="1.5" stroke-dasharray="4 3"/>
-      <polygon points="236,34 252,27 248,39" fill="oklch(0.72 0.18 65)"/>
-      <polygon points="204,41 218,35 214,45" fill="oklch(0.72 0.18 65)"/>
-      <rect x="0" y="102" width="318" height="16" fill="oklch(0.14 0.02 255)"/>
-      <text x="159" y="113" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="9" fill="oklch(0.90 0.02 85)">DYMER FIVE-STOREY BLOCK HIT · RESCUERS DIG RUBBLE</text>
-      <rect x="10" y="9" width="166" height="20" rx="2" fill="oklch(0.48 0.18 24)"/>
-      <text x="93" y="23" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="11" fill="white">186 DRONES · 161 DOWNED</text>
+      <polygon points="56,90 92,74 128,78 168,90" fill="oklch(0.46 0.02 70)"/>
+      <polygon points="88,90 114,72 146,81 162,90" fill="oklch(0.54 0.02 75)"/>
+      <line x1="184" y1="90" x2="184" y2="42" stroke="oklch(0.78 0.16 78)" stroke-width="3.5"/>
+      <line x1="184" y1="44" x2="128" y2="61" stroke="oklch(0.78 0.16 78)" stroke-width="2.5"/>
+      <line x1="138" y1="58" x2="138" y2="76" stroke="white" stroke-width="1.2" stroke-dasharray="2 2"/>
+      <circle cx="156" cy="74" r="3.8" fill="oklch(0.78 0.16 78)"/>
+      <rect x="152" y="78" width="8" height="11" rx="2" fill="oklch(0.62 0.20 35)"/>
+      <polygon points="98,75 112,50 126,75" fill="oklch(0.66 0.22 38)"/>
+      <path d="M238,30 Q188,38 122,58" fill="none" stroke="oklch(0.76 0.16 75)" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <polygon points="236,30 252,23 248,35" fill="oklch(0.72 0.18 65)"/>
+      <polygon points="204,37 218,31 214,41" fill="oklch(0.72 0.18 65)"/>
+      <rect x="0" y="90" width="318" height="18" fill="oklch(0.14 0.02 255)"/>
+      <text x="159" y="102" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="9" fill="oklch(0.92 0.02 85)">DYMER FIVE-STOREY BLOCK HIT · RESCUERS DIG RUBBLE</text>
+      <rect x="10" y="8" width="166" height="19" rx="2" fill="oklch(0.48 0.18 24)"/>
+      <text x="93" y="21" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="11" fill="white">186 DRONES · 161 DOWNED</text>
     </svg>""",
     'us_house_lead': """
     <svg viewBox="0 0 318 112" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -239,7 +239,7 @@ SVGS: dict[str, str] = {
 
 
 def badge_html(status: str, kind: str) -> str:
-    cls = 'badge-official' if kind == 'official' else 'badge-confirmed'
+    cls = 'badge-claim' if kind == 'claim' else ('badge-official' if kind == 'official' else 'badge-confirmed')
     return f'<span class="badge {cls}">{html.escape(status)}</span>'
 
 
@@ -424,7 +424,8 @@ def generate_html(data_path: Path, out_html: Path) -> None:
     --rule: oklch(0.18 0.01 260 / 0.14);
     --scarlet: oklch(0.48 0.18 24);
     --badge-confirmed: oklch(0.42 0.12 152);
-    --badge-official: oklch(0.46 0.13 65);
+    --badge-official: oklch(0.44 0.13 248);
+    --badge-claim: oklch(0.48 0.14 60);
   }}
   * {{ box-sizing: border-box; margin: 0; padding: 0; }}
   html, body {{
@@ -624,6 +625,7 @@ def generate_html(data_path: Path, out_html: Path) -> None:
   }}
   .badge-confirmed {{ background: var(--badge-confirmed); }}
   .badge-official {{ background: var(--badge-official); }}
+  .badge-claim {{ background: var(--badge-claim); }}
   .lead-card h2 {{
     font-family: "Source Serif 4", Georgia, serif;
     font-weight: 800;
@@ -881,7 +883,7 @@ def generate_html(data_path: Path, out_html: Path) -> None:
     </div>
 
     <div class="footer">
-      <span>REPORTED = confirmed; CLAIM = one side's claim · All <span class="footer-date">Sun 22 Nov 2026</span></span>
+      <span>CONFIRMED = multi-outlet; OFFICIAL = ministry/agency; CLAIM = one side · All <span class="footer-date">Sun 22 Nov 2026</span></span>
       <span>Sources: BBC, Reuters, AP, AFP, Al Jazeera, Xinhua, RIA, SCMP · Original vector art</span>
     </div>
   </div>
