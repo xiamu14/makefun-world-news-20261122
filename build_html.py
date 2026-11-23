@@ -358,9 +358,21 @@ def generate_html(data_path: Path, out_html: Path) -> None:
         for r in data['region_bar']
     )
 
+    LEAD_PHOTOS = {
+        'cop31_collapse': ('images/lead1_cop31.jpg', 'COP31 · NO DEAL'),
+        'ukraine_strikes': ('images/lead2_ukraine.jpg', '186 DRONES · 161 DOWNED'),
+        'sea_strikes': ('images/lead3_sea.jpg', 'BENGHAZI · FINLAND'),
+    }
+
+    def lead_media_html(art_key: str) -> str:
+        if art_key in LEAD_PHOTOS:
+            src, tag = LEAD_PHOTOS[art_key]
+            return f'<img src="{src}" alt="{html.escape(tag)}"/><span class="lead-tag">{html.escape(tag)}</span>'
+        return SVGS[art_key]
+
     leads_html = ''.join(
         f'''<article class="lead-card">
-          <div class="lead-art">{SVGS[l["art"]]}</div>
+          <div class="lead-art">{lead_media_html(l["art"])}</div>
           <div class="meta-row">
             <span class="meta-left">
               <span class="num-circle" style="background:{l["weight_color"]}">{html.escape(l["id"])}</span>
@@ -445,8 +457,8 @@ def generate_html(data_path: Path, out_html: Path) -> None:
     padding: 6px 16px 5px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 2px;
+    justify-content: flex-start;
+    gap: 10px;
   }}
   .eyebrow {{
     display: flex;
@@ -462,7 +474,7 @@ def generate_html(data_path: Path, out_html: Path) -> None:
   h1.masthead {{
     font-family: "Source Serif 4", Georgia, serif;
     font-weight: 900;
-    font-size: 42px;
+    font-size: 52px;
     line-height: 1.02;
     text-align: center;
     letter-spacing: -0.015em;
@@ -525,9 +537,29 @@ def generate_html(data_path: Path, out_html: Path) -> None:
     border-bottom: 1px solid var(--rule);
   }}
   .lead-art {{
+    position: relative;
     height: 118px;
     border: 1px solid var(--rule);
     overflow: hidden;
+  }}
+  .lead-art img {{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }}
+  .lead-tag {{
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: oklch(0.48 0.18 24 / 0.92);
+    color: white;
+    font-weight: 900;
+    font-size: 10px;
+    letter-spacing: 0.03em;
+    padding: 2px 6px;
+    border-radius: 2px;
   }}
   .lead-art svg, .mini-svg-wrap svg {{
     display: block;
