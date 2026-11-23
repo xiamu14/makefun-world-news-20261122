@@ -86,55 +86,42 @@ SVGS: dict[str, str] = {
       <rect x="10" y="9" width="166" height="20" rx="2" fill="oklch(0.48 0.18 24)"/>
       <text x="93" y="23" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="11" fill="white">186 DRONES · 161 DOWNED</text>
     </svg>""",
-    'sea_strikes': """
-    <svg viewBox="0 0 318 118" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="158" height="44" fill="oklch(0.89 0.025 220)"/>
-      <rect y="44" width="158" height="74" fill="oklch(0.45 0.09 235)"/>
-      <rect y="94" width="158" height="24" fill="oklch(0.84 0.03 80)"/>
-      <text x="12" y="38" font-family="Roboto, sans-serif" font-weight="800" font-size="8" fill="oklch(0.28 0.03 250)">LIBYA COAST</text>
-      <polygon points="14,76 34,76 30,82 16,82" fill="oklch(0.20 0.02 250)"/>
-      <line x1="34" y1="78" x2="54" y2="75" stroke="oklch(0.75 0.15 55)" stroke-width="1.6" stroke-dasharray="3 2"/>
-      <g transform="translate(52,52)">
-        <polygon points="0,18 92,18 84,30 8,30" fill="oklch(0.22 0.02 250)"/>
-        <rect x="22" y="8" width="24" height="10" fill="oklch(0.36 0.02 250)"/>
-        <polygon points="56,18 68,-4 80,18" fill="oklch(0.62 0.21 35)"/>
-        <circle cx="70" cy="-6" r="7" fill="oklch(0.38 0.01 260)" opacity="0.82"/>
-      </g>
-      <text x="79" y="109" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="9" fill="oklch(0.20 0.02 250)">BENGHAZI · CORVETTE HIT</text>
-
-      <rect x="158" width="2" height="118" fill="white"/>
-
-      <rect x="160" width="158" height="118" fill="oklch(0.87 0.035 225)"/>
-      <path d="M160,0 L318,0 L318,40 L258,44 L228,33 L160,37 Z" fill="oklch(0.91 0.02 85)"/>
-      <text x="200" y="20" font-family="Roboto, sans-serif" font-weight="800" font-size="8" fill="oklch(0.30 0.02 250)">FINLAND</text>
-      <rect x="160" y="94" width="158" height="24" fill="oklch(0.88 0.02 85)"/>
-      <g transform="translate(172,66)">
-        <polygon points="0,8 26,8 22,16 4,16" fill="oklch(0.48 0.18 24)"/>
-        <rect x="6" y="2" width="10" height="6" fill="white"/>
-      </g>
-      <line x1="198" y1="76" x2="218" y2="76" stroke="oklch(0.24 0.02 250)" stroke-width="1.8" stroke-dasharray="3 2"/>
-      <g transform="translate(218,60)">
-        <polygon points="0,12 82,12 74,24 8,24" fill="oklch(0.24 0.02 250)"/>
-        <rect x="14" y="3" width="18" height="9" fill="oklch(0.42 0.02 250)"/>
-        <polygon points="46,12 56,-5 66,12" fill="oklch(0.64 0.21 35)"/>
-      </g>
-      <text x="239" y="109" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="9" fill="oklch(0.20 0.02 250)">FINLAND · SPARTA II TOWED</text>
-
-      <rect x="10" y="9" width="138" height="19" rx="2" fill="oklch(0.48 0.18 24)"/>
-      <text x="79" y="22" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="10" fill="white">SEA DRONE STRIKES</text>
+    'us_house_lead': """
+    <svg viewBox="0 0 318 112" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="318" height="112" fill="oklch(0.955 0.012 240)"/>
+      <text x="16" y="18" font-family="Roboto, sans-serif" font-weight="900" font-size="9.5" fill="oklch(0.24 0.02 250)">U.S. HOUSE OF REPRESENTATIVES · 435 SEATS</text>
+      <!-- Hemicycle (left-center) -->
+      <path d="M26,98 A68,68 0 0,1 162,98" fill="none" stroke="oklch(0.86 0.015 240)" stroke-width="18"/>
+      <path d="M26,98 A68,68 0 0,1 124,37" fill="none" stroke="oklch(0.46 0.15 250)" stroke-width="18"/>
+      <path d="M124,37 A68,68 0 0,1 162,98" fill="none" stroke="oklch(0.50 0.19 25)" stroke-width="18"/>
+      <!-- 218 Majority dashed line at top center -->
+      <line x1="94" y1="22" x2="94" y2="42" stroke="oklch(0.18 0.01 260)" stroke-width="1.8" stroke-dasharray="2.5 2"/>
+      <text x="94" y="51" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="800" font-size="7.5" fill="oklch(0.28 0.02 250)">218 MAJ.</text>
+      <!-- Capitol dome silhouette -->
+      <rect x="74" y="83" width="40" height="15" fill="oklch(0.84 0.015 250)"/>
+      <rect x="81" y="75" width="26" height="8" fill="oklch(0.76 0.015 250)"/>
+      <path d="M82,75 Q94,58 106,75 Z" fill="oklch(0.68 0.02 250)"/>
+      <line x1="94" y1="58" x2="94" y2="64" stroke="oklch(0.40 0.02 250)" stroke-width="1.6"/>
+      <!-- Right-side stat card -->
+      <rect x="182" y="24" width="126" height="78" rx="3" fill="white" stroke="oklch(0.82 0.02 245)" stroke-width="1.2"/>
+      <text x="245" y="50" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="25" fill="oklch(0.46 0.15 250)">258+</text>
+      <text x="245" y="64" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="9.5" fill="oklch(0.20 0.02 260)">DEMOCRAT SEATS</text>
+      <line x1="194" y1="71" x2="296" y2="71" stroke="oklch(0.88 0.01 250)" stroke-width="1"/>
+      <text x="245" y="83" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="800" font-size="8.5" fill="oklch(0.48 0.18 24)">LARGEST SINCE 1992</text>
+      <text x="245" y="95" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="700" font-size="8" fill="oklch(0.36 0.02 260)">NC RECOUNT FLIP</text>
     </svg>""",
-    'us_house': """
+    'benghazi_mini': """
     <svg viewBox="0 0 188 72" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="188" height="72" fill="oklch(0.95 0.012 240)"/>
-      <path d="M18,62 A38,38 0 0,1 94,62" fill="none" stroke="oklch(0.84 0.02 240)" stroke-width="11"/>
-      <path d="M18,62 A38,38 0 0,1 76,30" fill="none" stroke="oklch(0.46 0.15 250)" stroke-width="11"/>
-      <path d="M76,30 A38,38 0 0,1 94,62" fill="none" stroke="oklch(0.50 0.20 25)" stroke-width="11"/>
-      <rect x="45" y="50" width="22" height="12" fill="oklch(0.86 0.01 250)"/>
-      <path d="M47,50 Q56,39 65,50 Z" fill="oklch(0.76 0.01 250)"/>
-      <line x1="56" y1="40" x2="56" y2="44" stroke="oklch(0.46 0.02 250)" stroke-width="1.5"/>
-      <text x="142" y="45" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="18.5" fill="oklch(0.46 0.15 250)">258+</text>
-      <text x="142" y="56" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="800" font-size="8" fill="oklch(0.28 0.02 250)">DEM MAJORITY</text>
-      <text x="142" y="65" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="700" font-size="7.5" fill="oklch(0.46 0.15 250)">NC FLIP</text>
+      <rect width="188" height="41" fill="oklch(0.90 0.02 220)"/>
+      <rect y="41" width="188" height="31" fill="oklch(0.48 0.09 235)"/>
+      <g transform="translate(18,34)">
+        <polygon points="0,14 78,14 71,24 7,24" fill="oklch(0.22 0.02 250)"/>
+        <rect x="18" y="6" width="20" height="8" fill="oklch(0.36 0.02 250)"/>
+        <polygon points="46,14 55,-3 64,14" fill="oklch(0.62 0.21 35)"/>
+        <circle cx="57" cy="-5" r="5" fill="oklch(0.38 0.01 260)" opacity="0.8"/>
+      </g>
+      <text x="142" y="51" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="13" fill="white">MERKURY</text>
+      <text x="142" y="62" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="800" font-size="7.5" fill="oklch(0.94 0.03 85)">CORVETTE HIT</text>
     </svg>""",
     'hormuz_mini': """
     <svg viewBox="0 0 188 72" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -256,7 +243,7 @@ def badge_html(status: str, kind: str) -> str:
 
 
 def build_world_map_svg(pins: list[dict]) -> str:
-    w, h = 284, 144
+    w, h = 340, 146
 
     def proj(lon: float, lat: float) -> tuple[float, float]:
         px = ((lon + 180.0) / 360.0) * w
@@ -358,21 +345,9 @@ def generate_html(data_path: Path, out_html: Path) -> None:
         for r in data['region_bar']
     )
 
-    LEAD_PHOTOS = {
-        'cop31_collapse': ('images/lead1_cop31.jpg', 'COP31 · NO DEAL'),
-        'ukraine_strikes': ('images/lead2_ukraine.jpg', '186 DRONES · 161 DOWNED'),
-        'sea_strikes': ('images/lead3_sea.jpg', 'BENGHAZI · FINLAND'),
-    }
-
-    def lead_media_html(art_key: str) -> str:
-        if art_key in LEAD_PHOTOS:
-            src, tag = LEAD_PHOTOS[art_key]
-            return f'<img src="{src}" alt="{html.escape(tag)}"/><span class="lead-tag">{html.escape(tag)}</span>'
-        return SVGS[art_key]
-
     leads_html = ''.join(
         f'''<article class="lead-card">
-          <div class="lead-art">{lead_media_html(l["art"])}</div>
+          <div class="lead-art">{SVGS[l["art"]]}</div>
           <div class="meta-row">
             <span class="meta-left">
               <span class="num-circle" style="background:{l["weight_color"]}">{html.escape(l["id"])}</span>
@@ -520,6 +495,40 @@ def generate_html(data_path: Path, out_html: Path) -> None:
     gap: 2px;
     margin-top: 2px;
   }}
+  .utc-strip {{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 3px;
+    padding: 2px 6px;
+    background: var(--bg-panel);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    font-size: 11px;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    overflow: hidden;
+  }}
+  .utc-label {{
+    background: var(--ink-primary);
+    color: white;
+    font-weight: 800;
+    font-size: 10px;
+    padding: 1px 5px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }}
+  .utc-items {{
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    gap: 6px;
+    color: var(--ink-secondary);
+  }}
+  .utc-items b {{
+    color: var(--scarlet);
+    font-weight: 800;
+  }}
   .reg-seg {{
     color: white;
     font-weight: 700;
@@ -537,29 +546,9 @@ def generate_html(data_path: Path, out_html: Path) -> None:
     border-bottom: 1px solid var(--rule);
   }}
   .lead-art {{
-    position: relative;
-    height: 118px;
+    height: 112px;
     border: 1px solid var(--rule);
     overflow: hidden;
-  }}
-  .lead-art img {{
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }}
-  .lead-tag {{
-    position: absolute;
-    top: 6px;
-    left: 6px;
-    background: oklch(0.48 0.18 24 / 0.92);
-    color: white;
-    font-weight: 900;
-    font-size: 10px;
-    letter-spacing: 0.03em;
-    padding: 2px 6px;
-    border-radius: 2px;
   }}
   .lead-art svg, .mini-svg-wrap svg {{
     display: block;
@@ -695,7 +684,7 @@ def generate_html(data_path: Path, out_html: Path) -> None:
   }}
   .bottom {{
     display: grid;
-    grid-template-columns: 284px 1fr;
+    grid-template-columns: 340px 1fr;
     gap: 12px;
     align-items: start;
   }}
@@ -789,6 +778,7 @@ def generate_html(data_path: Path, out_html: Path) -> None:
   }}
   .dc-key {{
     font-weight: 600;
+    color: var(--scarlet);
   }}
   .footer {{
     display: flex;
@@ -816,6 +806,16 @@ def generate_html(data_path: Path, out_html: Path) -> None:
       <div class="deck">{html.escape(data["deck"])}</div>
       <div class="kpi-strip">{kpi_html}</div>
       <div class="reg-bar">{reg_html}</div>
+      <div class="utc-strip">
+        <span class="utc-label">THE DAY IN UTC</span>
+        <div class="utc-items">
+          <span><b>01:00</b> HK polls open</span>
+          <span><b>05:30</b> Verstappen wins F1</span>
+          <span><b>06:00</b> 186 Ukraine drones tally</span>
+          <span><b>14:00</b> Alcaraz wins ATP</span>
+          <span><b>18:30</b> COP31 collapses</span>
+        </div>
+      </div>
     </div>
 
     <div class="leads">{leads_html}</div>

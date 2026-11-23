@@ -2,7 +2,7 @@
   "masthead": "Sunday 22 November 2026",
   "eyebrow_left": "The World in One Day",
   "eyebrow_right": "33 Stories · 7 Regions · Every One Dated Sunday 22 November 2026",
-  "deck": "COP31 collapses with no deal · Drones strike Russian corvette in Libya · US Democrats win 258+ House seats · Alcaraz wins ATP Finals",
+  "deck": "COP31 collapses with no deal · 186 drones hit Ukraine · US Democrats win 258+ House seats · Alcaraz wins ATP Finals",
   "kpi_stats": [
     {"num": "258+", "label": "Dem House seats (BBC)", "color": "oklch(0.46 0.13 245)"},
     {"num": "186", "label": "drones on Ukraine (AP)", "color": "oklch(0.48 0.18 24)"},
@@ -43,17 +43,17 @@
     },
     {
       "id": "3",
-      "loc": "Libya · Finland · Sea",
+      "loc": "Washington · US Politics",
       "weight_color": "oklch(0.48 0.18 24)",
       "status": "REPORTED",
       "status_kind": "confirmed",
-      "title": "Russia ship hit in Libya; Sparta II towed",
-      "body": "Ukrainian naval drones hit corvette Merkury in Benghazi; attacked Sparta II towed off Finland (BBC, AJ).",
-      "art": "sea_strikes"
+      "title": "US Democrats clinch 258+ House seats",
+      "body": "North Carolina recount flip seals the largest House majority for either party since 1992, well past the 218 threshold (BBC, Guardian).",
+      "art": "us_house_lead"
     }
   ],
   "cards": [
-    {"id": "4", "loc": "US House", "weight_color": "oklch(0.46 0.13 245)", "status": "REPORTED", "status_kind": "confirmed", "title": "Dems win 258+ seats", "sub": "Largest majority since 1992 after North Carolina flip (BBC)", "art": "us_house"},
+    {"id": "4", "loc": "Benghazi", "weight_color": "oklch(0.46 0.13 245)", "status": "REPORTED", "status_kind": "confirmed", "title": "Russia ship hit in Libya", "sub": "Sea drones hit corvette Merkury in port (BBC, AJ)", "art": "benghazi_mini"},
     {"id": "5", "loc": "Hormuz", "weight_color": "oklch(0.46 0.13 245)", "status": "CLAIM", "status_kind": "official", "title": "3 tankers hit in Strait", "sub": "Traffic drops ~65% off Oman; IRGC claims strikes (AP)", "art": "hormuz_mini"},
     {"id": "6", "loc": "Indonesia", "weight_color": "oklch(0.46 0.13 245)", "status": "REPORTED", "status_kind": "confirmed", "title": "Cikande fire kills 3", "sub": "Candy plant blaze leaves 36 missing, 15 rescued (BBC)", "art": "indonesia_fire"},
     {"id": "7", "loc": "Seoul", "weight_color": "oklch(0.46 0.13 245)", "status": "REPORTED", "status_kind": "confirmed", "title": "Education chief quits", "sub": "Choi resigns over AI exam cheating chaos (BBC, AFP)", "art": "korea_resign"},
@@ -89,8 +89,8 @@
   "pins": [
     {"id": 1, "lon": 30.7, "lat": 36.9, "r": "GLOBAL"},
     {"id": 2, "lon": 30.5, "lat": 50.4, "r": "EUROPE"},
-    {"id": 3, "lon": 20.1, "lat": 32.1, "r": "AFRICA"},
-    {"id": 4, "lon": -77.0, "lat": 38.9, "r": "N. AMERICA"},
+    {"id": 3, "lon": -77.0, "lat": 38.9, "r": "N. AMERICA"},
+    {"id": 4, "lon": 20.1, "lat": 32.1, "r": "AFRICA"},
     {"id": 5, "lon": 56.4, "lat": 26.5, "r": "MIDDLE EAST"},
     {"id": 6, "lon": 106.4, "lat": -6.2, "r": "ASIA"},
     {"id": 7, "lon": 127.0, "lat": 37.6, "r": "ASIA"},
@@ -121,5 +121,5 @@
     {"id": 32, "lon": 12.45, "lat": 41.9, "r": "EUROPE", "dot": true},
     {"id": 33, "lon": -91.2, "lat": 40.8, "r": "N. AMERICA", "dot": true}
   ],
-  "date_check": "DATE CHECK — LEFT OUT ON PURPOSE (NOT SUN 22 NOV): Russia's 400-drone barrage (Fri 20 Nov) · Bayelsa boat (Fri 20 Nov) · Peru M6.7 quake (Sat 21 Nov) · El Chapo Isidro capture (Fri/Sat) · BepiColombo burn (Sat 18:24 UTC)"
+  "date_check": "DATE CHECK — LEFT OUT ON PURPOSE (NOT SUN 22 NOV): Russia's 148-drone night (Fri/Sat) · Bayelsa boat (Fri 20 Nov) · Peru M6.7 quake (Sat 21 Nov) · El Chapo Isidro capture (Fri/Sat) · BepiColombo burn (Sat 18:24 UTC)"
 }
