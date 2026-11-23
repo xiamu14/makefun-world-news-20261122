@@ -18,93 +18,110 @@ REGION_OKLCH = {
 SVGS: dict[str, str] = {
     'cop31_collapse': """
     <svg viewBox="0 0 318 118" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="318" height="118" fill="oklch(0.96 0.01 85)"/>
-      <circle cx="159" cy="54" r="40" fill="none" stroke="oklch(0.86 0.02 220)" stroke-width="1" stroke-dasharray="3 3"/>
-      <g transform="translate(16,26)">
-        <rect width="72" height="44" rx="2" fill="oklch(0.48 0.21 25)"/>
-        <circle cx="27" cy="22" r="10.5" fill="white"/>
-        <circle cx="31" cy="22" r="8.4" fill="oklch(0.48 0.21 25)"/>
-        <polygon points="44,22 50,20 46,25 46,19 50,24" fill="white"/>
-        <text x="36" y="55" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="800" font-size="8.5" fill="oklch(0.32 0.02 260)">TÜRKİYE</text>
-      </g>
-      <g transform="translate(230,26)">
-        <rect width="72" height="44" rx="2" fill="oklch(0.34 0.16 258)"/>
-        <rect width="31" height="21" fill="oklch(0.30 0.14 258)"/>
-        <path d="M0,0 L31,21 M31,0 L0,21" stroke="white" stroke-width="2.6"/>
-        <path d="M0,0 L31,21 M31,0 L0,21" stroke="oklch(0.50 0.20 25)" stroke-width="1"/>
-        <path d="M15.5,0 V21 M0,10.5 H31" stroke="white" stroke-width="4"/>
-        <path d="M15.5,0 V21 M0,10.5 H31" stroke="oklch(0.50 0.20 25)" stroke-width="1.8"/>
-        <circle cx="15.5" cy="32" r="3.5" fill="white"/>
-        <circle cx="52" cy="12" r="1.8" fill="white"/><circle cx="60" cy="21" r="1.8" fill="white"/>
-        <circle cx="48" cy="28" r="1.8" fill="white"/><circle cx="54" cy="36" r="1.8" fill="white"/>
-        <text x="36" y="55" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="800" font-size="8.5" fill="oklch(0.32 0.02 260)">AUSTRALIA</text>
-      </g>
-      <g transform="translate(124,23)">
-        <rect width="70" height="50" rx="3" fill="white" stroke="oklch(0.46 0.13 245)" stroke-width="1.5"/>
-        <polygon points="56,0 70,14 56,14" fill="oklch(0.90 0.03 240)"/>
-        <line x1="10" y1="15" x2="50" y2="15" stroke="oklch(0.65 0.04 250)" stroke-width="2"/>
-        <line x1="10" y1="24" x2="60" y2="24" stroke="oklch(0.65 0.04 250)" stroke-width="2"/>
-        <line x1="10" y1="33" x2="46" y2="33" stroke="oklch(0.65 0.04 250)" stroke-width="2"/>
-        <circle cx="54" cy="39" r="8" fill="oklch(0.48 0.18 24)"/>
-        <path d="M50.5,35.5 L57.5,42.5 M57.5,35.5 L50.5,42.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
-      </g>
-      <text x="159" y="16" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="10.5" fill="oklch(0.22 0.01 260)">ANTALYA · +2 DAYS OVERTIME</text>
-      <rect x="16" y="88" width="286" height="21" rx="2" fill="oklch(0.48 0.18 24)"/>
-      <text x="159" y="102.5" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="12" fill="white">COP31: TALKS COLLAPSE · NO DEAL</text>
+      <rect width="318" height="118" fill="oklch(0.96 0.012 85)"/>
+      <rect x="8" y="8" width="94" height="72" rx="3" fill="white" stroke="oklch(0.84 0.01 85)" stroke-width="1"/>
+      <text x="55" y="21" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="8.5" fill="oklch(0.24 0.01 260)">COP31 · ANTALYA</text>
+      <rect x="14" y="26" width="38" height="24" rx="1.5" fill="oklch(0.49 0.20 25)"/>
+      <circle cx="30" cy="38" r="6" fill="white"/>
+      <circle cx="32.2" cy="38" r="4.8" fill="oklch(0.49 0.20 25)"/>
+      <polygon points="37,38 39,37 38,39 39.5,39.5 37.5,39.5" fill="white"/>
+      <rect x="58" y="26" width="38" height="24" rx="1.5" fill="oklch(0.32 0.12 255)"/>
+      <rect x="58" y="26" width="18" height="12" fill="oklch(0.26 0.11 255)"/>
+      <line x1="58" y1="26" x2="76" y2="38" stroke="white" stroke-width="1.8"/>
+      <line x1="76" y1="26" x2="58" y2="38" stroke="white" stroke-width="1.8"/>
+      <line x1="67" y1="26" x2="67" y2="38" stroke="oklch(0.52 0.21 25)" stroke-width="2.2"/>
+      <line x1="58" y1="32" x2="76" y2="32" stroke="oklch(0.52 0.21 25)" stroke-width="2.2"/>
+      <circle cx="84" cy="43" r="1.4" fill="white"/><circle cx="89" cy="40" r="1.2" fill="white"/><circle cx="83" cy="37" r="1.2" fill="white"/>
+      <rect x="14" y="55" width="82" height="18" rx="2" fill="oklch(0.93 0.03 24)"/>
+      <text x="55" y="67" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="8.5" fill="oklch(0.48 0.18 24)">+48H OVERTIME</text>
+
+      <rect x="110" y="8" width="112" height="72" rx="3" fill="white" stroke="oklch(0.76 0.015 250)" stroke-width="1.2"/>
+      <text x="166" y="21" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="8.5" fill="oklch(0.30 0.02 250)">FINAL SUMMIT DRAFT</text>
+      <line x1="120" y1="28" x2="212" y2="28" stroke="oklch(0.86 0.01 250)" stroke-width="2"/>
+      <rect x="120" y="34" width="92" height="17" rx="2" fill="oklch(0.95 0.03 24)"/>
+      <text x="166" y="46" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="9.5" fill="oklch(0.48 0.18 24)">FOSSIL FUELS</text>
+      <line x1="124" y1="42.5" x2="208" y2="42.5" stroke="oklch(0.48 0.18 24)" stroke-width="2"/>
+      <line x1="120" y1="58" x2="194" y2="58" stroke="oklch(0.86 0.01 250)" stroke-width="2"/>
+      <line x1="120" y1="66" x2="180" y2="66" stroke="oklch(0.86 0.01 250)" stroke-width="2"/>
+      <path d="M162,52 L167,61 L161,71 L166,80" fill="none" stroke="oklch(0.96 0.012 85)" stroke-width="2.2"/>
+
+      <rect x="230" y="8" width="80" height="72" rx="3" fill="white" stroke="oklch(0.84 0.01 85)" stroke-width="1"/>
+      <circle cx="270" cy="34" r="18" fill="none" stroke="oklch(0.48 0.18 24)" stroke-width="2.5"/>
+      <line x1="257" y1="21" x2="283" y2="47" stroke="oklch(0.48 0.18 24)" stroke-width="2.5"/>
+      <text x="270" y="64" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="10" fill="oklch(0.48 0.18 24)">NO DEAL</text>
+      <text x="270" y="74" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="700" font-size="7.5" fill="oklch(0.36 0.02 260)">TALKS COLLAPSE</text>
+
+      <rect x="8" y="87" width="302" height="22" rx="2" fill="oklch(0.48 0.18 24)"/>
+      <text x="159" y="102" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="10.5" fill="white">TALKS COLLAPSE OVER FOSSIL FUELS · LONGEST COP</text>
     </svg>""",
     'ukraine_strikes': """
     <svg viewBox="0 0 318 118" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="318" height="118" fill="oklch(0.18 0.03 255)"/>
-      <path d="M182 118 A76 76 0 0 1 308 118" fill="none" stroke="oklch(0.46 0.10 190)" stroke-width="1" stroke-dasharray="3 3"/>
-      <g fill="oklch(0.28 0.02 255)">
-        <rect x="10" y="72" width="24" height="46"/><rect x="38" y="58" width="28" height="60"/>
-        <rect x="70" y="68" width="22" height="50"/><rect x="96" y="52" width="30" height="66"/>
-        <rect x="130" y="76" width="24" height="42"/><rect x="248" y="66" width="28" height="52"/>
-        <rect x="280" y="74" width="26" height="44"/>
+      <rect width="318" height="118" fill="oklch(0.18 0.025 255)"/>
+      <g fill="oklch(0.25 0.02 255)">
+        <rect x="0" y="54" width="24" height="64"/>
+        <rect x="28" y="42" width="28" height="76"/>
+        <rect x="220" y="48" width="30" height="70"/>
+        <rect x="256" y="38" width="26" height="80"/>
+        <rect x="286" y="52" width="32" height="66"/>
       </g>
-      <polygon points="94,84 112,44 130,84" fill="oklch(0.62 0.21 35)"/>
-      <polygon points="101,84 112,56 123,84" fill="oklch(0.84 0.18 75)"/>
-      <circle cx="116" cy="40" r="11" fill="oklch(0.42 0.01 260)" opacity="0.8"/>
-      <polygon points="168,46 190,51 168,56 174,51" fill="oklch(0.80 0.16 75)"/>
-      <polygon points="204,34 224,38 204,42 209,38" fill="oklch(0.80 0.16 75)"/>
-      <polygon points="234,52 256,57 234,62 240,57" fill="oklch(0.80 0.16 75)"/>
-      <line x1="258" y1="94" x2="210" y2="46" stroke="oklch(0.84 0.16 80)" stroke-width="1.3" stroke-dasharray="3 3"/>
-      <rect x="10" y="10" width="192" height="22" rx="2" fill="oklch(0.48 0.18 24)"/>
-      <text x="106" y="25" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="12.5" fill="white">UKRAINE: 148 DRONES</text>
-      <rect x="208" y="10" width="100" height="22" rx="2" fill="white"/>
-      <text x="258" y="25" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="11.5" fill="oklch(0.18 0.01 260)">3 MISSILES</text>
+      <rect x="64" y="44" width="52" height="58" fill="oklch(0.34 0.02 250)"/>
+      <polygon points="116,54 148,74 148,102 116,102" fill="oklch(0.29 0.02 250)"/>
+      <g fill="oklch(0.78 0.12 75)">
+        <rect x="70" y="52" width="7" height="7"/><rect x="83" y="52" width="7" height="7"/>
+        <rect x="70" y="66" width="7" height="7"/><rect x="83" y="66" width="7" height="7"/>
+      </g>
+      <polygon points="56,102 92,84 128,88 168,102" fill="oklch(0.46 0.02 70)"/>
+      <polygon points="88,102 114,82 146,92 162,102" fill="oklch(0.54 0.02 75)"/>
+      <line x1="184" y1="102" x2="184" y2="48" stroke="oklch(0.78 0.16 78)" stroke-width="3.5"/>
+      <line x1="184" y1="50" x2="128" y2="68" stroke="oklch(0.78 0.16 78)" stroke-width="2.5"/>
+      <line x1="138" y1="65" x2="138" y2="85" stroke="white" stroke-width="1.2" stroke-dasharray="2 2"/>
+      <circle cx="156" cy="84" r="4" fill="oklch(0.78 0.16 78)"/>
+      <rect x="152" y="88" width="8" height="12" rx="2" fill="oklch(0.62 0.20 35)"/>
+      <polygon points="98,84 112,56 126,84" fill="oklch(0.66 0.22 38)"/>
+      <path d="M238,34 Q188,42 122,64" fill="none" stroke="oklch(0.76 0.16 75)" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <polygon points="236,34 252,27 248,39" fill="oklch(0.72 0.18 65)"/>
+      <polygon points="204,41 218,35 214,45" fill="oklch(0.72 0.18 65)"/>
+      <rect x="0" y="102" width="318" height="16" fill="oklch(0.14 0.02 255)"/>
+      <text x="159" y="113" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="9" fill="oklch(0.90 0.02 85)">DYMER FIVE-STOREY BLOCK HIT · RESCUERS DIG RUBBLE</text>
+      <rect x="10" y="9" width="166" height="20" rx="2" fill="oklch(0.48 0.18 24)"/>
+      <text x="93" y="23" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="11" fill="white">186 DRONES · 161 DOWNED</text>
     </svg>""",
     'sea_strikes': """
     <svg viewBox="0 0 318 118" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="seasky" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="oklch(0.84 0.03 235)"/>
-          <stop offset="100%" stop-color="oklch(0.91 0.02 230)"/>
-        </linearGradient>
-        <linearGradient id="seawater" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="oklch(0.48 0.09 235)"/>
-          <stop offset="100%" stop-color="oklch(0.36 0.08 240)"/>
-        </linearGradient>
-      </defs>
-      <rect width="318" height="58" fill="url(#seasky)"/>
-      <rect y="58" width="318" height="60" fill="url(#seawater)"/>
-      <g transform="translate(26,50)">
-        <polygon points="0,20 122,20 110,36 12,36" fill="oklch(0.20 0.015 260)"/>
-        <rect x="8" y="17" width="106" height="3" fill="oklch(0.48 0.18 24)"/>
-        <rect x="18" y="4" width="24" height="13" fill="oklch(0.96 0.01 90)"/>
-        <rect x="48" y="9" width="24" height="8" fill="oklch(0.44 0.12 245)"/>
-        <polygon points="74,17 86,-8 98,17" fill="oklch(0.62 0.21 35)"/>
-        <circle cx="88" cy="-10" r="9" fill="oklch(0.38 0.01 260)" opacity="0.85"/>
+      <rect width="158" height="44" fill="oklch(0.89 0.025 220)"/>
+      <rect y="44" width="158" height="74" fill="oklch(0.45 0.09 235)"/>
+      <rect y="94" width="158" height="24" fill="oklch(0.84 0.03 80)"/>
+      <text x="12" y="38" font-family="Roboto, sans-serif" font-weight="800" font-size="8" fill="oklch(0.28 0.03 250)">LIBYA COAST</text>
+      <polygon points="14,76 34,76 30,82 16,82" fill="oklch(0.20 0.02 250)"/>
+      <line x1="34" y1="78" x2="54" y2="75" stroke="oklch(0.75 0.15 55)" stroke-width="1.6" stroke-dasharray="3 2"/>
+      <g transform="translate(52,52)">
+        <polygon points="0,18 92,18 84,30 8,30" fill="oklch(0.22 0.02 250)"/>
+        <rect x="22" y="8" width="24" height="10" fill="oklch(0.36 0.02 250)"/>
+        <polygon points="56,18 68,-4 80,18" fill="oklch(0.62 0.21 35)"/>
+        <circle cx="70" cy="-6" r="7" fill="oklch(0.38 0.01 260)" opacity="0.82"/>
       </g>
-      <g transform="translate(194,60)">
-        <polygon points="0,12 90,12 82,24 8,24" fill="oklch(0.22 0.02 250)"/>
-        <rect x="20" y="3" width="22" height="9" fill="oklch(0.40 0.02 250)"/>
-        <polygon points="56,12 66,-6 76,12" fill="oklch(0.64 0.21 35)"/>
+      <text x="79" y="109" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="9" fill="oklch(0.20 0.02 250)">BENGHAZI · CORVETTE HIT</text>
+
+      <rect x="158" width="2" height="118" fill="white"/>
+
+      <rect x="160" width="158" height="118" fill="oklch(0.87 0.035 225)"/>
+      <path d="M160,0 L318,0 L318,40 L258,44 L228,33 L160,37 Z" fill="oklch(0.91 0.02 85)"/>
+      <text x="200" y="20" font-family="Roboto, sans-serif" font-weight="800" font-size="8" fill="oklch(0.30 0.02 250)">FINLAND</text>
+      <rect x="160" y="94" width="158" height="24" fill="oklch(0.88 0.02 85)"/>
+      <g transform="translate(172,66)">
+        <polygon points="0,8 26,8 22,16 4,16" fill="oklch(0.48 0.18 24)"/>
+        <rect x="6" y="2" width="10" height="6" fill="white"/>
       </g>
-      <text x="86" y="106" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="9.5" fill="white">BENGHAZI: MERKURY</text>
-      <text x="242" y="106" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="9.5" fill="white">SPARTA II TOWED</text>
-      <rect x="10" y="10" width="196" height="22" rx="2" fill="oklch(0.48 0.18 24)"/>
-      <text x="108" y="25" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="12.5" fill="white">WAR AT SEA: SHIPS HIT</text>
+      <line x1="198" y1="76" x2="218" y2="76" stroke="oklch(0.24 0.02 250)" stroke-width="1.8" stroke-dasharray="3 2"/>
+      <g transform="translate(218,60)">
+        <polygon points="0,12 82,12 74,24 8,24" fill="oklch(0.24 0.02 250)"/>
+        <rect x="14" y="3" width="18" height="9" fill="oklch(0.42 0.02 250)"/>
+        <polygon points="46,12 56,-5 66,12" fill="oklch(0.64 0.21 35)"/>
+      </g>
+      <text x="239" y="109" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="9" fill="oklch(0.20 0.02 250)">FINLAND · SPARTA II TOWED</text>
+
+      <rect x="10" y="9" width="138" height="19" rx="2" fill="oklch(0.48 0.18 24)"/>
+      <text x="79" y="22" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="10" fill="white">SEA DRONE STRIKES</text>
     </svg>""",
     'us_house': """
     <svg viewBox="0 0 188 72" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -115,113 +132,122 @@ SVGS: dict[str, str] = {
       <rect x="45" y="50" width="22" height="12" fill="oklch(0.86 0.01 250)"/>
       <path d="M47,50 Q56,39 65,50 Z" fill="oklch(0.76 0.01 250)"/>
       <line x1="56" y1="40" x2="56" y2="44" stroke="oklch(0.46 0.02 250)" stroke-width="1.5"/>
-      <text x="142" y="47" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="18.5" fill="oklch(0.46 0.15 250)">258+</text>
-      <text x="142" y="60" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="800" font-size="8.5" fill="oklch(0.28 0.02 250)">HOUSE SEATS</text>
+      <text x="142" y="45" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="18.5" fill="oklch(0.46 0.15 250)">258+</text>
+      <text x="142" y="56" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="800" font-size="8" fill="oklch(0.28 0.02 250)">DEM MAJORITY</text>
+      <text x="142" y="65" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="700" font-size="7.5" fill="oklch(0.46 0.15 250)">NC FLIP</text>
     </svg>""",
     'hormuz_mini': """
     <svg viewBox="0 0 188 72" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="188" height="40" fill="oklch(0.91 0.025 85)"/>
-      <rect y="40" width="188" height="32" fill="oklch(0.68 0.08 228)"/>
-      <path d="M0 42 L42 42 L32 72 L0 72 Z" fill="oklch(0.78 0.06 78)"/>
-      <g transform="translate(46,34)">
-        <path d="M0,11 L48,11 L42,19 L6,19 Z" fill="oklch(0.20 0.015 260)"/>
-        <rect x="6" y="9" width="36" height="2" fill="oklch(0.48 0.18 24)"/>
-        <rect x="8" y="3" width="10" height="6" fill="white"/>
-        <polygon points="24,9 29,-2 34,9" fill="oklch(0.64 0.21 35)"/>
+      <rect width="188" height="39" fill="oklch(0.92 0.025 85)"/>
+      <rect y="39" width="188" height="33" fill="oklch(0.68 0.08 228)"/>
+      <path d="M0 40 L44 40 L34 72 L0 72 Z" fill="oklch(0.80 0.05 78)"/>
+      <text x="18" y="61" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="800" font-size="7.5" fill="oklch(0.32 0.03 65)">OMAN</text>
+      <g transform="translate(46,33)">
+        <path d="M0,11 L46,11 L40,18 L6,18 Z" fill="oklch(0.20 0.015 260)"/>
+        <rect x="6" y="9" width="34" height="2" fill="oklch(0.48 0.18 24)"/>
+        <polygon points="22,9 27,-2 32,9" fill="oklch(0.64 0.21 35)"/>
       </g>
-      <g transform="translate(96,46)">
-        <path d="M0,10 L38,10 L33,16 L5,16 Z" fill="oklch(0.20 0.015 260)"/>
-        <rect x="5" y="8" width="28" height="2" fill="oklch(0.48 0.18 24)"/>
-        <polygon points="16,8 21,-2 26,8" fill="oklch(0.64 0.21 35)"/>
+      <g transform="translate(94,45)">
+        <path d="M0,10 L36,10 L31,16 L5,16 Z" fill="oklch(0.20 0.015 260)"/>
+        <polygon points="15,8 20,-2 25,8" fill="oklch(0.64 0.21 35)"/>
       </g>
-      <text x="160" y="60" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="13" fill="white">3 HIT</text>
+      <text x="158" y="51" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="12.5" fill="white">3 HIT</text>
+      <text x="158" y="63" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="800" font-size="7.5" fill="oklch(0.96 0.02 85)">TRAFFIC -65%</text>
     </svg>""",
     'indonesia_fire': """
     <svg viewBox="0 0 188 72" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="188" height="49" fill="oklch(0.91 0.025 85)"/>
-      <rect y="49" width="188" height="23" fill="oklch(0.40 0.04 145)"/>
-      <rect x="14" y="37" width="66" height="15" fill="oklch(0.38 0.02 250)"/>
-      <polygon points="14,37 27,29 40,37 53,29 66,37 80,37" fill="oklch(0.32 0.02 250)"/>
-      <rect x="20" y="42" width="8" height="5" fill="oklch(0.75 0.12 75)"/>
-      <rect x="34" y="42" width="8" height="5" fill="oklch(0.75 0.12 75)"/>
+      <rect width="188" height="49" fill="oklch(0.92 0.02 85)"/>
+      <rect y="49" width="188" height="23" fill="oklch(0.42 0.04 145)"/>
+      <rect x="14" y="38" width="66" height="15" fill="oklch(0.38 0.02 250)"/>
+      <polygon points="14,38 27,30 40,38 53,30 66,38 80,38" fill="oklch(0.32 0.02 250)"/>
+      <rect x="20" y="43" width="8" height="5" fill="oklch(0.75 0.12 75)"/>
+      <rect x="34" y="43" width="8" height="5" fill="oklch(0.75 0.12 75)"/>
       <circle cx="58" cy="28" r="6" fill="oklch(0.40 0.01 260)" opacity="0.78"/>
-      <polygon points="46,40 58,26 70,40" fill="oklch(0.62 0.21 35)"/>
-      <text x="134" y="45" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="16" fill="oklch(0.48 0.18 24)">3 DEAD</text>
-      <text x="134" y="61" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="8.5" fill="white">36 MISSING</text>
+      <polygon points="46,41 58,27 70,41" fill="oklch(0.62 0.21 35)"/>
+      <text x="134" y="43" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="15.5" fill="oklch(0.48 0.18 24)">3 DEAD</text>
+      <text x="134" y="61" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="9" fill="white">36 MISSING</text>
     </svg>""",
     'korea_resign': """
     <svg viewBox="0 0 188 72" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
       <rect width="188" height="72" fill="oklch(0.95 0.01 85)"/>
-      <rect x="16" y="29" width="50" height="33" rx="2" fill="white" stroke="oklch(0.36 0.04 250)" stroke-width="1.4"/>
-      <circle cx="41" cy="45.5" r="8.5" fill="oklch(0.50 0.20 25)"/>
-      <path d="M32.5,45.5 A4.25,4.25 0 0,1 41,45.5 A4.25,4.25 0 0,0 49.5,45.5 A8.5,8.5 0 0,1 32.5,45.5 Z" fill="oklch(0.38 0.16 255)"/>
-      <line x1="22" y1="34" x2="27" y2="37" stroke="oklch(0.22 0.01 260)" stroke-width="1.5"/>
-      <line x1="55" y1="37" x2="60" y2="34" stroke="oklch(0.22 0.01 260)" stroke-width="1.5"/>
-      <line x1="22" y1="57" x2="27" y2="54" stroke="oklch(0.22 0.01 260)" stroke-width="1.5"/>
-      <line x1="55" y1="54" x2="60" y2="57" stroke="oklch(0.22 0.01 260)" stroke-width="1.5"/>
-      <text x="128" y="47" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="15.5" fill="oklch(0.18 0.01 260)">RESIGNS</text>
-      <text x="128" y="60" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="700" font-size="8.5" fill="oklch(0.36 0.02 260)">AI EXAM ROW</text>
+      <rect x="18" y="28" width="38" height="35" rx="2" fill="white" stroke="oklch(0.38 0.03 250)" stroke-width="1.3"/>
+      <line x1="24" y1="36" x2="48" y2="36" stroke="oklch(0.72 0.02 250)" stroke-width="1.6"/>
+      <line x1="24" y1="42" x2="48" y2="42" stroke="oklch(0.72 0.02 250)" stroke-width="1.6"/>
+      <line x1="24" y1="48" x2="40" y2="48" stroke="oklch(0.72 0.02 250)" stroke-width="1.6"/>
+      <rect x="44" y="46" width="22" height="16" rx="2" fill="oklch(0.46 0.15 250)"/>
+      <text x="55" y="57.5" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="9.5" fill="white">AI</text>
+      <text x="128" y="46" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="15" fill="oklch(0.48 0.18 24)">RESIGNS</text>
+      <text x="128" y="59" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="700" font-size="8.5" fill="oklch(0.32 0.02 260)">EXAM CHEATING</text>
     </svg>""",
     'iran_power': """
     <svg viewBox="0 0 188 72" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="188" height="72" fill="oklch(0.18 0.02 260)"/>
-      <g fill="oklch(0.26 0.02 260)">
-        <rect x="8" y="46" width="16" height="26"/><rect x="28" y="38" width="18" height="34"/>
-        <rect x="152" y="42" width="22" height="30"/>
-      </g>
-      <polygon points="56,28 43,47 54,47 47,63 69,41 58,41" fill="oklch(0.80 0.17 78)"/>
-      <line x1="42" y1="30" x2="68" y2="61" stroke="oklch(0.55 0.22 25)" stroke-width="2.8" stroke-linecap="round"/>
-      <text x="126" y="47" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="17" fill="white">2 HRS</text>
-      <text x="126" y="60" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="700" font-size="8.5" fill="oklch(0.78 0.03 85)">DAILY CUTS</text>
+      <rect width="188" height="72" fill="oklch(0.94 0.015 80)"/>
+      <path d="M36,63 L46,30 L56,63 M34,42 L58,42 M38,52 L54,52" fill="none" stroke="oklch(0.38 0.02 260)" stroke-width="2" stroke-linejoin="round"/>
+      <polygon points="72,30 62,46 70,46 65,61 81,43 73,43" fill="oklch(0.70 0.16 78)"/>
+      <line x1="60" y1="32" x2="80" y2="59" stroke="oklch(0.48 0.18 24)" stroke-width="2.4" stroke-linecap="round"/>
+      <text x="134" y="46" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="16" fill="oklch(0.20 0.02 260)">2 HRS</text>
+      <text x="134" y="58" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="800" font-size="8" fill="oklch(0.36 0.02 260)">DAILY BLACKOUT</text>
     </svg>""",
     'alcaraz_atp': """
     <svg viewBox="0 0 188 72" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="188" height="72" fill="oklch(0.42 0.11 235)"/>
-      <rect x="14" y="29" width="54" height="33" fill="oklch(0.48 0.12 235)" stroke="white" stroke-width="1.4"/>
-      <line x1="41" y1="29" x2="41" y2="62" stroke="white" stroke-width="1.3"/>
-      <line x1="25" y1="29" x2="25" y2="62" stroke="white" stroke-width="0.9"/>
-      <line x1="57" y1="29" x2="57" y2="62" stroke="white" stroke-width="0.9"/>
-      <circle cx="80" cy="45.5" r="6" fill="oklch(0.84 0.18 98)"/>
-      <text x="135" y="47" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="14.5" fill="white">6–2, 7–6</text>
-      <text x="135" y="60" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="700" font-size="8.5" fill="oklch(0.92 0.02 230)">ALCARAZ</text>
+      <rect width="188" height="72" fill="oklch(0.44 0.11 235)"/>
+      <path d="M24,32 H50 L46,48 Q37,54 28,48 Z" fill="oklch(0.82 0.16 82)"/>
+      <rect x="35" y="51" width="4" height="8" fill="oklch(0.82 0.16 82)"/>
+      <rect x="28" y="59" width="18" height="4" rx="1" fill="oklch(0.82 0.16 82)"/>
+      <circle cx="66" cy="49" r="8" fill="oklch(0.86 0.18 100)"/>
+      <path d="M60,44 Q66,49 60,54 M72,44 Q66,49 72,54" fill="none" stroke="white" stroke-width="1"/>
+      <text x="132" y="46" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="14.5" fill="white">6–2, 7–6</text>
+      <text x="132" y="59" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="700" font-size="8.5" fill="oklch(0.93 0.02 230)">ATP FINALS</text>
     </svg>""",
     'cricket_720': """
     <svg viewBox="0 0 188 72" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="188" height="72" fill="oklch(0.92 0.035 145)"/>
-      <rect x="14" y="30" width="52" height="33" fill="oklch(0.86 0.04 95)" rx="2"/>
-      <line x1="28" y1="30" x2="42" y2="61" stroke="oklch(0.55 0.09 55)" stroke-width="4.8" stroke-linecap="round"/>
-      <circle cx="56" cy="54" r="5.2" fill="oklch(0.48 0.18 24)"/>
-      <text x="126" y="53" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="22" fill="oklch(0.18 0.01 260)">720/9</text>
+      <rect width="188" height="72" fill="oklch(0.93 0.03 145)"/>
+      <g stroke="oklch(0.55 0.08 65)" stroke-width="2.5" stroke-linecap="round">
+        <line x1="22" y1="32" x2="22" y2="61"/>
+        <line x1="29" y1="32" x2="29" y2="61"/>
+        <line x1="36" y1="32" x2="36" y2="61"/>
+      </g>
+      <line x1="21" y1="31" x2="37" y2="31" stroke="oklch(0.45 0.06 60)" stroke-width="2"/>
+      <line x1="48" y1="30" x2="58" y2="60" stroke="oklch(0.52 0.09 55)" stroke-width="4.5" stroke-linecap="round"/>
+      <circle cx="70" cy="54" r="5.5" fill="oklch(0.48 0.18 24)"/>
+      <text x="132" y="48" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="20" fill="oklch(0.18 0.01 260)">720/9</text>
+      <text x="132" y="60" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="800" font-size="8" fill="oklch(0.32 0.03 145)">DECLARED · NZ</text>
     </svg>""",
-    'vegas_f1': """
+    'brazil_storm': """
     <svg viewBox="0 0 188 72" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="188" height="72" fill="oklch(0.19 0.02 260)"/>
-      <rect y="50" width="188" height="22" fill="oklch(0.30 0.01 260)"/>
-      <line x1="0" y1="62" x2="188" y2="62" stroke="oklch(0.84 0.16 80)" stroke-width="1.5" stroke-dasharray="6 4"/>
-      <path d="M16,51 L70,51 L62,41 L30,41 Z" fill="oklch(0.46 0.16 250)"/>
-      <rect x="10" y="46" width="10" height="5" fill="oklch(0.48 0.18 24)"/>
-      <rect x="64" y="40" width="8" height="4" fill="oklch(0.48 0.18 24)"/>
-      <circle cx="28" cy="53" r="4.8" fill="oklch(0.14 0.01 260)" stroke="white" stroke-width="1"/>
-      <circle cx="60" cy="53" r="4.8" fill="oklch(0.14 0.01 260)" stroke="white" stroke-width="1"/>
-      <text x="132" y="47" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="15.5" fill="white">P1 MAX</text>
+      <rect width="188" height="72" fill="oklch(0.93 0.02 230)"/>
+      <path d="M20,45 Q16,35 26,33 Q30,26 42,28 Q52,26 56,33 Q66,35 62,45 Z" fill="oklch(0.46 0.05 245)"/>
+      <polygon points="42,45 35,54 41,54 37,62 48,51 42,51" fill="oklch(0.74 0.17 78)"/>
+      <circle cx="24" cy="54" r="2.2" fill="white" stroke="oklch(0.48 0.12 235)" stroke-width="1"/>
+      <circle cx="56" cy="56" r="2.2" fill="white" stroke="oklch(0.48 0.12 235)" stroke-width="1"/>
+      <line x1="68" y1="42" x2="82" y2="39" stroke="oklch(0.46 0.06 245)" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="66" y1="48" x2="80" y2="45" stroke="oklch(0.46 0.06 245)" stroke-width="1.8" stroke-linecap="round"/>
+      <text x="132" y="46" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="16.5" fill="oklch(0.48 0.18 24)">250+</text>
+      <text x="132" y="59" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="800" font-size="8" fill="oklch(0.24 0.02 260)">HURT · 5 DEAD</text>
     </svg>""",
     'motogp_8': """
     <svg viewBox="0 0 188 72" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="188" height="72" fill="oklch(0.22 0.02 25)"/>
-      <circle cx="34" cy="52" r="8.5" fill="none" stroke="white" stroke-width="2.6"/>
-      <circle cx="70" cy="52" r="8.5" fill="none" stroke="white" stroke-width="2.6"/>
-      <path d="M34,52 L48,39 L66,41 L70,52" fill="none" stroke="oklch(0.62 0.21 35)" stroke-width="3.8" stroke-linecap="round"/>
-      <polygon points="55,33 66,39 57,43" fill="oklch(0.84 0.16 80)"/>
-      <text x="135" y="47" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="18" fill="white">8TH</text>
-      <text x="135" y="60" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="700" font-size="8.5" fill="oklch(0.86 0.04 85)">MÁRQUEZ</text>
+      <rect width="188" height="72" fill="oklch(0.95 0.015 35)"/>
+      <circle cx="28" cy="53" r="8" fill="none" stroke="oklch(0.24 0.02 260)" stroke-width="2.6"/>
+      <circle cx="62" cy="53" r="8" fill="none" stroke="oklch(0.24 0.02 260)" stroke-width="2.6"/>
+      <path d="M28,53 L41,40 L58,42 L62,53" fill="none" stroke="oklch(0.52 0.20 26)" stroke-width="3.6" stroke-linecap="round"/>
+      <circle cx="48" cy="34" r="4" fill="oklch(0.24 0.02 260)"/>
+      <line x1="80" y1="32" x2="80" y2="60" stroke="oklch(0.30 0.02 260)" stroke-width="1.6"/>
+      <rect x="81" y="32" width="14" height="10" fill="white" stroke="oklch(0.24 0.02 260)" stroke-width="0.8"/>
+      <rect x="81" y="32" width="7" height="5" fill="oklch(0.24 0.02 260)"/>
+      <rect x="88" y="37" width="7" height="5" fill="oklch(0.24 0.02 260)"/>
+      <text x="140" y="46" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="18" fill="oklch(0.20 0.02 260)">8TH</text>
+      <text x="140" y="59" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="700" font-size="8.5" fill="oklch(0.40 0.04 26)">MOTOGP TITLE</text>
     </svg>""",
     'nigeria_boat': """
     <svg viewBox="0 0 188 72" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="188" height="42" fill="oklch(0.88 0.03 220)"/>
-      <rect y="42" width="188" height="30" fill="oklch(0.56 0.08 225)"/>
-      <path d="M16,52 L70,44 L64,57 L22,57 Z" fill="oklch(0.30 0.04 55)"/>
+      <rect width="188" height="41" fill="oklch(0.89 0.025 220)"/>
+      <rect y="41" width="188" height="31" fill="oklch(0.56 0.08 225)"/>
+      <path d="M16,51 Q40,36 66,51 Z" fill="oklch(0.30 0.04 55)"/>
+      <path d="M14,53 Q24,50 34,53 Q44,56 54,53 Q64,50 74,53" fill="none" stroke="white" stroke-width="1.2"/>
       <circle cx="82" cy="52" r="5.5" fill="none" stroke="oklch(0.64 0.20 35)" stroke-width="2.4"/>
-      <text x="137" y="56" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="15.5" fill="oklch(0.48 0.18 24)">26 DEAD</text>
+      <text x="139" y="51" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="15" fill="oklch(0.48 0.18 24)">26 DEAD</text>
+      <text x="139" y="62" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="800" font-size="7.5" fill="white">FERRY CAPSIZE</text>
     </svg>""",
 }
 
@@ -392,7 +418,7 @@ def generate_html(data_path: Path, out_html: Path) -> None:
 <meta charset="utf-8"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:opsz,wght@8..60,700;8..60,800;8..60,900&display=swap" rel="stylesheet">
 <style>
   :root {{
     --bg-paper: oklch(0.992 0.004 90);
@@ -436,8 +462,9 @@ def generate_html(data_path: Path, out_html: Path) -> None:
   .eyebrow-left {{ color: var(--scarlet); }}
   .eyebrow-right {{ color: var(--ink-primary); }}
   h1.masthead {{
+    font-family: "Source Serif 4", Georgia, serif;
     font-weight: 900;
-    font-size: 38px;
+    font-size: 42px;
     line-height: 1.02;
     text-align: center;
     letter-spacing: -0.015em;
@@ -547,7 +574,8 @@ def generate_html(data_path: Path, out_html: Path) -> None:
   .badge-confirmed {{ background: var(--badge-confirmed); }}
   .badge-official {{ background: var(--badge-official); }}
   .lead-card h2 {{
-    font-weight: 900;
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 800;
     font-size: 20px;
     line-height: 1.06;
     margin-bottom: 2px;
@@ -623,7 +651,8 @@ def generate_html(data_path: Path, out_html: Path) -> None:
     overflow: hidden;
   }}
   .mini-card h3 {{
-    font-weight: 900;
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 800;
     font-size: 17px;
     line-height: 1.06;
     margin: 2px 0 1px;
@@ -750,6 +779,7 @@ def generate_html(data_path: Path, out_html: Path) -> None:
     <div>
       <div class="eyebrow">
         <span class="eyebrow-left">{html.escape(data["eyebrow_left"])}</span>
+        <span class="eyebrow-left">DAY 326 OF 2026</span>
         <span class="eyebrow-right">{html.escape(data["eyebrow_right"])}</span>
       </div>
       <h1 class="masthead">{html.escape(data["masthead"])}</h1>
