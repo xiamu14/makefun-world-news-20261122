@@ -9,7 +9,7 @@
     {"num": "3", "label": "Hormuz tankers hit (AP)", "color": "oklch(0.46 0.15 310)"},
     {"num": "720/9", "label": "India Test record (Reuters)", "color": "oklch(0.46 0.12 170)"},
     {"num": "8th", "label": "Márquez MotoGP title (AP)", "color": "oklch(0.48 0.12 195)"},
-    {"num": "26", "label": "Bayelsa boat dead (RIA)", "color": "oklch(0.46 0.13 150)"}
+    {"num": "22", "label": "Kordofan blast (Darfur24)", "color": "oklch(0.46 0.13 150)"}
   ],
   "region_bar": [
     {"name": "Europe 9", "count": 9, "color": "oklch(0.46 0.13 245)"},
@@ -60,12 +60,12 @@
     {"id": "8", "loc": "Tehran", "weight_color": "oklch(0.46 0.13 245)", "status": "REPORTED", "status_kind": "confirmed", "title": "Iran rations power", "sub": "Rolling 2-hr daily cuts begin as gas lags (RFE/RL)", "art": "iran_power"},
     {"id": "9", "loc": "Turin · ATP", "weight_color": "oklch(0.46 0.12 170)", "status": "REPORTED", "status_kind": "confirmed", "title": "Alcaraz wins ATP", "sub": "Beats Zverev 6–2, 7–6 for first Finals title (Reuters)", "art": "alcaraz_atp"},
     {"id": "10", "loc": "Wellington", "weight_color": "oklch(0.46 0.12 170)", "status": "REPORTED", "status_kind": "confirmed", "title": "India declare 720/9", "sub": "Rahul 156, Pant 128, Gill 98; hosts NZ 119/2 (Reuters)", "art": "cricket_720"},
-    {"id": "11", "loc": "Brazil", "weight_color": "oklch(0.46 0.12 170)", "status": "REPORTED", "status_kind": "confirmed", "title": "Storm hurts 250+", "sub": "Severe winds and hail kill 5 in southern towns (AFP)", "art": "brazil_storm"},
+    {"id": "11", "loc": "Hong Kong", "weight_color": "oklch(0.46 0.12 170)", "status": "REPORTED", "status_kind": "confirmed", "title": "856 vie for 723 seats", "sub": "Hong Kong holds Election Committee polls (SCMP)", "art": "hk_polls"},
     {"id": "12", "loc": "Portugal", "weight_color": "oklch(0.46 0.12 170)", "status": "REPORTED", "status_kind": "confirmed", "title": "Márquez 8th MotoGP", "sub": "Spaniard equals Agostini's premier record (AP)", "art": "motogp_8"},
-    {"id": "13", "loc": "Nigeria", "weight_color": "oklch(0.46 0.12 170)", "status": "REPORTED", "status_kind": "confirmed", "title": "Boat toll hits 26", "sub": "Mourners ferry capsize search goes on in Bayelsa (RIA)", "art": "nigeria_boat"}
+    {"id": "13", "loc": "Sudan", "weight_color": "oklch(0.46 0.12 170)", "status": "REPORTED", "status_kind": "confirmed", "title": "Landmine kills 22", "sub": "Anti-tank blast hits tuk-tuk in North Kordofan (Darfur24)", "art": "sudan_mine"}
   ],
   "briefs": [
-    ["14", "Hong Kong", "856 vie for 723 seats (SCMP)", "oklch(0.48 0.12 195)"],
+    ["14", "Brasília", "Bolsonaro in ICU with obstruction (AJ)", "oklch(0.48 0.18 24)"],
     ["15", "Las Vegas", "Verstappen wins F1 GP (AP)", "oklch(0.48 0.18 24)"],
     ["16", "Washington", "FBI probes NCIC hack (AP)", "oklch(0.48 0.18 24)"],
     ["17", "Brussels", "Strike grounds Mon flights (AFP)", "oklch(0.46 0.13 245)"],
@@ -80,7 +80,7 @@
     ["26", "Manipur", "Tainted liquor toll hits 19 (E-Pao)", "oklch(0.48 0.12 195)"],
     ["27", "Philippines", "M5.9 quake off Palawan (EMSC)", "oklch(0.48 0.12 195)"],
     ["28", "Tokyo", "62% friendly to S. Korea (Kyodo)", "oklch(0.48 0.12 195)"],
-    ["29", "Sudan", "Kordofan mine kills 22 (Darfur24)", "oklch(0.46 0.13 150)"],
+    ["29", "Somalia", "Expels UAE envoy; recalls own (AP)", "oklch(0.46 0.13 150)"],
     ["30", "India", "12 die in Rajasthan crashes (Xinhua)", "oklch(0.48 0.12 195)"],
     ["31", "Poland", "3 die in Trzcianka house fire (Xinhua)", "oklch(0.46 0.13 245)"],
     ["32", "Vatican", "Pope hosts 1,000+ for Poor Day (AP)", "oklch(0.46 0.13 245)"],
@@ -97,10 +97,10 @@
     {"id": 8, "lon": 51.4, "lat": 35.7, "r": "MIDDLE EAST"},
     {"id": 9, "lon": 7.7, "lat": 45.1, "r": "EUROPE"},
     {"id": 10, "lon": 174.8, "lat": -41.3, "r": "OCEANIA"},
-    {"id": 11, "lon": -47.9, "lat": -15.8, "r": "S. AMERICA"},
+    {"id": 11, "lon": 114.2, "lat": 22.3, "r": "ASIA"},
     {"id": 12, "lon": -8.8, "lat": 37.2, "r": "EUROPE"},
-    {"id": 13, "lon": 6.3, "lat": 4.9, "r": "AFRICA"},
-    {"id": 14, "lon": 114.2, "lat": 22.3, "r": "ASIA", "dot": true},
+    {"id": 13, "lon": 30.2, "lat": 13.2, "r": "AFRICA"},
+    {"id": 14, "lon": -47.9, "lat": -15.8, "r": "S. AMERICA", "dot": true},
     {"id": 15, "lon": -115.1, "lat": 36.1, "r": "N. AMERICA", "dot": true},
     {"id": 16, "lon": -77.0, "lat": 38.9, "r": "N. AMERICA", "dot": true},
     {"id": 17, "lon": 4.4, "lat": 50.8, "r": "EUROPE", "dot": true},
@@ -115,11 +115,11 @@
     {"id": 26, "lon": 93.9, "lat": 24.8, "r": "ASIA", "dot": true},
     {"id": 27, "lon": 118.7, "lat": 9.7, "r": "ASIA", "dot": true},
     {"id": 28, "lon": 139.7, "lat": 35.7, "r": "ASIA", "dot": true},
-    {"id": 29, "lon": 30.2, "lat": 13.2, "r": "AFRICA", "dot": true},
+    {"id": 29, "lon": 45.3, "lat": 2.0, "r": "AFRICA", "dot": true},
     {"id": 30, "lon": 74.2, "lat": 26.9, "r": "ASIA", "dot": true},
     {"id": 31, "lon": 16.5, "lat": 53.0, "r": "EUROPE", "dot": true},
     {"id": 32, "lon": 12.45, "lat": 41.9, "r": "EUROPE", "dot": true},
     {"id": 33, "lon": -91.2, "lat": 40.8, "r": "N. AMERICA", "dot": true}
   ],
-  "date_check": "DATE CHECK — LEFT OUT ON PURPOSE (NOT SUN 22 NOV): Russia's 400-drone barrage (Fri 20 Nov) · Peru M6.7 quake (Sat 21 Nov) · El Chapo Isidro capture (Fri/Sat) · EU-Indonesia CEPA deal (Sat 21 Nov) · BepiColombo burn (Sat 18:24 UTC)"
+  "date_check": "DATE CHECK — LEFT OUT ON PURPOSE (NOT SUN 22 NOV): Russia's 400-drone barrage (Fri 20 Nov) · Bayelsa boat (Fri 20 Nov) · Peru M6.7 quake (Sat 21 Nov) · El Chapo Isidro capture (Fri/Sat) · BepiColombo burn (Sat 18:24 UTC)"
 }

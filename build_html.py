@@ -213,17 +213,15 @@ SVGS: dict[str, str] = {
       <text x="132" y="48" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="20" fill="oklch(0.18 0.01 260)">720/9</text>
       <text x="132" y="60" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="800" font-size="8" fill="oklch(0.32 0.03 145)">DECLARED · NZ</text>
     </svg>""",
-    'brazil_storm': """
+    'hk_polls': """
     <svg viewBox="0 0 188 72" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="188" height="72" fill="oklch(0.93 0.02 230)"/>
-      <path d="M20,45 Q16,35 26,33 Q30,26 42,28 Q52,26 56,33 Q66,35 62,45 Z" fill="oklch(0.46 0.05 245)"/>
-      <polygon points="42,45 35,54 41,54 37,62 48,51 42,51" fill="oklch(0.74 0.17 78)"/>
-      <circle cx="24" cy="54" r="2.2" fill="white" stroke="oklch(0.48 0.12 235)" stroke-width="1"/>
-      <circle cx="56" cy="56" r="2.2" fill="white" stroke="oklch(0.48 0.12 235)" stroke-width="1"/>
-      <line x1="68" y1="42" x2="82" y2="39" stroke="oklch(0.46 0.06 245)" stroke-width="1.8" stroke-linecap="round"/>
-      <line x1="66" y1="48" x2="80" y2="45" stroke="oklch(0.46 0.06 245)" stroke-width="1.8" stroke-linecap="round"/>
-      <text x="132" y="46" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="16.5" fill="oklch(0.48 0.18 24)">250+</text>
-      <text x="132" y="59" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="800" font-size="8" fill="oklch(0.24 0.02 260)">HURT · 5 DEAD</text>
+      <rect width="188" height="72" fill="oklch(0.95 0.012 210)"/>
+      <rect x="24" y="40" width="44" height="23" rx="2" fill="white" stroke="oklch(0.38 0.04 240)" stroke-width="1.5"/>
+      <line x1="32" y1="45" x2="60" y2="45" stroke="oklch(0.28 0.02 250)" stroke-width="2.2" stroke-linecap="round"/>
+      <polygon points="39,28 53,28 53,45 39,45" fill="oklch(0.98 0.005 90)" stroke="oklch(0.46 0.12 195)" stroke-width="1.3"/>
+      <path d="M42,36 L45,39 L50,33" fill="none" stroke="oklch(0.46 0.12 195)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="128" y="46" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="16.5" fill="oklch(0.48 0.12 195)">856</text>
+      <text x="128" y="59" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="800" font-size="8" fill="oklch(0.24 0.02 260)">FOR 723 SEATS</text>
     </svg>""",
     'motogp_8': """
     <svg viewBox="0 0 188 72" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -239,15 +237,15 @@ SVGS: dict[str, str] = {
       <text x="140" y="46" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="18" fill="oklch(0.20 0.02 260)">8TH</text>
       <text x="140" y="59" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="700" font-size="8.5" fill="oklch(0.40 0.04 26)">MOTOGP TITLE</text>
     </svg>""",
-    'nigeria_boat': """
+    'sudan_mine': """
     <svg viewBox="0 0 188 72" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="188" height="41" fill="oklch(0.89 0.025 220)"/>
-      <rect y="41" width="188" height="31" fill="oklch(0.56 0.08 225)"/>
-      <path d="M16,51 Q40,36 66,51 Z" fill="oklch(0.30 0.04 55)"/>
-      <path d="M14,53 Q24,50 34,53 Q44,56 54,53 Q64,50 74,53" fill="none" stroke="white" stroke-width="1.2"/>
-      <circle cx="82" cy="52" r="5.5" fill="none" stroke="oklch(0.64 0.20 35)" stroke-width="2.4"/>
-      <text x="139" y="51" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="15" fill="oklch(0.48 0.18 24)">26 DEAD</text>
-      <text x="139" y="62" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="800" font-size="7.5" fill="white">FERRY CAPSIZE</text>
+      <rect width="188" height="46" fill="oklch(0.92 0.025 82)"/>
+      <rect y="46" width="188" height="26" fill="oklch(0.76 0.05 75)"/>
+      <polygon points="30,56 44,32 58,56" fill="oklch(0.62 0.21 35)"/>
+      <polygon points="36,56 44,41 52,56" fill="oklch(0.84 0.17 80)"/>
+      <path d="M22,56 L30,49 M66,56 L58,49" stroke="oklch(0.32 0.03 55)" stroke-width="1.8" stroke-linecap="round"/>
+      <text x="130" y="45" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="900" font-size="15.5" fill="oklch(0.48 0.18 24)">22 DEAD</text>
+      <text x="130" y="59" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="800" font-size="8" fill="oklch(0.24 0.02 260)">LANDMINE BLAST</text>
     </svg>""",
 }
 
